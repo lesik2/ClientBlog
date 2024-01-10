@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: move to root folder
-        run: cd client-blog
+        run: cd ./client-blog
       - name: install modules
         run: yarn install
       - name: build project
