@@ -1,3 +1,4 @@
 export const ROUTES = {
-  blogPost: 'blog/1',
+  blogPost: '/blog/1',
+  blog: '/blog',
 };

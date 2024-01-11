@@ -12,6 +12,10 @@
     @extend %body1;
     color: $white-color;
     text-decoration: none;
+    transition: color 0.2s;
+    &:hover {
+      color: $light-gray-color;
+    }
   }
   .active {
     color: $secondary-color;

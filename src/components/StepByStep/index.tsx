@@ -1,9 +1,9 @@
 import button from '@styles/ui/button.module.scss';
 import style from '@styles/home/stepByStep.module.scss';
-import Link from 'next/link'
-import {ROUTES} from '@constants/routes';
+import Link from 'next/link';
+import { ROUTES } from '@constants/routes';
 
-import {CONSTANTS} from './constants';
+import { CONSTANTS } from './constants';
 
 export function StepByStep() {
   return (
@@ -19,15 +19,13 @@ export function StepByStep() {
           <span className={style.divide}>{CONSTANTS.divide}</span>
           {CONSTANTS.date}
         </p>
-        <p className={style.description}>
-          {CONSTANTS.description}
-        </p>
+        <p className={style.description}>{CONSTANTS.description}</p>
         <Link className={style.link} href={ROUTES.blogPost}>
-            <button type='button' className={button.primary}>
-              {CONSTANTS.btn}
-            </button>
-        </Link> 
+          <button type='button' className={button.primary}>
+            {CONSTANTS.btn}
+          </button>
+        </Link>
       </div>
     </section>
-  )
+  );
 }

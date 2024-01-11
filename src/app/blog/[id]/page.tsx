@@ -1,5 +1,3 @@
 export default function BlogPost() {
-  return (
-    <h2>Blog Post</h2>
-  )
+  return <h2>Blog Post</h2>;
 }
