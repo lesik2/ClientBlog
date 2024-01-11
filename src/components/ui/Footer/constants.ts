@@ -6,7 +6,7 @@ export const CONSTANTS = {
   email: 'Hello@finsweet.com  020 7993 2905',
   placeholder: 'Enter Your Email',
 };
-export const LINKS = [
+export const FOOTER_LINKS = [
   {
     name: 'Home',
     to: '/',

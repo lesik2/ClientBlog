@@ -3,33 +3,20 @@
 import style from '@styles/ui/footer.module.scss';
 import button from '@styles/ui/button.module.scss';
 import Image from 'next/image';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 
-import { CONSTANTS, LINKS, ICONS } from './constants';
+import { CONSTANTS, ICONS } from './constants';
+
+import { Navigation } from '../Navigation';
 
 export function Footer() {
-  const pathname = usePathname();
+
 
   return (
     <footer className={style.footer}>
       <div className={style.content}>
         <div className={style.header}>
           <p className={style.title}>{CONSTANTS.title}</p>
-          <nav>
-            <ul className={style.list}>
-              {LINKS.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    className={`${pathname === link.to ? style.active : ''} ${style.link}`}
-                    href={link.to}
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
+          <Navigation type='footer'/>
         </div>
 
         <div className={style.submitWrapper}>
