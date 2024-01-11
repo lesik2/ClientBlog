@@ -28,7 +28,7 @@ export function Footer() {
             </ul>
           </nav>
         </div>
-        
+
         <div className={style.submitWrapper}>
           <h2 className={style.subtitle}>{CONSTANTS.subtitle}</h2>
           <div className={style.submitForm}>
@@ -44,9 +44,9 @@ export function Footer() {
             <p className={style.contact}>{CONSTANTS.email}</p>
           </div>
           <div className={style.socialWrapper}>
-            {ICONS.map((icon)=>(
-              <a key={icon.src}  className={style.socialLink} href='/'>
-                <Image {...icon}/>
+            {ICONS.map((icon) => (
+              <a key={icon.src} className={style.socialLink} href='/'>
+                <Image {...icon} />
               </a>
             ))}
           </div>

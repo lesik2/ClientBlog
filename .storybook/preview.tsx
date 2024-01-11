@@ -1,8 +1,7 @@
 import type { Preview } from '@storybook/react';
 import '../src/styles/global.scss';
-import { sen } from "../src/lib/fonts";
-import * as React from "react";
-
+import { sen } from '../src/lib/fonts';
+import * as React from 'react';
 
 const preview: Preview = {
   parameters: {

@@ -1,10 +1,8 @@
 import type { Metadata } from 'next';
-import {sen} from '@lib/fonts'
+import { sen } from '@lib/fonts';
 import '@styles/global.scss';
 import { Header } from '@components/ui/Header';
 import { Footer } from '@components/ui/Footer';
-
-
 
 export const metadata: Metadata = {
   title: 'Client Blog',

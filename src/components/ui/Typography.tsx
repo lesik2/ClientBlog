@@ -1,6 +1,5 @@
 import style from '@styles/ui/typography.module.scss';
 
-
 export function Typography() {
   return (
     <div>
@@ -10,8 +9,8 @@ export function Typography() {
       <h4>Heading H4</h4>
       <h5>Heading H5</h5>
       <h6>Heading H6</h6>
-      <br/>
-      <br/>
+      <br />
+      <br />
       <h3>Body 1</h3>
       <p className={style.parag1}>Apparently we had reached a great height in the atmosphere</p>
       <h3>Body 2</h3>
