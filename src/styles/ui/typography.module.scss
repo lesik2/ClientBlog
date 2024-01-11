@@ -1,0 +1,23 @@
+%body1 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+}
+%body2 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+%display {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 64px;
+  letter-spacing: -2px;
+}
+
+.parag1 {
+  @extend %body1;
+}
+.parag2 {
+  @extend %body2;
+}

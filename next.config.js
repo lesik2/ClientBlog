@@ -7,7 +7,6 @@ const path = require('path');
  **/
 const nextConfig = {
   experimental: {
-    typedRoutes: true,
     forceSwcTransforms: true,
   },
   sassOptions: {
