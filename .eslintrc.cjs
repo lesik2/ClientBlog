@@ -2,16 +2,17 @@ module.exports = {
   root: true,
   env: { browser: true, es2020: true },
   extends: [
-    'eslint:recommended',
+    "eslint:recommended",
     "plugin:@typescript-eslint/recommended-type-checked",
-    'plugin:react-hooks/recommended',
-    "airbnb", 
+    "plugin:react-hooks/recommended",
+    "airbnb",
     "airbnb-typescript",
-    "airbnb/hooks", 
+    "airbnb/hooks",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "plugin:@next/next/recommended",
     "prettier",
+    "plugin:storybook/recommended"
   ],
   globals: {
     "JSX": true

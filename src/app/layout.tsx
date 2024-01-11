@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { Sen } from 'next/font/google';
+import '@styles/global.scss';
+import { Header } from '@components/ui/Header';
 
 const sen = Sen({
   subsets: ['latin'],
@@ -14,7 +16,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
-      <body className={sen.className}>{children}</body>
+      <body className={sen.className}>
+        <Header />
+        <main>
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
