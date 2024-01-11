@@ -9,7 +9,15 @@
   line-height: 20px;
 }
 %display {
-  border: 1px solid #ccc;
-  padding: 10px;
-  color: #333;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 64px;
+  letter-spacing: -2px;
+}
+
+.parag1 {
+  @extend %body1;
+}
+.parag2 {
+  @extend %body2;
 }

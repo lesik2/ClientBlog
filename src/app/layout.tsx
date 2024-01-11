@@ -1,12 +1,10 @@
 import type { Metadata } from 'next';
-import { Sen } from 'next/font/google';
+import {sen} from '@lib/fonts'
 import '@styles/global.scss';
 import { Header } from '@components/ui/Header';
+import { Footer } from '@components/ui/Footer';
 
-const sen = Sen({
-  subsets: ['latin'],
-  weight: '400',
-});
+
 
 export const metadata: Metadata = {
   title: 'Client Blog',
@@ -18,9 +16,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang='en'>
       <body className={sen.className}>
         <Header />
-        <main>
-          {children}
-        </main>
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
