@@ -9,14 +9,12 @@ import { CONSTANTS, ICONS } from './constants';
 import { Navigation } from '../Navigation';
 
 export function Footer() {
-
-
   return (
     <footer className={style.footer}>
       <div className={style.content}>
         <div className={style.header}>
           <p className={style.title}>{CONSTANTS.title}</p>
-          <Navigation type='footer'/>
+          <Navigation type='footer' />
         </div>
 
         <div className={style.submitWrapper}>

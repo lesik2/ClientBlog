@@ -1,7 +1,9 @@
+import { StepByStep } from "@/components/StepByStep";
+
 export default function Home() {
   return (
-    <div>
-      <div>Home</div>
-    </div>
+    <>
+      <StepByStep />
+    </>
   );
 }
