@@ -10,9 +10,9 @@ module.exports = {
     "airbnb/hooks",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
-    "plugin:@next/next/recommended",
     "prettier",
-    "plugin:storybook/recommended"
+    "plugin:storybook/recommended",
+    "plugin:@next/next/recommended",
   ],
   globals: {
     "JSX": true
