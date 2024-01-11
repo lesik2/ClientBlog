@@ -1,12 +1,15 @@
 'use client';
-import { CONSTANTS, LINKS } from './constants';
+
 import Link from 'next/link';
 import style from '@styles/ui/header.module.scss';
 import button from '@styles/ui/button.module.scss';
 import { usePathname } from 'next/navigation';
 
+import { CONSTANTS, LINKS } from './constants';
+
 export function Header() {
   const pathname = usePathname();
+
   return (
     <header className={style.header}>
       <p className={style.title}>{CONSTANTS.title}</p>

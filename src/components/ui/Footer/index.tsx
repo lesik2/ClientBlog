@@ -1,13 +1,16 @@
 'use client';
+
 import style from '@styles/ui/footer.module.scss';
 import button from '@styles/ui/button.module.scss';
 import Image from 'next/image';
-import { CONSTANTS, LINKS, ICONS } from './constants';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+import { CONSTANTS, LINKS, ICONS } from './constants';
+
 export function Footer() {
   const pathname = usePathname();
+
   return (
     <footer className={style.footer}>
       <div className={style.content}>
