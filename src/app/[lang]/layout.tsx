@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { sen } from '@lib/fonts';
 import '@styles/global.scss';
-import  Header  from '@components/ui/Header';
+import Header from '@components/ui/Header';
 import Footer from '@components/ui/Footer';
 
 import { Locale, i18n } from '@/i18n.config';
@@ -12,21 +12,22 @@ export const metadata: Metadata = {
 };
 
 export async function generateStaticParams() {
-  return i18n.locales.map(locale => ({ lang: locale }))
+  return i18n.locales.map((locale) => ({ lang: locale }));
 }
 
-export default function RootLayout({ children, params }: {
-  children: React.ReactNode
-  params: { lang: Locale }
+export default function RootLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: { lang: Locale };
 }) {
-
-
   return (
     <html lang={params.lang}>
       <body className={sen.className}>
-        <Header  lang={params.lang}/>
+        <Header lang={params.lang} />
         <main>{children}</main>
-        <Footer  lang={params.lang}/>
+        <Footer lang={params.lang} />
       </body>
     </html>
   );

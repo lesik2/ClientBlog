@@ -1,14 +1,13 @@
-import { LocaleType } from '@customTypes/index';
+import { LocaleType } from '@customTypes/locale';
 
 import { About } from '@/components/About';
 import { Posts } from '@/components/Posts';
-import  StepByStep  from '@/components/StepByStep';
+import StepByStep from '@/components/StepByStep';
 
-export default function Home({params: { lang }}: LocaleType) {
-
+export default function Home({ params: { lang } }: {params: LocaleType}) {
   return (
     <>
-      <StepByStep lang={lang}/>
+      <StepByStep lang={lang} />
       <Posts />
       <About />
     </>

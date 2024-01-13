@@ -6,20 +6,20 @@ import { CONSTANTS, ICONS } from './constants';
 
 import { Navigation } from '../Navigation';
 
-import { Locale } from '@/i18n.config';
+
 import { getDictionary } from '@/lib/dictionary';
+import { LocaleType } from '@/types/locale';
 
-export default async function Footer({ lang }: { lang: Locale }) {
-
+export default async function Footer({ lang }: LocaleType) {
   const { navigation } = await getDictionary(lang);
-  const nameOfLinks  = Object.values(navigation);
+  const nameOfLinks = Object.values(navigation);
 
   return (
     <footer className={style.footer}>
       <div className={style.content}>
         <div className={style.header}>
           <p className={style.title}>{CONSTANTS.title}</p>
-          <Navigation type='footer' nameOfLinks={nameOfLinks}/>
+          <Navigation type='footer' nameOfLinks={nameOfLinks} />
         </div>
 
         <div className={style.submitWrapper}>

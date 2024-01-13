@@ -3,21 +3,15 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import nav from '@styles/ui/navigation.module.scss';
+import { INavigation } from '@customTypes/ui';
 
 import { HEADER_LINKS } from './Header/constants';
 import { FOOTER_LINKS } from './Footer/constants';
 
 
-
-
-export interface INavigation {
-  type: 'header' | 'footer';
-  nameOfLinks: string[];
-}
 export async function Navigation({ type, nameOfLinks }: INavigation) {
   const pathname = usePathname();
   const links = type === 'footer' ? FOOTER_LINKS : HEADER_LINKS;
-
 
   return (
     <nav>

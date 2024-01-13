@@ -1,7 +1,5 @@
-import { Locale } from '@/i18n.config';
-
-export type LocaleType = {
-  params: {
-    lang: Locale;
-  };
-};
+export interface IPost {
+  title: string;
+  author: string;
+  date: string;
+}

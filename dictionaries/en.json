@@ -6,12 +6,12 @@
     "ContactUS": "Contact us",
     "PrivacyPolicy": "Privacy Policy"
   },
-  "stepByStep":{
+  "stepByStep": {
     "btn": "Read More >",
-    "date":"May 23, 2022",
+    "date": "May 23, 2022",
     "title": "Step-by-step guide to choosing great font pairs",
     "subtitle": "Posted on",
-    "StartFrom":"By",
-    "video":"Video about us"
+    "StartFrom": "By",
+    "video": "Video about us"
   }
 }

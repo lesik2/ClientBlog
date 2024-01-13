@@ -2,14 +2,14 @@ import button from '@styles/ui/button.module.scss';
 import style from '@styles/home/stepByStep.module.scss';
 import Link from 'next/link';
 import { ROUTES } from '@constants/routes';
+import { LocaleType } from '@customTypes/locale';
 
 import { CONSTANTS } from './constants';
 
-import { Locale } from '@/i18n.config';
+
 import { getDictionary } from '@/lib/dictionary';
 
-export default async function StepByStep({lang}: {lang: Locale}) {
-
+export default async function StepByStep({ lang }: LocaleType) {
   const { stepByStep } = await getDictionary(lang);
 
   return (
@@ -21,7 +21,8 @@ export default async function StepByStep({lang}: {lang: Locale}) {
         </p>
         <p className={style.title}>{stepByStep.title}</p>
         <p className={style.info}>
-          {stepByStep.StartFrom}<span className={style.infoMark}>{CONSTANTS.author}</span>
+          {stepByStep.StartFrom}
+          <span className={style.infoMark}>{CONSTANTS.author}</span>
           <span className={style.divide}>{CONSTANTS.divide}</span>
           {stepByStep.date}
         </p>
