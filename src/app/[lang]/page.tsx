@@ -7,6 +7,7 @@ import AuthorsList from '@components/AuthorsList';
 import SpecialPost from '@components/SpecialPost';
 import JoinOurTeam from '@components/JoinOurTeam';
 import Logo from '@components/Logo';
+import Testimonials from '@components/Testimonials';
 
 export default function Home({ params: { lang } }: { params: LocaleType }) {
   return (
@@ -18,6 +19,7 @@ export default function Home({ params: { lang } }: { params: LocaleType }) {
       <SpecialPost />
       <AuthorsList />
       <Logo />
+      <Testimonials />
       <JoinOurTeam />
     </>
   );
