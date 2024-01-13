@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { Post } from './components/Post';
 import { CONSTANTS, PostsData } from './constants';
 
-export function Posts() {
+export default function Posts() {
   return (
     <section className={style.sectionPosts}>
       <div className={style.content}>

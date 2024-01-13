@@ -4,7 +4,7 @@ import style from '@styles/home/aboutUs.module.scss';
 
 import { Info } from './constants';
 
-export function About() {
+export default function About() {
   return (
     <section className={style.aboutUsSection}>
       <div className={style.content}>

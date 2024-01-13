@@ -10,10 +10,11 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  transition: background-color 0.2s;
+  transition: background-color 0.3s;
   &:hover {
     cursor: pointer;
     background-color: $secondary-color;
+    border: none;
   }
   .iconWrapper {
     width: 48px;

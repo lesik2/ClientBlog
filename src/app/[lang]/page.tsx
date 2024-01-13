@@ -1,11 +1,11 @@
 import { LocaleType } from '@customTypes/locale';
-
-import { About } from '@/components/About';
-import { Posts } from '@/components/Posts';
-import StepByStep from '@/components/StepByStep';
-import { ChooseCategory } from '@/components/ChooseCategory';
-import { AuthorsList } from '@/components/AuthorsList';
-import { SpecialPost } from '@/components/SpecialPost';
+import  About  from '@components/About';
+import  Posts  from '@components/Posts';
+import StepByStep from '@components/StepByStep';
+import  ChooseCategory  from '@components/ChooseCategory';
+import  AuthorsList  from '@components/AuthorsList';
+import  SpecialPost  from '@components/SpecialPost';
+import JoinOurTeam from '@components/JoinOurTeam';
 
 export default function Home({ params: { lang } }: { params: LocaleType }) {
   return (
@@ -16,6 +16,7 @@ export default function Home({ params: { lang } }: { params: LocaleType }) {
       <ChooseCategory />
       <SpecialPost />
       <AuthorsList />
+      <JoinOurTeam />
     </>
   );
 }

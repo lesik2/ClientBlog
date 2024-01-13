@@ -1,12 +1,12 @@
 import style from '@styles/ui/categoryCard.module.scss';
 import Image from 'next/image';
 
-export interface ICategoryCard{
+export interface ICategoryCard {
   iconSrc: string;
   title: string;
   description: string;
 }
-export default function CategoryCard({iconSrc, title, description}: ICategoryCard) {
+export default function CategoryCard({ iconSrc, title, description }: ICategoryCard) {
   return (
     <div className={style.cardWrapper}>
       <div className={style.iconWrapper}>
