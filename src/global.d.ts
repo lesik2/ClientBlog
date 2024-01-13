@@ -34,3 +34,7 @@ declare module '*.mp3' {
 }
 declare module '*.woff';
 declare module '*.ttf';
+
+type MessagesEn = typeof import('./messages/en.json');
+type MessagesRu = typeof import('./messages/ru.json');
+declare interface IntlMessages extends MessagesEn, MessagesRu {}

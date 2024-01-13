@@ -19,4 +19,16 @@
     align-items: center;
     gap: 32px;
   }
+  .wrapperLocale {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+  }
+  .localeBtn {
+    padding: 7px;
+    width: 40px;
+    height: 40px;
+  }
 }

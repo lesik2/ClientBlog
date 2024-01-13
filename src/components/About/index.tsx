@@ -4,14 +4,14 @@ import style from '@styles/home/aboutUs.module.scss';
 
 import { Info } from './constants';
 
-export  function About() {
+export function About() {
   return (
     <section className={style.aboutUsSection}>
       <div className={style.content}>
         <div className={style.header}>
-          <div className={style.first}/>
-          <div className={style.second}/>
-          <div className={style.third}/>
+          <div className={style.first} />
+          <div className={style.second} />
+          <div className={style.third} />
         </div>
         <div className={style.main}>
           <div className={style.card}>
@@ -29,7 +29,6 @@ export  function About() {
           </div>
         </div>
       </div>
-      
     </section>
-  )
+  );
 }

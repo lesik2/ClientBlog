@@ -7,20 +7,25 @@ import nav from '@styles/ui/navigation.module.scss';
 import { HEADER_LINKS } from './Header/constants';
 import { FOOTER_LINKS } from './Footer/constants';
 
+
+
+
 export interface INavigation {
   type: 'header' | 'footer';
+  nameOfLinks: string[];
 }
-export function Navigation({ type }: INavigation) {
+export async function Navigation({ type, nameOfLinks }: INavigation) {
   const pathname = usePathname();
   const links = type === 'footer' ? FOOTER_LINKS : HEADER_LINKS;
+
 
   return (
     <nav>
       <ul className={nav.list}>
-        {links.map((link) => (
+        {links.map((link, index) => (
           <li key={link.name}>
             <Link className={`${pathname === link.to ? nav.active : ''} ${nav.link}`} href={link.to}>
-              {link.name}
+              {nameOfLinks[index]}
             </Link>
           </li>
         ))}

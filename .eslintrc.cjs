@@ -143,5 +143,6 @@ module.exports = {
     "import/no-extraneous-dependencies": 'off',
     "react/no-array-index-key": 'off',
     "react-refresh/only-export-components": 'off',
+    "@typescript-eslint/no-unsafe-member-access": 'off'
   },
 }

@@ -1,5 +1,3 @@
-'use client';
-
 import style from '@styles/ui/footer.module.scss';
 import button from '@styles/ui/button.module.scss';
 import Image from 'next/image';
@@ -8,13 +6,20 @@ import { CONSTANTS, ICONS } from './constants';
 
 import { Navigation } from '../Navigation';
 
-export function Footer() {
+import { Locale } from '@/i18n.config';
+import { getDictionary } from '@/lib/dictionary';
+
+export default async function Footer({ lang }: { lang: Locale }) {
+
+  const { navigation } = await getDictionary(lang);
+  const nameOfLinks  = Object.values(navigation);
+
   return (
     <footer className={style.footer}>
       <div className={style.content}>
         <div className={style.header}>
           <p className={style.title}>{CONSTANTS.title}</p>
-          <Navigation type='footer' />
+          <Navigation type='footer' nameOfLinks={nameOfLinks}/>
         </div>
 
         <div className={style.submitWrapper}>

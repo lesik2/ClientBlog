@@ -1,0 +1,17 @@
+{
+  "navigation": {
+    "home": "Home",
+    "blog": "Blog",
+    "AboutUS": "About Us",
+    "ContactUS": "Contact us",
+    "PrivacyPolicy": "Privacy Policy"
+  },
+  "stepByStep":{
+    "btn": "Read More >",
+    "date":"May 23, 2022",
+    "title": "Step-by-step guide to choosing great font pairs",
+    "subtitle": "Posted on",
+    "StartFrom":"By",
+    "video":"Video about us"
+  }
+}

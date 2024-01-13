@@ -5,24 +5,30 @@ import { ROUTES } from '@constants/routes';
 
 import { CONSTANTS } from './constants';
 
-export function StepByStep() {
+import { Locale } from '@/i18n.config';
+import { getDictionary } from '@/lib/dictionary';
+
+export default async function StepByStep({lang}: {lang: Locale}) {
+
+  const { stepByStep } = await getDictionary(lang);
+
   return (
     <section className={style.stepSection}>
       <div className={style.content}>
         <p className={style.subtitle}>
-          {CONSTANTS.subtitle}
+          {stepByStep.subtitle}
           <span className={style.subtitleMark}>{CONSTANTS.subtitleMark}</span>
         </p>
-        <p className={style.title}>{CONSTANTS.title}</p>
+        <p className={style.title}>{stepByStep.title}</p>
         <p className={style.info}>
-          By<span className={style.infoMark}>{CONSTANTS.author}</span>
+          {stepByStep.StartFrom}<span className={style.infoMark}>{CONSTANTS.author}</span>
           <span className={style.divide}>{CONSTANTS.divide}</span>
-          {CONSTANTS.date}
+          {stepByStep.date}
         </p>
         <p className={style.description}>{CONSTANTS.description}</p>
         <Link className={style.link} href={ROUTES.blogPost}>
           <button type='button' className={button.primary}>
-            {CONSTANTS.btn}
+            {stepByStep.btn}
           </button>
         </Link>
       </div>
