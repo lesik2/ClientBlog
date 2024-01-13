@@ -13,12 +13,13 @@
       display: flex;
       align-items: center;
       width: 100%;
-      gap: 64px;
+      gap: 32px;
       justify-content: space-between;
+      width: 1282px;
 
       .header {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         justify-content: space-between;
         width: 100%;
         .title {

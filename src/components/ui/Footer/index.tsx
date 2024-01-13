@@ -1,11 +1,11 @@
 import style from '@styles/ui/footer.module.scss';
 import button from '@styles/ui/button.module.scss';
 import Image from 'next/image';
+import { ICONS } from '@constants/index';
 
-import { CONSTANTS, ICONS } from './constants';
+import { CONSTANTS } from './constants';
 
 import { Navigation } from '../Navigation';
-
 
 import { getDictionary } from '@/lib/dictionary';
 import { LocaleType } from '@/types/locale';

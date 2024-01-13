@@ -6,7 +6,6 @@ import { LocaleType } from '@customTypes/locale';
 
 import { CONSTANTS } from './constants';
 
-
 import { getDictionary } from '@/lib/dictionary';
 
 export default async function StepByStep({ lang }: LocaleType) {

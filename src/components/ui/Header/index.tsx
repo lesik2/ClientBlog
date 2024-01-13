@@ -7,7 +7,6 @@ import LocaleSwitcher from './LocaleSwitcher';
 
 import { Navigation } from '../Navigation';
 
-
 import { getDictionary } from '@/lib/dictionary';
 
 export default async function Header({ lang }: LocaleType) {

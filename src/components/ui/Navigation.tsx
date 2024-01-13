@@ -8,7 +8,6 @@ import { INavigation } from '@customTypes/ui';
 import { HEADER_LINKS } from './Header/constants';
 import { FOOTER_LINKS } from './Footer/constants';
 
-
 export async function Navigation({ type, nameOfLinks }: INavigation) {
   const pathname = usePathname();
   const links = type === 'footer' ? FOOTER_LINKS : HEADER_LINKS;
