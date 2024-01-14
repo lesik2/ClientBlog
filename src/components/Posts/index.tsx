@@ -9,7 +9,7 @@ import { CONSTANTS, PostsData } from './constants';
 
 export default function Posts() {
   return (
-    <section className={style.sectionPosts}>
+    <div className={style.sectionPosts}>
       <div className={style.content}>
         <div className={style.postsWrapper}>
           <div className={style.featuredPostsWrapper}>
@@ -44,6 +44,6 @@ export default function Posts() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

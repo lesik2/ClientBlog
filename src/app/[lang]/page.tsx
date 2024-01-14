@@ -1,26 +1,16 @@
 import { LocaleType } from '@customTypes/locale';
-import About from '@components/About';
-import Posts from '@components/Posts';
-import StepByStep from '@components/StepByStep';
-import ChooseCategory from '@components/ChooseCategory';
-import AuthorsList from '@components/AuthorsList';
-import SpecialPost from '@components/SpecialPost';
-import JoinOurTeam from '@components/JoinOurTeam';
-import Logo from '@components/Logo';
-import Testimonials from '@components/Testimonials';
+import InfinityScroll from '@components/InfinityScroll';
 
-export default function Home({ params: { lang } }: { params: LocaleType }) {
+import { Dictionary, getDictionary } from '@/lib/dictionary';
+
+
+export default async function Home({ params: { lang } }: { params: LocaleType }) {
+  
+  const dictionary: Dictionary = await getDictionary(lang)
+  
   return (
     <>
-      <StepByStep lang={lang} />
-      <Posts />
-      <About />
-      <ChooseCategory />
-      <SpecialPost />
-      <AuthorsList />
-      <Logo />
-      <Testimonials />
-      <JoinOurTeam />
+      <InfinityScroll  dictionary={dictionary}/>
     </>
   );
 }

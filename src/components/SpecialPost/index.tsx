@@ -6,7 +6,7 @@ import { ROUTES } from '@constants/routes';
 
 export default function SpecialPost() {
   return (
-    <section className={style.wrapper}>
+    <div className={style.wrapper}>
       <div className={style.content}>
         <Image
           className={style.backImage}
@@ -30,6 +30,6 @@ export default function SpecialPost() {
           </Link>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

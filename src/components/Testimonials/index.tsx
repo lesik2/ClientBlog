@@ -9,7 +9,7 @@ export default function Testimonials() {
   
 
   return (
-    <section className={style.wrapper}>
+    <div className={style.wrapper}>
       <div className={style.content}>
         <div className={style.wrapperInfo}>
           <p className={style.subtitle}>TESTIMONIALS</p>
@@ -22,6 +22,6 @@ export default function Testimonials() {
           {REVIEW_CARDS.map((card, index) => <ReviewCard key={index} {...card} />)}
         </Slider>
       </div>
-    </section>
+    </div>
   );
 }

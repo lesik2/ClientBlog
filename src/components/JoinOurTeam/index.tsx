@@ -5,7 +5,7 @@ import button from '@styles/ui/button.module.scss';
 
 export default function JoinOurTeam() {
   return (
-    <section className={style.wrapper}>
+    <div className={style.wrapper}>
       <div className={style.content}>
         <h2 className={style.title}>Join our team to be a part of our story</h2>
         <p className={style.description}>
@@ -17,6 +17,6 @@ export default function JoinOurTeam() {
           </button>
         </Link>
       </div>
-    </section>
+    </div>
   );
 }

@@ -28,11 +28,13 @@ const Slider = ({ children }: ISlider) => {
 
   return (
     <div className={slider.wrapperSlider}>
+    <div className={slider.wrapperCards}>
       {children.map((card, index) => (
         <div className={slider.wrapperCard} key={index} style={{ translate: `${-100 * currentIndex}%` }}>
           {card}
         </div>
       ))}
+      </div>
       <div className={style.wrapperBtn}>
         <button type='button' className={style.prevBtn} onClick={handlePrev}>
           <Image height={20} width={20} src='/icons/arrowPrev.svg' alt='prev arrow' />

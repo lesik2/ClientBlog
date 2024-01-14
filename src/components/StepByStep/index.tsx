@@ -2,17 +2,18 @@ import button from '@styles/ui/button.module.scss';
 import style from '@styles/home/stepByStep.module.scss';
 import Link from 'next/link';
 import { ROUTES } from '@constants/routes';
-import { LocaleType } from '@customTypes/locale';
+
 
 import { CONSTANTS } from './constants';
 
-import { getDictionary } from '@/lib/dictionary';
+import { Dictionary } from '@/lib/dictionary';
 
-export default async function StepByStep({ lang }: LocaleType) {
-  const { stepByStep } = await getDictionary(lang);
+export default  function StepByStep({dictionary}: {dictionary: Dictionary}) {
+
+  const {stepByStep} = dictionary;
 
   return (
-    <section className={style.stepSection}>
+    <div className={style.stepSection}>
       <div className={style.content}>
         <p className={style.subtitle}>
           {stepByStep.subtitle}
@@ -32,6 +33,6 @@ export default async function StepByStep({ lang }: LocaleType) {
           </button>
         </Link>
       </div>
-    </section>
+    </div>
   );
 }

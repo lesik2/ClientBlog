@@ -5,7 +5,7 @@ import { LOGO_ICONS } from './constants';
 
 export default function Logo() {
   return (
-    <section className={style.wrapper}>
+    <div className={style.wrapper}>
       <div className={style.content}>
         <div className={style.wrapperInfo}>
           <p className={style.subtitle}>We are</p>
@@ -17,6 +17,6 @@ export default function Logo() {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }
