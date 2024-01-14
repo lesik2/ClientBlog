@@ -1,0 +1,10 @@
+.wrapperSlider {
+  position: relative;
+  width: 469px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  .wrapperCard {
+    transition: translate 0.4s ease-in-out;
+  }
+}

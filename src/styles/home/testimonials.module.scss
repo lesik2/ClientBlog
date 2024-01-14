@@ -13,7 +13,6 @@
     padding: 80px 174px 75px 112px;
     justify-content: flex-start;
     gap: 180px;
-    position: relative;
     .wrapperInfo {
       display: flex;
       flex-direction: column;
@@ -50,43 +49,14 @@
         width: 349px;
       }
     }
-    .wrapperTestimonials {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 121px;
-      .text {
-        color: $primary-color;
-        width: 469px;
-      }
-      .wrapperUser {
-        display: flex;
-        align-items: flex-start;
-        gap: 16px;
-        .userIcon {
-          border-radius: 50%;
-        }
-        .userInfoWrapper {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          .userName {
-            color: $primary-color;
-          }
-          .userAddress {
-            @extend %body1;
-            color: $light-gray-color;
-          }
-        }
-      }
-    }
+
     .wrapperBtn {
       display: flex;
       gap: 24px;
       align-items: center;
       position: absolute;
-      bottom: 80px;
-      right: 111px;
+      bottom: 3px;
+      right: 3px;
 
       .prevBtn {
         width: 48px;

@@ -1,0 +1,33 @@
+@import '../ui/typography.module.scss';
+@import '../colors.module.scss';
+
+.wrapperReviewCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 121px;
+  .text {
+    color: $primary-color;
+    width: 469px;
+  }
+  .wrapperUser {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    .userIcon {
+      border-radius: 50%;
+    }
+    .userInfoWrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      .userName {
+        color: $primary-color;
+      }
+      .userAddress {
+        @extend %body1;
+        color: $light-gray-color;
+      }
+    }
+  }
+}
