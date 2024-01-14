@@ -11,16 +11,14 @@ import Logo from '@components/Logo';
 import Testimonials from '@components/Testimonials';
 import { useInView } from 'react-intersection-observer';
 import { useEffect, useState } from 'react';
-import style from '@styles/home/infinityScroll.module.scss'
+import style from '@styles/home/infinityScroll.module.scss';
+import { Dictionary } from '@lib/dictionary';
 
-import { Dictionary } from '@/lib/dictionary';
-
-
-export interface IInfinityScroll{
+export interface IInfinityScroll {
   dictionary: Dictionary;
 }
 
-export default function InfinityScroll({dictionary}: IInfinityScroll) {
+export default function InfinityScroll({ dictionary }: IInfinityScroll) {
   const components = [
     StepByStep,
     Posts,
@@ -30,15 +28,14 @@ export default function InfinityScroll({dictionary}: IInfinityScroll) {
     AuthorsList,
     Logo,
     Testimonials,
-    JoinOurTeam
-  ]
+    JoinOurTeam,
+  ];
 
-  
   const [currentIndex, setCurrentIndex] = useState(0);
-  
+
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.7,
+    threshold: 0.6,
     delay: 200,
   });
 
@@ -48,17 +45,15 @@ export default function InfinityScroll({dictionary}: IInfinityScroll) {
     }
   }, [inView]);
 
-
   return (
     <>
-    {components.map((Component,index)=>(
-      index <= currentIndex ? (
-        <section key={index} ref={index === currentIndex ? ref : undefined} className={style.fadeIn}>
-          <Component dictionary={dictionary}/>
-        </section>
-      ) : null
-    
-    ))}
+      {components.map((Component, index) =>
+        index <= currentIndex ? (
+          <section key={index} ref={index === currentIndex ? ref : undefined} className={style.fadeIn}>
+            <Component dictionary={dictionary} />
+          </section>
+        ) : null,
+      )}
     </>
   );
 }

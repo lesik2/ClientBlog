@@ -1,6 +1,5 @@
 export const CONSTANTS = {
   title: 'Modsen Client Blog',
-  btn: 'Video about us',
 };
 export const HEADER_LINKS = [
   {

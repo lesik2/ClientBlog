@@ -11,7 +11,7 @@ import { getDictionary } from '@/lib/dictionary';
 import { LocaleType } from '@/types/locale';
 
 export default async function Footer({ lang }: LocaleType) {
-  const { navigation } = await getDictionary(lang);
+  const { navigation, footer } = await getDictionary(lang);
   const nameOfLinks = Object.values(navigation);
 
   return (
@@ -23,11 +23,11 @@ export default async function Footer({ lang }: LocaleType) {
         </div>
 
         <div className={style.submitWrapper}>
-          <h2 className={style.subtitle}>{CONSTANTS.subtitle}</h2>
+          <h2 className={style.subtitle}>{footer.text}</h2>
           <div className={style.submitForm}>
-            <input placeholder={CONSTANTS.placeholder} className={style.input} />
+            <input placeholder={footer.placeholder as string} className={style.input} />
             <button className={button.primary} type='submit'>
-              {CONSTANTS.btn}
+              {footer.btn}
             </button>
           </div>
         </div>

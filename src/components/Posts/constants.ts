@@ -25,12 +25,7 @@ export const PostsData = [
   },
 ];
 export const CONSTANTS = {
-  btn: 'Read More >',
-  featuredTitle: 'Featured Post',
-  allPostsTitle: 'All Posts',
-  link: 'View All',
-  author: 'John Deo',
-  date: 'Aug 23, 2021',
+  author: ' John Deo',
   subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
   description:
     'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',

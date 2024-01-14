@@ -3,8 +3,11 @@ import style from '@styles/home/specialPost.module.scss';
 import button from '@styles/ui/button.module.scss';
 import Link from 'next/link';
 import { ROUTES } from '@constants/routes';
+import { Dictionary } from '@lib/dictionary';
 
-export default function SpecialPost() {
+export default function SpecialPost({ dictionary }: { dictionary: Dictionary }) {
+  const {specialPost} = dictionary;
+
   return (
     <div className={style.wrapper}>
       <div className={style.content}>
@@ -16,8 +19,8 @@ export default function SpecialPost() {
           alt='special post'
         />
         <div className={style.specialPostWrapper}>
-          <p className={style.subtitle}>Why we started</p>
-          <h1 className={style.title}>It started out as a simple idea and evolved into our passion</h1>
+          <p className={style.subtitle}>{specialPost.subtitle}</p>
+          <h1 className={style.title}>{specialPost.title}</h1>
           <p className={style.description}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -25,7 +28,7 @@ export default function SpecialPost() {
           </p>
           <Link href={ROUTES.aboutUs}>
             <button type='button' className={button.primary}>
-              Discover our story {'>'}
+              {specialPost.btn}
             </button>
           </Link>
         </div>
