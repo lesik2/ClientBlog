@@ -6,8 +6,7 @@ import ReviewCard from './components/ReviewCard';
 import Slider from '../Slider';
 
 export default function Testimonials() {
-
-  const reviewCards = REVIEW_CARDS.map((card,index)=><ReviewCard key={index} {...card}/>)
+  
 
   return (
     <section className={style.wrapper}>
@@ -16,11 +15,13 @@ export default function Testimonials() {
           <p className={style.subtitle}>TESTIMONIALS</p>
           <h2 className={style.title}>What people say about our blog</h2>
           <p className={style.infoDescription}>
-            Lorem ipsum dolor sit amet, consectetur 
-            adipiscing elit, sed do eiusmod tempor.</p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+          </p>
         </div>
-        <Slider cards={reviewCards}/>
-      </div>     
+        <Slider>
+          {REVIEW_CARDS.map((card, index) => <ReviewCard key={index} {...card} />)}
+        </Slider>
+      </div>
     </section>
-  )
+  );
 }
