@@ -5,10 +5,8 @@ import { Dictionary } from '@lib/dictionary';
 
 import { AboutDescription, MissionDescription } from './constants';
 
-
-
 export default function About({ dictionary }: { dictionary: Dictionary }) {
-  const {aboutUs} = dictionary;
+  const { aboutUs } = dictionary;
 
   return (
     <section className={style.aboutUsSection}>

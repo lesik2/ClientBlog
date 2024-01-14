@@ -6,8 +6,8 @@ import { CARDS } from './constants';
 import CategoryCard from '../ui/CategoryCard';
 
 export default function ChooseCategory({ dictionary }: { dictionary: Dictionary }) {
-  const {chooseCategory} = dictionary
-  
+  const { chooseCategory } = dictionary;
+
   return (
     <section className={style.wrapper}>
       <div className={style.content}>

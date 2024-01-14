@@ -14,13 +14,16 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.12.1",
     "@formatjs/intl-localematcher": "^0.5.2",
+    "emailjs": "^4.0.3",
     "negotiator": "^0.6.3",
     "next": "14.0.4",
     "next-intl": "^3.4.2",
     "react": "^18",
     "react-dom": "^18",
-    "react-intersection-observer": "^9.5.3"
+    "react-intersection-observer": "^9.5.3",
+    "yap": "^0.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.23.7",
@@ -44,6 +47,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/yup": "^0.32.0",
     "@typescript-eslint/eslint-plugin": "^6.18.1",
     "@typescript-eslint/parser": "^6.18.1",
     "babel-plugin-jsx-remove-data-test-id": "^3.0.0",

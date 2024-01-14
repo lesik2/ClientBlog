@@ -7,7 +7,7 @@ import ReviewCard from './components/ReviewCard';
 import Slider from '../Slider';
 
 export default function Testimonials({ dictionary }: { dictionary: Dictionary }) {
-  const {testimonials} = dictionary;
+  const { testimonials } = dictionary;
 
   return (
     <div className={style.wrapper}>

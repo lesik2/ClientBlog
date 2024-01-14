@@ -1,14 +1,14 @@
 import style from '@styles/ui/footer.module.scss';
-import button from '@styles/ui/button.module.scss';
 import Image from 'next/image';
 import { ICONS } from '@constants/index';
+import { LocaleType } from '@customTypes/locale';
 
 import { CONSTANTS } from './constants';
+import SubscribeForm from './components/SubscribeForm';
 
 import { Navigation } from '../Navigation';
 
 import { getDictionary } from '@/lib/dictionary';
-import { LocaleType } from '@/types/locale';
 
 export default async function Footer({ lang }: LocaleType) {
   const { navigation, footer } = await getDictionary(lang);
@@ -21,15 +21,9 @@ export default async function Footer({ lang }: LocaleType) {
           <p className={style.title}>{CONSTANTS.title}</p>
           <Navigation type='footer' nameOfLinks={nameOfLinks} />
         </div>
-
         <div className={style.submitWrapper}>
           <h2 className={style.subtitle}>{footer.text}</h2>
-          <div className={style.submitForm}>
-            <input placeholder={footer.placeholder as string} className={style.input} />
-            <button className={button.primary} type='submit'>
-              {footer.btn}
-            </button>
-          </div>
+          <SubscribeForm  placeholder={footer.placeholder} btnText={footer.btn}/>
         </div>
         <div className={style.contactsWrapper}>
           <div className={style.contactsInfo}>

@@ -5,7 +5,7 @@ import { Dictionary } from '@lib/dictionary';
 import { LOGO_ICONS } from './constants';
 
 export default function Logo({ dictionary }: { dictionary: Dictionary }) {
-  const {logos} = dictionary;
+  const { logos } = dictionary;
 
   return (
     <div className={style.wrapper}>

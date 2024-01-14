@@ -14,46 +14,46 @@
     "StartFrom": "By",
     "video": "Video about us"
   },
-  "footer":{
+  "footer": {
     "btn": "Subscribe",
     "text": "Subscribe to our news letter to get latest updates and news",
-    "placeholder":"Enter Your Email"
+    "placeholder": "Enter Your Email"
   },
-  "joinOurTeam":{
+  "joinOurTeam": {
     "btn": "Join now",
     "title": "Join our team to be a part of our story"
   },
-  "testimonials":{
+  "testimonials": {
     "title": "What people say about our blog",
     "subtitle": "TESTIMONIALS"
   },
-  "logos":{
+  "logos": {
     "title": "Featured in",
     "subtitle": "We are"
   },
-  "aboutUs":{
-    "aboutTitle":"We are a community of content writers who share their learnings",
-    "aboutSubtitle":"ABOUT US",
-    "missionSubtitle":"Our mision",
-    "missionTitle":"Creating valuable content for creatives all around the world"
+  "aboutUs": {
+    "aboutTitle": "We are a community of content writers who share their learnings",
+    "aboutSubtitle": "ABOUT US",
+    "missionSubtitle": "Our mision",
+    "missionTitle": "Creating valuable content for creatives all around the world"
   },
-  "specialPost":{
+  "specialPost": {
     "title": "It started out as a simple idea and evolved into our passion",
     "subtitle": "Why we started",
     "btn": " Discover our story >"
   },
-  "posts":{
-    "date":"Aug 23, 2021",
+  "posts": {
+    "date": "Aug 23, 2021",
     "link": "View All",
-    "allPostsTitle":"All Posts",
-    "featuredTitle":"Featured Post",
-    "btn":"Read More >",
+    "allPostsTitle": "All Posts",
+    "featuredTitle": "Featured Post",
+    "btn": "Read More >",
     "StartFrom": "By"
   },
-  "chooseCategory":{
-    "title":"Choose A Catagory"
+  "chooseCategory": {
+    "title": "Choose A Catagory"
   },
-  "authorList":{
-    "title":"List of Authors"
+  "authorList": {
+    "title": "List of Authors"
   }
 }

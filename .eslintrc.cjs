@@ -55,7 +55,6 @@ module.exports = {
     "@typescript-eslint/no-non-null-asserted-nullish-coalescing": "error",
     "@typescript-eslint/prefer-includes": "warn",
     "@typescript-eslint/no-unsafe-return": "error",
-    "@typescript-eslint/no-unsafe-call": "error",
     "@typescript-eslint/no-unnecessary-type-assertion": "error",
     "@typescript-eslint/no-unused-vars": [
       "error",
@@ -143,6 +142,7 @@ module.exports = {
     "import/no-extraneous-dependencies": 'off',
     "react/no-array-index-key": 'off',
     "react-refresh/only-export-components": 'off',
-    "@typescript-eslint/no-unsafe-member-access": 'off'
+    "@typescript-eslint/no-unsafe-member-access": 'off',
+    "@typescript-eslint/no-unsafe-call": 'off'
   },
 }

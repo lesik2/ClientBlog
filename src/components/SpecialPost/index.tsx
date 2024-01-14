@@ -6,7 +6,7 @@ import { ROUTES } from '@constants/routes';
 import { Dictionary } from '@lib/dictionary';
 
 export default function SpecialPost({ dictionary }: { dictionary: Dictionary }) {
-  const {specialPost} = dictionary;
+  const { specialPost } = dictionary;
 
   return (
     <div className={style.wrapper}>

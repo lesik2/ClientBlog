@@ -9,7 +9,7 @@ import { Post } from './components/Post';
 import { CONSTANTS, PostsData } from './constants';
 
 export default function Posts({ dictionary }: { dictionary: Dictionary }) {
-  const {posts} = dictionary;
+  const { posts } = dictionary;
 
   return (
     <div className={style.sectionPosts}>

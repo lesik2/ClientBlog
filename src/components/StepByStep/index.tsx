@@ -6,7 +6,6 @@ import { Dictionary } from '@lib/dictionary';
 
 import { CONSTANTS } from './constants';
 
-
 export default function StepByStep({ dictionary }: { dictionary: Dictionary }) {
   const { stepByStep } = dictionary;
 

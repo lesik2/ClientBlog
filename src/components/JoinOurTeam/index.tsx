@@ -5,8 +5,8 @@ import button from '@styles/ui/button.module.scss';
 import { Dictionary } from '@lib/dictionary';
 
 export default function JoinOurTeam({ dictionary }: { dictionary: Dictionary }) {
-  const {joinOurTeam} = dictionary;
-  
+  const { joinOurTeam } = dictionary;
+
   return (
     <div className={style.wrapper}>
       <div className={style.content}>
