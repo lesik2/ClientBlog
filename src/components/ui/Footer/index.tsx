@@ -23,7 +23,7 @@ export default async function Footer({ lang }: LocaleType) {
         </div>
         <div className={style.submitWrapper}>
           <h2 className={style.subtitle}>{footer.text}</h2>
-          <SubscribeForm  placeholder={footer.placeholder} btnText={footer.btn}/>
+          <SubscribeForm placeholder={footer.placeholder} btnText={footer.btn} />
         </div>
         <div className={style.contactsWrapper}>
           <div className={style.contactsInfo}>
