@@ -1,6 +1,7 @@
 import style from '@styles/contactPage/contact.module.scss';
 
-import Form from './components/form';
+import Form from './components/Form';
+import { MapComponent } from './components/Map';
 
 export default function Contact() {
   return (
@@ -27,6 +28,7 @@ export default function Contact() {
         </div>
       </div>
       <Form />
+      <MapComponent />
     </section>
   );
 }

@@ -19,6 +19,7 @@ export function DropDown({ value, setValue }: IDropDown) {
     'Resolution Message',
     'Apology Message',
   ];
+
   const handleClick = () => {
     setActive(!active);
   };

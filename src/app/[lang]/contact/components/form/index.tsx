@@ -31,28 +31,28 @@ export default function Form() {
 
   const onSubmit: SubmitHandler<TMessageEmail> = async (data) => {
     setSuccess('');
-    const userData = {...data, selectValue};
+    const userData = { ...data, selectValue };
     reset();
-      setLoading(true);
-      emailjs
-        .send(
-          process.env.NEXT_PUBLIC_SERVICE_ID ?? '',
-          process.env.NEXT_PUBLIC_TEMPLATE_ID_USER_EMAIL ?? '',
-          userData,
-          process.env.NEXT_PUBLIC_PUBLIC_KEY,
-        )
-        .then((result) => {
-          if (result.status === 200) {
-            setSuccess(`We have received you message. And contact you as soon as possible`);
-          }
-        })
-        .catch((error) => console.error(error))
-        .finally(() => setLoading(false));
-
+    setLoading(true);
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_SERVICE_ID ?? '',
+        process.env.NEXT_PUBLIC_TEMPLATE_ID_USER_EMAIL ?? '',
+        userData,
+        process.env.NEXT_PUBLIC_PUBLIC_KEY,
+      )
+      .then((result) => {
+        if (result.status === 200) {
+          setSuccess(`We have received you message. And contact you as soon as possible`);
+        }
+      })
+      .catch((error) => console.error(error))
+      .finally(() => setLoading(false));
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} autoComplete='off' className={style.formWrapper}>
+    <section className={style.sectionWrapper}>
+      <form onSubmit={handleSubmit(onSubmit)} autoComplete='off' className={style.formWrapper}>
       <div className={inputStyle.inputWrapper}>
         <input
           className={inputStyle.contactInput}
@@ -97,17 +97,18 @@ export default function Form() {
         {errors.message && <p className={inputStyle.errorMessage}>{errors.message.message}</p>}
       </div>
       <div className={style.btnWrapper}>
-      <button type='submit' className={buttonStyle.formPrimary} disabled={!isValid}>
-        Send Message
-      </button>
+        <button type='submit' className={buttonStyle.formPrimary} disabled={!isValid}>
+          Send Message
+        </button>
         {loading && (
           <div className={style.loader}>
             <InfinityLoader />
           </div>
         )}
-         {success && <SnackBar  message={success} />}
+        {success && <SnackBar message={success} />}
       </div>
-      
     </form>
+    </section>
+    
   );
 }

@@ -2,7 +2,7 @@
 
 import style from '@styles/ui/footer.module.scss';
 import button from '@styles/ui/button.module.scss';
-import {  useState } from 'react';
+import { useState } from 'react';
 import { emailSchema } from '@validation/email';
 import emailjs from '@emailjs/browser';
 import { InfinityLoader } from '@components/InfinityLoader';
@@ -20,7 +20,6 @@ export default function SubscribeForm({ placeholder, btnText }: ISubscribeForm) 
   const [errorMessage, setErrorMessage] = useState<Error | null>(null);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState('');
-
 
   const { register, handleSubmit, reset } = useForm<TSubscribeEmail>({
     mode: 'onChange',
@@ -60,7 +59,7 @@ export default function SubscribeForm({ placeholder, btnText }: ISubscribeForm) 
   };
 
   return (
-    <form  className={style.submitForm} onSubmit={handleSubmit(sendEmail)} autoComplete='off'>
+    <form className={style.submitForm} onSubmit={handleSubmit(sendEmail)} autoComplete='off'>
       <div className={style.inputWrapper}>
         <input
           placeholder={placeholder}
@@ -80,7 +79,7 @@ export default function SubscribeForm({ placeholder, btnText }: ISubscribeForm) 
           </div>
         )}
       </div>
-      {success && <SnackBar message={success}/>}
+      {success && <SnackBar message={success} />}
     </form>
   );
 }
