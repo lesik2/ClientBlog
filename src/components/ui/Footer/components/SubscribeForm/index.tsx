@@ -2,44 +2,56 @@
 
 import style from '@styles/ui/footer.module.scss';
 import button from '@styles/ui/button.module.scss';
-import { ChangeEvent, FormEvent, useRef, useState } from 'react';
-import { Email, emailSchema } from '@validation/email';
+import { useRef, useState } from 'react';
+import { emailSchema } from '@validation/email';
 import emailjs from '@emailjs/browser';
 import { InfinityLoader } from '@components/InfinityLoader';
 import { SnackBar } from '@components/SnackBar';
+import { useForm, SubmitHandler } from 'react-hook-form';
 
 export interface ISubscribeForm {
   placeholder: string;
   btnText: string;
 }
+export type TSubscribeEmail = {
+  user_email: string;
+};
 export default function SubscribeForm({ placeholder, btnText }: ISubscribeForm) {
-  const [emailValue, setEmailValue] = useState('');
+
   const [errorMessage, setErrorMessage] = useState<Error | null>(null);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState('');
   const form = useRef<HTMLFormElement | null>(null);
 
-  const sendEmail = async (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const emailData: Email = {
-      email: emailValue,
-    };
+  const {
+    register,
+    handleSubmit,
+    reset,
+    
+  } = useForm<TSubscribeEmail>({
+    mode: 'onChange',
+  });
+
+
+  const sendEmail: SubmitHandler<TSubscribeEmail> = async (data) => {
+
+    reset();
 
     try {
-      await emailSchema.validate(emailData);
+      await emailSchema.validate(data);
       setLoading(true);
       if (form.current === null) return;
+
       emailjs
-        .sendForm(
+        .send(
           process.env.NEXT_PUBLIC_SERVICE_ID ?? '',
           process.env.NEXT_PUBLIC_TEMPLATE_ID ?? '',
-          form.current,
+          data,
           process.env.NEXT_PUBLIC_PUBLIC_KEY,
         )
         .then((result) => {
           if (result.status === 200) {
-            setSuccess(`We have received you email: ${emailData.email}`);
-            setEmailValue('');
+            setSuccess(`We have received you email: ${data.user_email}`);
           }
         })
         .catch((error) => console.error(error))
@@ -47,28 +59,24 @@ export default function SubscribeForm({ placeholder, btnText }: ISubscribeForm) 
     } catch (error) {
       if (error instanceof Error) {
         console.error(error);
-        setEmailValue('');
         setErrorMessage(error);
       }
     }
   };
+  
+  const handleFocus = () => {
+    setErrorMessage(null)
+  }
 
-  const handleInput = (event: ChangeEvent<HTMLInputElement>) => {
-    setEmailValue(event.currentTarget.value);
-    if (errorMessage) {
-      setErrorMessage(null);
-    }
-  };
 
   return (
-    <form ref={form} className={style.submitForm} onSubmit={sendEmail} autoComplete='off'>
+    <form ref={form} className={style.submitForm} onSubmit={handleSubmit(sendEmail)} autoComplete='off'>
       <div className={style.inputWrapper}>
         <input
-          name='user_email'
-          value={emailValue}
           placeholder={placeholder}
           className={style.input}
-          onChange={handleInput}
+          onFocus={handleFocus}
+          {...register('user_email', { required: true })}
         />
         {errorMessage && <p className={style.errorMessage}>{errorMessage.message}</p>}
       </div>

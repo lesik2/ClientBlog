@@ -35,8 +35,7 @@ export default function InfinityScroll({ dictionary }: IInfinityScroll) {
 
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.6,
-    delay: 150,
+    threshold: 0.5,
   });
 
   useEffect(() => {

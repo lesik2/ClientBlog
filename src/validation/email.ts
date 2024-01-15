@@ -1,10 +1,10 @@
 import { object, string, InferType, ObjectSchema } from 'yup';
 
 type EmailSchemaType = ObjectSchema<{
-  email: string;
+  user_email: string;
 }>;
 export const emailSchema: EmailSchemaType = object({
-  email: string().email().required(),
+  user_email: string().email().required(),
 });
 
 export type Email = InferType<typeof emailSchema>;
