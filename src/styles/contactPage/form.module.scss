@@ -8,4 +8,13 @@
   justify-content: center;
   gap: 16px;
   margin-bottom: 70px;
+  .btnWrapper {
+    position: relative;
+    .loader {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
 }
