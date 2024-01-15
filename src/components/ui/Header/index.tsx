@@ -1,32 +1,26 @@
-'use client';
-
-import Link from 'next/link';
 import style from '@styles/ui/header.module.scss';
 import button from '@styles/ui/button.module.scss';
-import { usePathname } from 'next/navigation';
+import { LocaleType } from '@customTypes/locale';
 
-import { CONSTANTS, LINKS } from './constants';
+import { CONSTANTS } from './constants';
+import LocaleSwitcher from './LocaleSwitcher';
 
-export function Header() {
-  const pathname = usePathname();
+import { Navigation } from '../Navigation';
+
+import { getDictionary } from '@/lib/dictionary';
+
+export default async function Header({ lang }: LocaleType) {
+  const { navigation, stepByStep } = await getDictionary(lang);
+  const nameOfLinks = Object.values(navigation);
 
   return (
     <header className={style.header}>
       <p className={style.title}>{CONSTANTS.title}</p>
+      <LocaleSwitcher />
       <div className={style.wrapper}>
-        <nav>
-          <ul className={style.list}>
-            {LINKS.map((link) => (
-              <li key={link.name}>
-                <Link className={`${pathname === link.to ? style.active : ''} ${style.link}`} href={link.to}>
-                  {link.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <Navigation type='header' nameOfLinks={nameOfLinks} />
         <button type='button' className={button.secondary}>
-          {CONSTANTS.btn}
+          {stepByStep.btn}
         </button>
       </div>
     </header>

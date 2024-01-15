@@ -14,7 +14,11 @@
   line-height: 64px;
   letter-spacing: -2px;
 }
-
+%label {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
 .parag1 {
   @extend %body1;
 }

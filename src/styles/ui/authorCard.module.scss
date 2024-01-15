@@ -1,0 +1,42 @@
+@import '../ui/typography.module.scss';
+@import '../colors.module.scss';
+.wrapperCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 28px;
+  &:hover {
+    background-color: $white-pink-color;
+    cursor: pointer;
+  }
+  transition: background-color 0.3s;
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .icon {
+      border-radius: 50%;
+    }
+    .title {
+      color: $primary-color;
+      margin-top: 20px;
+    }
+    .description {
+      @extend %body2;
+      color: $light-gray-color;
+    }
+    .wrapperSocialLinks {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 20px;
+      .socialLink {
+        transition: transform 0.2;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

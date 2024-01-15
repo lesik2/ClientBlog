@@ -1,5 +1,5 @@
 @import '../colors.module.scss';
-@import '../ui/typography.module.scss';
+
 .header {
   padding: 0px 80px 0px 50px;
   display: flex;
@@ -7,7 +7,6 @@
   align-items: center;
   background-color: $primary-color;
   height: 80px;
-
   .title {
     color: $white-color;
     font-size: 24px;
@@ -19,24 +18,17 @@
     display: flex;
     align-items: center;
     gap: 32px;
-
-    .list {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-
-      .link {
-        @extend %body1;
-        color: $white-color;
-        text-decoration: none;
-      }
-      .active {
-        color: $secondary-color;
-        font-weight: 700;
-      }
-    }
+  }
+  .wrapperLocale {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+  }
+  .localeBtn {
+    padding: 7px;
+    width: 40px;
+    height: 40px;
   }
 }

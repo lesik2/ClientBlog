@@ -1,0 +1,93 @@
+@import '../ui/typography.module.scss';
+@import '../colors.module.scss';
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 80px 0px 80px;
+  .content {
+    display: flex;
+    background-color: $white-pink-color;
+    align-items: flex-start;
+    padding: 80px 174px 75px 112px;
+    justify-content: flex-start;
+    gap: 180px;
+    .wrapperInfo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+      margin-top: 12px;
+      &::after {
+        content: '';
+        position: absolute;
+        top: -17px;
+        right: -80px;
+        width: 1px;
+        height: 310px;
+        background: $light-gray-color;
+        opacity: 0.4;
+      }
+      .subtitle {
+        color: $primary-color;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+      }
+      .title {
+        color: $primary-color;
+        margin: 12px 0px 16px 0px;
+        width: 345px;
+      }
+      .infoDescription {
+        @extend %body1;
+        color: $primary-color;
+        width: 349px;
+      }
+    }
+
+    .wrapperBtn {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      position: absolute;
+      bottom: 3px;
+      right: -65px;
+
+      .prevBtn {
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $white-color;
+        border: none;
+        outline: none;
+        border-radius: 50%;
+        transition: transform 0.2s;
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+      .nextBtn {
+        width: 62px;
+        height: 62px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $primary-color;
+        border: none;
+        outline: none;
+        border-radius: 50%;
+        transition: transform 0.2s;
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}

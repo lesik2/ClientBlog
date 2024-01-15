@@ -1,45 +1,29 @@
-'use client';
-
 import style from '@styles/ui/footer.module.scss';
-import button from '@styles/ui/button.module.scss';
 import Image from 'next/image';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { ICONS } from '@constants/index';
+import { LocaleType } from '@customTypes/locale';
 
-import { CONSTANTS, LINKS, ICONS } from './constants';
+import { CONSTANTS } from './constants';
+import SubscribeForm from './components/SubscribeForm';
 
-export function Footer() {
-  const pathname = usePathname();
+import { Navigation } from '../Navigation';
+
+import { getDictionary } from '@/lib/dictionary';
+
+export default async function Footer({ lang }: LocaleType) {
+  const { navigation, footer } = await getDictionary(lang);
+  const nameOfLinks = Object.values(navigation);
 
   return (
     <footer className={style.footer}>
       <div className={style.content}>
         <div className={style.header}>
           <p className={style.title}>{CONSTANTS.title}</p>
-          <nav>
-            <ul className={style.list}>
-              {LINKS.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    className={`${pathname === link.to ? style.active : ''} ${style.link}`}
-                    href={link.to}
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
+          <Navigation type='footer' nameOfLinks={nameOfLinks} />
         </div>
-
         <div className={style.submitWrapper}>
-          <h2 className={style.subtitle}>{CONSTANTS.subtitle}</h2>
-          <div className={style.submitForm}>
-            <input placeholder={CONSTANTS.placeholder} className={style.input} />
-            <button className={button.primary} type='submit'>
-              {CONSTANTS.btn}
-            </button>
-          </div>
+          <h2 className={style.subtitle}>{footer.text}</h2>
+          <SubscribeForm placeholder={footer.placeholder} btnText={footer.btn} />
         </div>
         <div className={style.contactsWrapper}>
           <div className={style.contactsInfo}>
