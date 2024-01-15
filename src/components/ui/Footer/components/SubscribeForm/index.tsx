@@ -17,24 +17,16 @@ export type TSubscribeEmail = {
   user_email: string;
 };
 export default function SubscribeForm({ placeholder, btnText }: ISubscribeForm) {
-
   const [errorMessage, setErrorMessage] = useState<Error | null>(null);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState('');
   const form = useRef<HTMLFormElement | null>(null);
 
-  const {
-    register,
-    handleSubmit,
-    reset,
-    
-  } = useForm<TSubscribeEmail>({
+  const { register, handleSubmit, reset } = useForm<TSubscribeEmail>({
     mode: 'onChange',
   });
 
-
   const sendEmail: SubmitHandler<TSubscribeEmail> = async (data) => {
-
     reset();
 
     try {
@@ -63,11 +55,10 @@ export default function SubscribeForm({ placeholder, btnText }: ISubscribeForm) 
       }
     }
   };
-  
-  const handleFocus = () => {
-    setErrorMessage(null)
-  }
 
+  const handleFocus = () => {
+    setErrorMessage(null);
+  };
 
   return (
     <form ref={form} className={style.submitForm} onSubmit={handleSubmit(sendEmail)} autoComplete='off'>
