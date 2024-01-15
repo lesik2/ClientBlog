@@ -24,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang={params.lang}>
-      <body className={sen.className}>
+      <body className={`${sen.className}`}>
         <Header lang={params.lang} />
         <main>{children}</main>
         <Footer lang={params.lang} />
