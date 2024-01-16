@@ -1,14 +1,21 @@
 import style from '@styles/contactPage/contact.module.scss';
+import { LocaleType } from '@customTypes/locale';
+import { Dictionary, getDictionary } from '@lib/dictionary';
 
-import Form from './components/Form';
-import { MapComponent } from './components/Map';
+import Form from './components/Form/index';
+import { MapComponent } from './components/Map/index';
 
-export default function Contact() {
+
+export default async function Contact({ params: { lang } }: { params: LocaleType }) {
+
+  const dictionary: Dictionary = await getDictionary(lang);
+  const {contact} = dictionary;
+
   return (
     <section className={style.contactSection}>
       <header className={style.header}>
-        <p className={style.subtitle}>Contact us</p>
-        <h1 className={style.title}>Let’s Start a Conversation</h1>
+        <p className={style.subtitle}>{contact.headerSubtitle}</p>
+        <h1 className={style.title}>{contact.headerTitle}</h1>
         <p className={style.description}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
           et dolore magna aliqua. Ut enim ad minim.
@@ -16,18 +23,18 @@ export default function Contact() {
       </header>
       <div className={style.label}>
         <div className={style.infoCard}>
-          <p className={style.infoSubtitle}>Working hours</p>
-          <h5 className={style.infoTitle}>Monday To Friday</h5>
-          <h5 className={style.infoTitle}>9:00 AM to 8:00 PM</h5>
-          <p className={style.infoDescription}>Our Support Team is available 24/7</p>
+          <p className={style.infoSubtitle}>{contact.workTitle}</p>
+          <h5 className={style.infoTitle}>{contact.workDays}</h5>
+          <h5 className={style.infoTitle}>{contact.workTime}</h5>
+          <p className={style.infoDescription}>{contact.workDescription}</p>
         </div>
         <div className={style.infoCard}>
-          <p className={style.infoSubtitle}>Contact Us</p>
+          <p className={style.infoSubtitle}>{contact.headerSubtitle}</p>
           <h5 className={style.infoTitle}>020 7993 2905</h5>
           <p className={style.infoDescription}>hello@finsweet.com</p>
         </div>
       </div>
-      <Form />
+      <Form dictionary={dictionary}/>
       <MapComponent />
     </section>
   );

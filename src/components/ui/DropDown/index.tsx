@@ -8,17 +8,12 @@ import Image from 'next/image';
 export interface IDropDown {
   value: string;
   setValue: Dispatch<React.SetStateAction<string>>;
+  selectValues: string[];
 }
 
-export function DropDown({ value, setValue }: IDropDown) {
+export function DropDown({ value, setValue, selectValues }: IDropDown) {
   const [active, setActive] = useState(false);
-  const values = [
-    'Query Related',
-    'Confirmation Message',
-    'Status Update Message',
-    'Resolution Message',
-    'Apology Message',
-  ];
+
 
   const handleClick = () => {
     setActive(!active);
@@ -42,7 +37,7 @@ export function DropDown({ value, setValue }: IDropDown) {
         <Image src='/icons/arrow.svg' alt='arrow' width={14} height={8} />
       </button>
       <ul ref={listRef} className={`${active ? style.listActive : ''} ${style.list}`}>
-        {values.map((item) => (
+        {selectValues.map((item) => (
           <li key={item} onClick={() => handleSelect(item)} className={style.itemList}>
             {item}
           </li>

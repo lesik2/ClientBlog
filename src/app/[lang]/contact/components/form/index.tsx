@@ -10,14 +10,17 @@ import { UserRegularExpression } from '@validation/user';
 import { InfinityLoader } from '@components/InfinityLoader';
 import emailjs from '@emailjs/browser';
 import { SnackBar } from '@components/SnackBar';
+import { Dictionary } from '@lib/dictionary';
 
 export type TMessageEmail = {
   user_name: string;
   user_email: string;
   message: string;
 };
-export default function Form() {
-  const [selectValue, setSelectValue] = useState('Query Related');
+export default function Form({ dictionary }: { dictionary: Dictionary }) {
+  const {contactForm} = dictionary;
+  const selectValues = contactForm.contactSelect.split(',') as string[];
+  const [selectValue, setSelectValue] = useState(selectValues[0]);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState('');
   const {
@@ -43,7 +46,7 @@ export default function Form() {
       )
       .then((result) => {
         if (result.status === 200) {
-          setSuccess(`We have received you message. And contact you as soon as possible`);
+          setSuccess(contactForm.successMessage as string);
         }
       })
       .catch((error) => console.error(error))
@@ -56,12 +59,12 @@ export default function Form() {
         <div className={inputStyle.inputWrapper}>
           <input
             className={inputStyle.contactInput}
-            placeholder='Full Name'
+            placeholder={contactForm.placeholderName as string}
             {...register('user_name', {
               required: true,
               pattern: {
                 value: UserRegularExpression.fullName,
-                message: 'Invalid input. Please enter letters or(and) spaces.',
+                message: contactForm.errorMessageName as string,
               },
             })}
           />
@@ -70,27 +73,27 @@ export default function Form() {
         <div className={inputStyle.inputWrapper}>
           <input
             className={inputStyle.contactInput}
-            placeholder='Your Email'
+            placeholder={contactForm.placeholderEmail as string}
             {...register('user_email', {
               required: true,
               pattern: {
                 value: UserRegularExpression.email,
-                message: 'Invalid email address.',
+                message: contactForm.errorMessageEmail as string,
               },
             })}
           />
           {errors.user_email && <p className={inputStyle.errorMessage}>{errors.user_email.message}</p>}
         </div>
-        <DropDown value={selectValue} setValue={setSelectValue} />
+        <DropDown value={selectValue} setValue={setSelectValue} selectValues={selectValues} />
         <div className={inputStyle.inputWrapper}>
           <textarea
             className={`${inputStyle.contactInput} ${inputStyle.contactTextArea}`}
-            placeholder='Message'
+            placeholder={contactForm.placeholderMessage as string}
             {...register('message', {
               required: true,
               minLength: {
                 value: 10,
-                message: 'Your message should include at least 10 symbols.',
+                message:  contactForm.errorMessageMessage as string,
               },
             })}
           />
@@ -98,7 +101,7 @@ export default function Form() {
         </div>
         <div className={style.btnWrapper}>
           <button type='submit' className={buttonStyle.formPrimary} disabled={!isValid}>
-            Send Message
+            {contactForm.btn}
           </button>
           {loading && (
             <div className={style.loader}>
