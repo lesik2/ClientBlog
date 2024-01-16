@@ -1,12 +1,18 @@
 import style from '@styles/aboutUsPage/aboutUs.module.scss';
+import JoinOurTeam from '@components/JoinOurTeam';
+import { LocaleType } from '@customTypes/locale';
+import { Dictionary, getDictionary } from '@lib/dictionary';
 
 import Header from './components/Header';
 import Overview from './components/Overview';
 import MissionVision from './components/MissionVision';
 import OurTeam from './components/OurTeam';
 import WhyStarted from './components/WhyStarted';
+import Authors from './components/Authors';
 
-export default function AboutUs() {
+export default async function AboutUs({ params: { lang } }: { params: LocaleType }) {
+  const dictionary: Dictionary = await getDictionary(lang);
+
   return (
     <section className={style.aboutSection}>
       <div className={style.content}>
@@ -15,6 +21,8 @@ export default function AboutUs() {
         <MissionVision />
         <OurTeam />
         <WhyStarted />
+        <Authors />
+        <JoinOurTeam  dictionary={dictionary}/>
       </div>
     </section>
   );

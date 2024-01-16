@@ -5,6 +5,9 @@
   align-items: center;
   justify-content: center;
   padding: 40px 28px;
+  width: 296px;
+  height: 324px;
+  background-color: $white-dark-gray-color;
   &:hover {
     background-color: $white-pink-color;
     cursor: pointer;
@@ -24,6 +27,7 @@
     }
     .description {
       @extend %body2;
+      font-family: var(--font-inter);
       color: $light-gray-color;
     }
     .wrapperSocialLinks {

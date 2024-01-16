@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { sen } from '@lib/fonts';
+import { sen, inter } from '@lib/fonts';
 import '@styles/global.scss';
 import Header from '@components/ui/Header';
 import Footer from '@components/ui/Footer';
@@ -24,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang={params.lang}>
-      <body className={`${sen.className}`}>
+      <body className={`${sen.className} ${inter.variable}`}>
         <Header lang={params.lang} />
         <main>{children}</main>
         <Footer lang={params.lang} />

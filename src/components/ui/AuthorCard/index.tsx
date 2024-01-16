@@ -16,8 +16,8 @@ export function AuthorCard({ title, description, iconSrc }: IAuthorCard) {
         <p className={style.description}>{description}</p>
         <div className={style.wrapperSocialLinks}>
           {ICONS.map((icon) => (
-            <a key={icon.src} className={style.socialLink} href='/'>
-              <Image {...icon} />
+            <a key={icon.src} className={`${style.socialLink}`} href='/'>
+              <Image  {...icon} />
             </a>
           ))}
         </div>
