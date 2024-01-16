@@ -14,7 +14,6 @@ export interface IDropDown {
 export function DropDown({ value, setValue, selectValues }: IDropDown) {
   const [active, setActive] = useState(false);
 
-
   const handleClick = () => {
     setActive(!active);
   };

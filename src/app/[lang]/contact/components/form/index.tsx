@@ -18,8 +18,8 @@ export type TMessageEmail = {
   message: string;
 };
 export default function Form({ dictionary }: { dictionary: Dictionary }) {
-  const {contactForm} = dictionary;
-  const selectValues = contactForm.contactSelect.split(',') as string[];
+  const { contactForm } = dictionary;
+  const selectValues = contactForm.contactSelect.split(',');
   const [selectValue, setSelectValue] = useState(selectValues[0]);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState('');
@@ -46,7 +46,7 @@ export default function Form({ dictionary }: { dictionary: Dictionary }) {
       )
       .then((result) => {
         if (result.status === 200) {
-          setSuccess(contactForm.successMessage as string);
+          setSuccess(contactForm.successMessage);
         }
       })
       .catch((error) => console.error(error))
@@ -59,12 +59,12 @@ export default function Form({ dictionary }: { dictionary: Dictionary }) {
         <div className={inputStyle.inputWrapper}>
           <input
             className={inputStyle.contactInput}
-            placeholder={contactForm.placeholderName as string}
+            placeholder={contactForm.placeholderName}
             {...register('user_name', {
               required: true,
               pattern: {
                 value: UserRegularExpression.fullName,
-                message: contactForm.errorMessageName as string,
+                message: contactForm.errorMessageName,
               },
             })}
           />
@@ -73,12 +73,12 @@ export default function Form({ dictionary }: { dictionary: Dictionary }) {
         <div className={inputStyle.inputWrapper}>
           <input
             className={inputStyle.contactInput}
-            placeholder={contactForm.placeholderEmail as string}
+            placeholder={contactForm.placeholderEmail}
             {...register('user_email', {
               required: true,
               pattern: {
                 value: UserRegularExpression.email,
-                message: contactForm.errorMessageEmail as string,
+                message: contactForm.errorMessageEmail,
               },
             })}
           />
@@ -88,12 +88,12 @@ export default function Form({ dictionary }: { dictionary: Dictionary }) {
         <div className={inputStyle.inputWrapper}>
           <textarea
             className={`${inputStyle.contactInput} ${inputStyle.contactTextArea}`}
-            placeholder={contactForm.placeholderMessage as string}
+            placeholder={contactForm.placeholderMessage}
             {...register('message', {
               required: true,
               minLength: {
                 value: 10,
-                message:  contactForm.errorMessageMessage as string,
+                message: contactForm.errorMessageMessage,
               },
             })}
           />
