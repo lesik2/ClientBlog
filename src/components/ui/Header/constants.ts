@@ -16,6 +16,6 @@ export const HEADER_LINKS = [
   },
   {
     name: 'Contact us',
-    to: '/contact-us',
+    to: '/contact',
   },
 ];

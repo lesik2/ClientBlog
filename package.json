@@ -17,6 +17,7 @@
     "@emailjs/browser": "^3.12.1",
     "@formatjs/intl-localematcher": "^0.5.2",
     "emailjs": "^4.0.3",
+    "mapbox-gl": "^3.0.1",
     "negotiator": "^0.6.3",
     "next": "14.0.4",
     "next-intl": "^3.4.2",
@@ -24,6 +25,7 @@
     "react-dom": "^18",
     "react-hook-form": "^7.49.3",
     "react-intersection-observer": "^9.5.3",
+    "react-map-gl": "^7.1.7",
     "yap": "^0.0.2"
   },
   "devDependencies": {
@@ -44,6 +46,7 @@
     "@storybook/nextjs": "7.6.7",
     "@storybook/react": "7.6.7",
     "@storybook/test": "7.6.7",
+    "@types/mapbox-gl": "^2.7.19",
     "@types/negotiator": "^0.6.3",
     "@types/node": "^20",
     "@types/react": "^18",

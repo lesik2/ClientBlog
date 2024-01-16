@@ -18,7 +18,7 @@ export const FOOTER_LINKS = [
   },
   {
     name: 'Contact us',
-    to: '/contact-us',
+    to: '/contact',
   },
   {
     name: 'Privacy Policy',

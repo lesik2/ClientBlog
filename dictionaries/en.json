@@ -55,5 +55,24 @@
   },
   "authorList": {
     "title": "List of Authors"
+  },
+  "contact": {
+    "headerSubtitle": "Contact us",
+    "headerTitle": "Let’s Start a Conversation",
+    "workTime": "9:00 AM to 8:00 PM",
+    "workDescription": "Our Support Team is available 24/7",
+    "workDays": "Monday To Friday",
+    "workTitle": "Working hours"
+  },
+  "contactForm": {
+    "placeholderName": "Full Name",
+    "errorMessageName": "Invalid input. Please enter letters and spaces.",
+    "placeholderEmail": "Your Email",
+    "errorMessageEmail": "Invalid email address.",
+    "placeholderMessage": "Message",
+    "errorMessageMessage": "Your message should include at least 10 symbols.",
+    "successMessage": "We have received you message. And contact you as soon as possible",
+    "btn": "Send Message",
+    "contactSelect": "Query Related,Confirmation Message,Status Update Message,Resolution Message,Apology Message"
   }
 }
