@@ -3,7 +3,7 @@ import style from '@styles/aboutUsPage/ourTeam.module.scss';
 import { Dictionary } from '@lib/dictionary';
 
 export default function OurTeam({ dictionary }: { dictionary: Dictionary }) {
-  const {aboutUsPage} = dictionary;
+  const { aboutUsPage } = dictionary;
 
   return (
     <section className={style.ourTeamSection}>

@@ -4,7 +4,7 @@ import { AuthorCard } from '@components/ui/AuthorCard';
 import { Dictionary } from '@lib/dictionary';
 
 export default function Authors({ dictionary }: { dictionary: Dictionary }) {
-  const {aboutUsPage} = dictionary;
+  const { aboutUsPage } = dictionary;
 
   return (
     <section className={style.authorsSection}>

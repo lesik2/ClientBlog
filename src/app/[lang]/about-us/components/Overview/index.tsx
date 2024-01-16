@@ -2,8 +2,8 @@ import { Dictionary } from '@lib/dictionary';
 import style from '@styles/aboutUsPage/overview.module.scss';
 
 export default function Overview({ dictionary }: { dictionary: Dictionary }) {
-  const {aboutUsPage} = dictionary;
-  
+  const { aboutUsPage } = dictionary;
+
   return (
     <section className={style.overviewSection}>
       <div className={style.overviewWrapper}>

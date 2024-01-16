@@ -3,11 +3,9 @@ import ourTeam from '@styles/aboutUsPage/ourTeam.module.scss';
 import Image from 'next/image';
 import { Dictionary } from '@lib/dictionary';
 
-
 export default function WhyStarted({ dictionary }: { dictionary: Dictionary }) {
-  
-  const {aboutUsPage} = dictionary;
-  
+  const { aboutUsPage } = dictionary;
+
   return (
     <section className={style.whyStartedSection}>
       <div className={style.content}>

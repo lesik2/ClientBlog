@@ -2,8 +2,8 @@ import { Dictionary } from '@lib/dictionary';
 import style from '@styles/aboutUsPage/header.module.scss';
 
 export default function Header({ dictionary }: { dictionary: Dictionary }) {
-  const {aboutUsPage} = dictionary;
-  
+  const { aboutUsPage } = dictionary;
+
   return (
     <header className={style.headerWrapper}>
       <div className={style.content}>
