@@ -2,8 +2,9 @@ import style from '@styles/contactPage/contact.module.scss';
 import { LocaleType } from '@customTypes/locale';
 import { Dictionary, getDictionary } from '@lib/dictionary';
 
-import Form from './components/Form/index';
+
 import { MapComponent } from './components/Map/index';
+import Form from './components/Form/index';
 
 export default async function Contact({ params: { lang } }: { params: LocaleType }) {
   const dictionary: Dictionary = await getDictionary(lang);
