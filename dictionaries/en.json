@@ -78,5 +78,19 @@
   "privacyPolicy": {
     "title": "Privacy Policy",
     "lastUpdate": "Last Updated on 27th January 2022"
+  },
+  "aboutUsPage":{
+    "headerSubtitle":"ABOUT US",
+    "headerTitle":"We are a team of content writers who share their learnings",
+    "blogs":"Blogs Published",
+    "views":"Views on Finsweet",
+    "users":"Total active Users",
+    "missionSubtitle":"Our mission",
+    "missionTitle":"Creating valuable content for creatives all around the world",
+    "visionSubtitle":"Our Vision",
+    "visionTitle":"A platform that empowers individuals to improve",
+    "ourTeamTitle":"Our team of creatives",
+    "whyStartedTitle":"Why we started this Blog",
+    "authorTitle":"List of Authors"
   }
 }

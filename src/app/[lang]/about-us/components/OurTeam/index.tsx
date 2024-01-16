@@ -1,12 +1,15 @@
 import Image from 'next/image';
 import style from '@styles/aboutUsPage/ourTeam.module.scss';
+import { Dictionary } from '@lib/dictionary';
 
-export default function OurTeam() {
+export default function OurTeam({ dictionary }: { dictionary: Dictionary }) {
+  const {aboutUsPage} = dictionary;
+
   return (
     <section className={style.ourTeamSection}>
       <div className={style.content}>
         <div className={style.infoWrapper}>
-          <h2 className={style.title}>Our team of creatives</h2>
+          <h2 className={style.title}>{aboutUsPage.ourTeamTitle}</h2>
           <h3 className={style.subtitle}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
           </h3>

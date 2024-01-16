@@ -6,7 +6,7 @@ import { AuthorCard } from '../ui/AuthorCard';
 
 export default function AuthorsList({ dictionary }: { dictionary: Dictionary }) {
   const { authorList } = dictionary;
-  const cards = AUTHORS_CARDS.slice(0,4);
+  const cards = AUTHORS_CARDS.slice(0, 4);
 
   return (
     <section className={style.wrapper}>

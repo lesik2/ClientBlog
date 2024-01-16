@@ -1,12 +1,15 @@
+import { Dictionary } from '@lib/dictionary';
 import style from '@styles/aboutUsPage/header.module.scss';
 
-export default function Header() {
+export default function Header({ dictionary }: { dictionary: Dictionary }) {
+  const {aboutUsPage} = dictionary;
+  
   return (
     <header className={style.headerWrapper}>
       <div className={style.content}>
         <div className={style.aboutWrapper}>
-          <p className={style.subtitle}>ABOUT US</p>
-          <h1 className={style.title}>We are a team of content writers who share their learnings</h1>
+          <p className={style.subtitle}>{aboutUsPage.headerSubtitle}</p>
+          <h1 className={style.title}>{aboutUsPage.headerTitle}</h1>
         </div>
         <div className={style.description}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore

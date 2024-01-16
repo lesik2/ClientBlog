@@ -1,12 +1,15 @@
+import { Dictionary } from '@lib/dictionary';
 import style from '@styles/aboutUsPage/missionVision.module.scss';
 
-export default function MissionVision() {
+export default function MissionVision({ dictionary }: { dictionary: Dictionary }) {
+  const {aboutUsPage} = dictionary;
+
   return (
     <section className={style.missionVisionSection}>
       <div className={style.content}>
         <div className={style.infoWrapper}>
-          <p className={style.subtitle}>Our mission</p>
-          <h3 className={style.title}>Creating valuable content for creatives all around the world</h3>
+          <p className={style.subtitle}>{aboutUsPage.missionSubtitle}</p>
+          <h3 className={style.title}>{aboutUsPage.missionTitle}</h3>
           <p className={style.description}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
             labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam
@@ -14,8 +17,8 @@ export default function MissionVision() {
           </p>
         </div>
         <div className={style.infoWrapper}>
-          <p className={style.subtitle}>Our Vision</p>
-          <h3 className={style.title}>A platform that empowers individuals to improve</h3>
+          <p className={style.subtitle}>{aboutUsPage.visionSubtitle}</p>
+          <h3 className={style.title}>{aboutUsPage.visionTitle}</h3>
           <p className={style.description}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
             labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam

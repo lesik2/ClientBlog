@@ -16,13 +16,13 @@ export default async function AboutUs({ params: { lang } }: { params: LocaleType
   return (
     <section className={style.aboutSection}>
       <div className={style.content}>
-        <Header />
-        <Overview />
-        <MissionVision />
-        <OurTeam />
-        <WhyStarted />
-        <Authors />
-        <JoinOurTeam  dictionary={dictionary}/>
+        <Header dictionary={dictionary}/>
+        <Overview dictionary={dictionary}/>
+        <MissionVision dictionary={dictionary}/>
+        <OurTeam dictionary={dictionary}/>
+        <WhyStarted dictionary={dictionary}/>
+        <Authors dictionary={dictionary}/>
+        <JoinOurTeam dictionary={dictionary} />
       </div>
     </section>
   );

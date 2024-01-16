@@ -13,7 +13,6 @@ export function Navigation({ type, nameOfLinks }: INavigation) {
   const paths = `/${pathname.split('/').slice(2).join('')}`;
 
   const links = type === 'footer' ? FOOTER_LINKS : HEADER_LINKS;
- 
 
   return (
     <nav>
