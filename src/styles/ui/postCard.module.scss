@@ -1,0 +1,29 @@
+@import '../ui/typography.module.scss';
+@import '../colors.module.scss';
+
+.postCardArticle {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  justify-content: center;
+  .infoWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .tags {
+      @extend %cap;
+      color: $third-color;
+    }
+    .title {
+      color: $primary-color;
+      margin-top: 20px 0px 16px 0px;
+      width: 602px;
+    }
+    .description {
+      width: 624px;
+      @extend %body1;
+      color: $light-gray-color;
+    }
+  }
+}
