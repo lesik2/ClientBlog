@@ -4,7 +4,7 @@ import { Dictionary, getDictionary } from '@lib/dictionary';
 
 
 import { MapComponent } from './components/Map/index';
-import {FormComponent} from './components/Form/index';
+import {FormComponent} from './components/FormComponent/index';
 
 export default async function Contact({ params: { lang } }: { params: LocaleType }) {
   const dictionary: Dictionary = await getDictionary(lang);
