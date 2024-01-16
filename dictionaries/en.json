@@ -74,5 +74,9 @@
     "successMessage": "We have received you message. And contact you as soon as possible",
     "btn": "Send Message",
     "contactSelect": "Query Related,Confirmation Message,Status Update Message,Resolution Message,Apology Message"
+  },
+  "privacyPolicy":{
+    "title":"Privacy Policy",
+    "lastUpdate":"Last Updated on 27th January 2022"
   }
 }

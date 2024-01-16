@@ -17,7 +17,7 @@ export type TMessageEmail = {
   user_email: string;
   message: string;
 };
-export  function FormComponent({ dictionary }: { dictionary: Dictionary }) {
+export function FormComponent({ dictionary }: { dictionary: Dictionary }) {
   const { contactForm } = dictionary;
   const selectValues = contactForm.contactSelect.split(',');
   const [selectValue, setSelectValue] = useState(selectValues[0]);
@@ -54,7 +54,7 @@ export  function FormComponent({ dictionary }: { dictionary: Dictionary }) {
   };
 
   return (
-    <section className={style.sectionWrapper}>
+    <div className={style.sectionWrapper}>
       <form onSubmit={handleSubmit(onSubmit)} autoComplete='off' className={style.formWrapper}>
         <div className={inputStyle.inputWrapper}>
           <input
@@ -111,6 +111,6 @@ export  function FormComponent({ dictionary }: { dictionary: Dictionary }) {
           {success && <SnackBar message={success} />}
         </div>
       </form>
-    </section>
+    </div>
   );
 }
