@@ -18,8 +18,8 @@ export default function Overview() {
         </div>
       </div>
       <div className={style.designWrapper}>
-        <div className={style.first}/>
-        <div className={style.second}/>
+        <div className={style.first} />
+        <div className={style.second} />
       </div>
     </section>
   );
