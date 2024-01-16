@@ -4,7 +4,7 @@ import { Dictionary, getDictionary } from '@lib/dictionary';
 
 
 import { MapComponent } from './components/Map/index';
-import Form from './components/Form/index';
+import {FormComponent} from './components/Form/index';
 
 export default async function Contact({ params: { lang } }: { params: LocaleType }) {
   const dictionary: Dictionary = await getDictionary(lang);
@@ -33,7 +33,7 @@ export default async function Contact({ params: { lang } }: { params: LocaleType
           <p className={style.infoDescription}>hello@finsweet.com</p>
         </div>
       </div>
-      <Form dictionary={dictionary} />
+      <FormComponent dictionary={dictionary} />
       <MapComponent />
     </section>
   );

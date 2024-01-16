@@ -17,7 +17,7 @@ export type TMessageEmail = {
   user_email: string;
   message: string;
 };
-export default function Form({ dictionary }: { dictionary: Dictionary }) {
+export  function FormComponent({ dictionary }: { dictionary: Dictionary }) {
   const { contactForm } = dictionary;
   const selectValues = contactForm.contactSelect.split(',');
   const [selectValue, setSelectValue] = useState(selectValues[0]);
