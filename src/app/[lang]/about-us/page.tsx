@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Overview from './components/Overview';
 import MissionVision from './components/MissionVision';
 import OurTeam from './components/OurTeam';
+import WhyStarted from './components/WhyStarted';
 
 export default function AboutUs() {
   return (
@@ -13,6 +14,7 @@ export default function AboutUs() {
         <Overview />
         <MissionVision />
         <OurTeam />
+        <WhyStarted />
       </div>
     </section>
   );

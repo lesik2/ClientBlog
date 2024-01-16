@@ -6,26 +6,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
   .content {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 137px;
-    .infoWrapper {
-      .description {
-        width: 519px;
-        @extend %body1;
-        color: $primary-color;
-      }
-      .title {
-        color: #232536;
-      }
-      .subtitle {
-        width: 519px;
-        color: $primary-color;
-        margin: 16px 0px;
-      }
-    }
     .imageContent {
       position: relative;
       &::before {
@@ -39,5 +25,20 @@
         border-radius: 50px 0px 0px 0px;
       }
     }
+  }
+}
+.infoWrapper {
+  .description {
+    width: 519px;
+    @extend %body1;
+    color: $primary-color;
+  }
+  .title {
+    color: #232536;
+  }
+  .subtitle {
+    width: 519px;
+    color: $primary-color;
+    margin: 16px 0px;
   }
 }
