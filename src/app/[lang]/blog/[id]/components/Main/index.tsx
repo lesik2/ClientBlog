@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import style from '@styles/blogPost/main.module.scss';
 
-export default function Main({imageSrc}: {imageSrc: string}) {
+export default function Main({ imageSrc }: { imageSrc: string }) {
   return (
     <main className={style.mainSection}>
       <Image className={style.image} src={imageSrc} alt='post' width={1280} height={582} />

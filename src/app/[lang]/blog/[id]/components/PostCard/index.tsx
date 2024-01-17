@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ROUTES } from '@constants/routes';
 
-export default function PostCard({ imageSrc,  title, description, id }: IPostCard) {
+export default function PostCard({ imageSrc, title, description, id }: IPostCard) {
   return (
     <Link href={`${ROUTES.blog}/${id}`}>
       <article className={style.postCardSection}>
@@ -16,6 +16,5 @@ export default function PostCard({ imageSrc,  title, description, id }: IPostCar
         <p className={style.description}>{description}</p>
       </article>
     </Link>
-    
   );
 }

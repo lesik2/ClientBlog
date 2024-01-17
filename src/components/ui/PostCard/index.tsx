@@ -13,13 +13,12 @@ export default function PostCard({ imageSrc, tags, title, description, size = 'd
       <article
         className={`${size === 'medium' ? style.postCardArticleMedium : ''} ${style.postCardArticleDefault}`}
       >
-        
         <Image src={imageSrc} alt='post image' width={width} height={318} />
-          <div className={style.infoWrapper}>
-            <p className={style.tags}>{tags.join(' ')}</p>
-            <h2 className={style.title}>{title}</h2>
-            <p className={style.description}>{description}</p>
-          </div>
+        <div className={style.infoWrapper}>
+          <p className={style.tags}>{tags.join(' ')}</p>
+          <h2 className={style.title}>{title}</h2>
+          <p className={style.description}>{description}</p>
+        </div>
       </article>
     </Link>
   );
