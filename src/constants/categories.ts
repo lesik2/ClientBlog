@@ -1,22 +1,24 @@
-export const CARDS = [
+import { ICategoryCard } from '@customTypes/models';
+
+export const CATEGORIES: ICategoryCard[] = [
   {
     iconSrc: '/icons/businessCard.svg',
-    title: 'Business',
+    category: 'Business',
     description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
   },
   {
     iconSrc: '/icons/startupCard.svg',
-    title: 'Startup',
+    category: 'Startup',
     description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
   },
   {
     iconSrc: '/icons/economyCard.svg',
-    title: 'Economy',
+    category: 'Economy',
     description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
   },
   {
     iconSrc: '/icons/technologyCard.svg',
-    title: 'Technology',
+    category: 'Technology',
     description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
   },
 ];

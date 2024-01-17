@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import style from '@styles/blog/header.module.scss';
+import style from '@styles/blogPage/header.module.scss';
 import buttonStyle from '@styles/ui/button.module.scss';
 import Link from 'next/link';
 

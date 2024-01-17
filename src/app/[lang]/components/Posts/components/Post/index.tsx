@@ -1,5 +1,5 @@
 import { IPost } from '@customTypes/index';
-import style from '@styles/home/post.module.scss';
+import style from '@styles/homePage/post.module.scss';
 
 export function Post({ title, author, date }: IPost) {
   return (

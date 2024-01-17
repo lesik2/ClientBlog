@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import style from '@styles/home/specialPost.module.scss';
+import style from '@styles/homePage/specialPost.module.scss';
 import button from '@styles/ui/button.module.scss';
 import Link from 'next/link';
 import { ROUTES } from '@constants/routes';

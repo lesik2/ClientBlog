@@ -1,4 +1,4 @@
-import style from '@styles/home/featuredPosts.module.scss';
+import style from '@styles/homePage/featuredPosts.module.scss';
 import Link from 'next/link';
 import { ROUTES } from '@constants/routes';
 import button from '@styles/ui/button.module.scss';

@@ -1,11 +1,10 @@
-import style from '@styles/home/testimonials.module.scss';
+import style from '@styles/homePage/testimonials.module.scss';
 import { Dictionary } from '@lib/dictionary';
 import Slider from '@components/ui/Slider';
 
 import { REVIEW_CARDS } from './constants';
 import ReviewCard from './components/ReviewCard';
 import WrapperButtons from './components/WrapperButtons';
-
 
 export default function Testimonials({ dictionary }: { dictionary: Dictionary }) {
   const { testimonials } = dictionary;

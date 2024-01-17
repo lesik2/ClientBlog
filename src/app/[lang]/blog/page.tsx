@@ -1,4 +1,4 @@
-import style from '@styles/blog/blog.module.scss';
+import style from '@styles/blogPage/blog.module.scss';
 
 import Header from './components/Header';
 import Posts from './components/Posts';

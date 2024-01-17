@@ -1,4 +1,4 @@
-export const ICONS = [
+export const SOCIAL_ICONS = [
   {
     src: '/icons/facebook.svg',
     width: 16,

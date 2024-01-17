@@ -3,8 +3,8 @@
 import JoinOurTeam from '@components/JoinOurTeam';
 import { useInView } from 'react-intersection-observer';
 import { useEffect, useState } from 'react';
-import style from '@styles/home/infinityScroll.module.scss';
-import { Dictionary } from '@lib/dictionary';
+import style from '@styles/homePage/infinityScroll.module.scss';
+
 
 import Posts from '../Posts';
 import SpecialPost from '../SpecialPost';
@@ -15,9 +15,8 @@ import Testimonials from '../Testimonials';
 import Logo from '../Logo';
 import StepByStep from '../StepByStep';
 
-export interface IInfinityScroll {
-  dictionary: Dictionary;
-}
+import { IInfinityScroll } from '@/types';
+
 
 export default function InfinityScroll({ dictionary }: IInfinityScroll) {
   const components = [

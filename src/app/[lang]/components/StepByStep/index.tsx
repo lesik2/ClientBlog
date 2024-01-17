@@ -1,5 +1,5 @@
 import button from '@styles/ui/button.module.scss';
-import style from '@styles/home/stepByStep.module.scss';
+import style from '@styles/homePage/stepByStep.module.scss';
 import Link from 'next/link';
 import { ROUTES } from '@constants/routes';
 import { Dictionary } from '@lib/dictionary';

@@ -1,13 +1,8 @@
 import Image from 'next/image';
 import style from '@styles/ui/postCard.module.scss';
+import { IPostCard } from '@customTypes/models';
 
-export interface IPostCard {
-  imageSrc: string;
-  tags: string[];
-  title: string;
-  description: string;
-  size?: 'default' | 'medium' | 'small';
-}
+
 export default function PostCard({ imageSrc, tags, title, description, size = 'default' }: IPostCard) {
   const width = size === 'default' ? 490 : 412;
 

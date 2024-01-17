@@ -10,14 +10,11 @@ import { UserRegularExpression } from '@validation/user';
 import emailjs from '@emailjs/browser';
 import { SnackBar } from '@components/ui/SnackBar';
 import { Dictionary } from '@lib/dictionary';
+import { TMessageEmail } from '@customTypes/index';
 
 import { InfinityLoader } from '@/components/ui/InfinityLoader';
 
-export type TMessageEmail = {
-  user_name: string;
-  user_email: string;
-  message: string;
-};
+
 export function FormComponent({ dictionary }: { dictionary: Dictionary }) {
   const { contactForm } = dictionary;
   const selectValues = contactForm.contactSelect.split(',');

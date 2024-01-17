@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { ROUTES } from '@constants/routes';
-import style from '@styles/home/aboutUs.module.scss';
+import style from '@styles/homePage/aboutUs.module.scss';
 import { Dictionary } from '@lib/dictionary';
 
 import { AboutDescription, MissionDescription } from './constants';

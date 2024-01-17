@@ -1,10 +1,7 @@
 import Image from 'next/image';
-import style from '@styles/home/testimonials.module.scss';
+import style from '@styles/homePage/testimonials.module.scss';
+import { IWrapperButtons } from '@customTypes/index';
 
-export interface IWrapperButtons {
-  handleClickNext: () => void;
-  handleClickPrev: () => void;
-}
 
 export default function WrapperButtons({ handleClickNext, handleClickPrev }: IWrapperButtons) {
   return (

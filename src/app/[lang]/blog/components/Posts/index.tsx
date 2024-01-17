@@ -1,16 +1,15 @@
 'use client';
 
-import style from '@styles/blog/posts.module.scss';
+import style from '@styles/blogPage/posts.module.scss';
 import PostCard from '@components/ui/PostCard';
 import { useState } from 'react';
-
-import { CARDS } from '@/constants/cards';
+import { POST_CARDS } from '@constants/cards';
 
 export default function Posts() {
   const [currentPage, setCurrentPage] = useState(0);
   const postsPerPage = 5;
 
-  const totalPages = Math.ceil(CARDS.length / postsPerPage);
+  const totalPages = Math.ceil(POST_CARDS.length / postsPerPage);
 
   const handleNextPage = () => {
     setCurrentPage((prevPage) => prevPage + 1);
@@ -24,9 +23,9 @@ export default function Posts() {
     const startIndex = currentPage * postsPerPage;
     const endIndex = startIndex + postsPerPage;
 
-    const slicedCards = CARDS.slice(startIndex, endIndex);
+    const slicedCards = POST_CARDS.slice(startIndex, endIndex);
 
-    return slicedCards.map((postCard, index) => <PostCard key={index} {...postCard} />);
+    return slicedCards.map((postCard) => <PostCard key={postCard.id} {...postCard} />);
   };
 
   return (

@@ -9,13 +9,13 @@ import Posts from './components/Posts';
 
 export default async function BlogPost({ params: { lang } }: { params: LocaleType }) {
   const dictionary: Dictionary = await getDictionary(lang);
-  
+
   return (
     <section className={style.blogPostSection}>
       <Header />
       <Main />
       <Posts />
-      <JoinOurTeam dictionary={dictionary}/>
+      <JoinOurTeam dictionary={dictionary} />
     </section>
   );
 }

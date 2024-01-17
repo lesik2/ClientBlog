@@ -1,4 +1,4 @@
-import style from '@styles/home/logo.module.scss';
+import style from '@styles/homePage/logo.module.scss';
 import Image from 'next/image';
 import { Dictionary } from '@lib/dictionary';
 
