@@ -1,5 +1,6 @@
 import { LocaleType } from '@customTypes/locale';
-import InfinityScroll from '@components/InfinityScroll';
+
+import InfinityScroll from './components/InfinityScroll';
 
 import { Dictionary, getDictionary } from '@/lib/dictionary';
 

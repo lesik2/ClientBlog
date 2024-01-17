@@ -1,18 +1,19 @@
 'use client';
 
-import About from '@components/About';
-import Posts from '@components/Posts';
-import StepByStep from '@components/StepByStep';
-import ChooseCategory from '@components/ChooseCategory';
-import AuthorsList from '@components/AuthorsList';
-import SpecialPost from '@components/SpecialPost';
 import JoinOurTeam from '@components/JoinOurTeam';
-import Logo from '@components/Logo';
-import Testimonials from '@components/Testimonials';
 import { useInView } from 'react-intersection-observer';
 import { useEffect, useState } from 'react';
 import style from '@styles/home/infinityScroll.module.scss';
 import { Dictionary } from '@lib/dictionary';
+
+import Posts from '../Posts';
+import SpecialPost from '../SpecialPost';
+import ChooseCategory from '../ChooseCategory';
+import AuthorsList from '../AuthorsList';
+import About from '../About';
+import Testimonials from '../Testimonials';
+import Logo from '../Logo';
+import StepByStep from '../StepByStep';
 
 export interface IInfinityScroll {
   dictionary: Dictionary;

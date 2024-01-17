@@ -1,8 +1,7 @@
 import style from '@styles/home/authorList.module.scss';
 import { Dictionary } from '@lib/dictionary';
 import { AUTHORS_CARDS } from '@constants/authors';
-
-import { AuthorCard } from '../ui/AuthorCard';
+import { AuthorCard } from '@components/ui/AuthorCard';
 
 export default function AuthorsList({ dictionary }: { dictionary: Dictionary }) {
   const { authorList } = dictionary;

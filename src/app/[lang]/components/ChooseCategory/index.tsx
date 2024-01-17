@@ -1,9 +1,9 @@
 import style from '@styles/home/chooseCategory.module.scss';
 import { Dictionary } from '@lib/dictionary';
+import CategoryCard from '@components/ui/CategoryCard';
 
 import { CARDS } from './constants';
 
-import CategoryCard from '../ui/CategoryCard';
 
 export default function ChooseCategory({ dictionary }: { dictionary: Dictionary }) {
   const { chooseCategory } = dictionary;
