@@ -18,7 +18,7 @@ export default function Header() {
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur. Excepteur sint occaecat cupidatat non proident.
         </p>
-        <Link href={ROUTES.blogPost}>
+        <Link href={`${ROUTES.blog}/1`}>
           <button type='button' className={buttonStyle.primary}>
             Read More {'>'}
           </button>

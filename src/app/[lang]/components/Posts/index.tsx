@@ -27,7 +27,7 @@ export default function Posts({ dictionary }: { dictionary: Dictionary }) {
               </p>
               <h3 className={style.subtitle}>{CONSTANTS.subtitle}</h3>
               <p className={style.description}>{CONSTANTS.description}</p>
-              <Link href={ROUTES.blogPost} className={style.link}>
+              <Link href={`${ROUTES.blog}/1`} className={style.link}>
                 <button type='button' className={button.primary}>
                   {posts.btn}
                 </button>

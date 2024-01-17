@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import style from '@styles/blogPost/main.module.scss';
 
-export default function Main() {
+export default function Main({imageSrc}: {imageSrc: string}) {
   return (
     <main className={style.mainSection}>
-      <Image className={style.image} src='/images/blogPostBack.png' alt='post' width={1280} height={582} />
+      <Image className={style.image} src={imageSrc} alt='post' width={1280} height={582} />
       <div className={style.content}>
         <article className={style.article}>
           <h2 className={style.title}>

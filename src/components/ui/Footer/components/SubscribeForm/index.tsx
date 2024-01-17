@@ -11,7 +11,6 @@ import { ISubscribeForm, TSubscribeEmail } from '@customTypes/index';
 
 import { InfinityLoader } from '@/components/ui/InfinityLoader';
 
-
 export default function SubscribeForm({ placeholder, btnText }: ISubscribeForm) {
   const [errorMessage, setErrorMessage] = useState<Error | null>(null);
   const [loading, setLoading] = useState(false);

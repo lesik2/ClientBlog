@@ -2,7 +2,6 @@ import { ICategoryCard } from '@customTypes/models';
 import style from '@styles/ui/categoryCard.module.scss';
 import Image from 'next/image';
 
-
 export default function CategoryCard({ iconSrc, category, description }: ICategoryCard) {
   return (
     <div className={style.cardWrapper}>

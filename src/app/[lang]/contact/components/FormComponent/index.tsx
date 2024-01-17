@@ -14,7 +14,6 @@ import { TMessageEmail } from '@customTypes/index';
 
 import { InfinityLoader } from '@/components/ui/InfinityLoader';
 
-
 export function FormComponent({ dictionary }: { dictionary: Dictionary }) {
   const { contactForm } = dictionary;
   const selectValues = contactForm.contactSelect.split(',');

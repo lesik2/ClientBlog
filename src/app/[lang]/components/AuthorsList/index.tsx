@@ -1,11 +1,9 @@
 import style from '@styles/homePage/authorList.module.scss';
 import { Dictionary } from '@lib/dictionary';
 import { AuthorCard } from '@components/ui/AuthorCard';
-import {AUTHORS} from '@constants/authors'
+import { AUTHORS } from '@constants/authors';
 
-
-export default function AuthorsList(
-  { dictionary}: { dictionary: Dictionary }) {
+export default function AuthorsList({ dictionary }: { dictionary: Dictionary }) {
   const { authorList } = dictionary;
   const cards = AUTHORS.slice(0, 4);
 
@@ -22,5 +20,3 @@ export default function AuthorsList(
     </section>
   );
 }
- 
-

@@ -2,7 +2,6 @@ import Image from 'next/image';
 import style from '@styles/homePage/testimonials.module.scss';
 import { IWrapperButtons } from '@customTypes/index';
 
-
 export default function WrapperButtons({ handleClickNext, handleClickPrev }: IWrapperButtons) {
   return (
     <div className={style.wrapperBtn}>

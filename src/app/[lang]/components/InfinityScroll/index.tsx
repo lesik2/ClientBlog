@@ -5,7 +5,6 @@ import { useInView } from 'react-intersection-observer';
 import { useEffect, useState } from 'react';
 import style from '@styles/homePage/infinityScroll.module.scss';
 
-
 import Posts from '../Posts';
 import SpecialPost from '../SpecialPost';
 import ChooseCategory from '../ChooseCategory';
@@ -16,7 +15,6 @@ import Logo from '../Logo';
 import StepByStep from '../StepByStep';
 
 import { IInfinityScroll } from '@/types';
-
 
 export default function InfinityScroll({ dictionary }: IInfinityScroll) {
   const components = [

@@ -1,6 +1,9 @@
 import { Dispatch, FC, ReactNode } from 'react';
 
+import { IAuthor, IPostCard } from './models';
+
 import { Dictionary } from '@/lib/dictionary';
+import { Locale } from '@/i18n.config';
 
 export interface IPost {
   title: string;
@@ -48,10 +51,13 @@ export interface IReviewCard {
   userAddress: string;
 }
 
-export interface IBlogPostCard {
-  imageSrc: string;
-  author: string;
-  date: string;
-  title: string;
-  description: string;
+export interface IBlogPost {
+  params: {
+    lang: Locale;
+    id: string;
+  };
+}
+export interface IHeaderBlogPost {
+  author: IAuthor;
+  post: IPostCard;
 }

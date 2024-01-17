@@ -2,8 +2,6 @@ import { IReviewCard } from '@customTypes/index';
 import style from '@styles/homePage/reviewCard.module.scss';
 import Image from 'next/image';
 
-
-
 export default function ReviewCard({ iconSrc, text, userName, userAddress }: IReviewCard) {
   return (
     <div className={style.wrapperReviewCard}>

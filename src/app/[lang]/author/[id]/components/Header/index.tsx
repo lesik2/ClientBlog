@@ -5,12 +5,9 @@ import style from '@styles/authorPage/header.module.scss';
 import { SOCIAL_ICONS } from '@constants/socialIcons';
 import { IAuthor } from '@customTypes/models';
 
-
-
-export default function Header({author}: {author: IAuthor}) {
-
+export default function Header({ author }: { author: IAuthor }) {
   return (
-      <header className={style.header}>
+    <header className={style.header}>
       <Image src={author.iconSrc} alt='author image' width={251} height={294} />
       <div className={style.infoWrapper}>
         <h1 className={style.title}>{`Hey there, I’m ${author.fullName} and welcome to my Blog`}</h1>
@@ -31,6 +28,6 @@ export default function Header({author}: {author: IAuthor}) {
         <div className={style.first} />
         <div className={style.second} />
       </div>
-    </header>    
+    </header>
   );
 }

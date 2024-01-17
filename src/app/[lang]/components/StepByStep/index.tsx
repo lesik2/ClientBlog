@@ -24,7 +24,7 @@ export default function StepByStep({ dictionary }: { dictionary: Dictionary }) {
           {stepByStep.date}
         </p>
         <p className={style.description}>{CONSTANTS.description}</p>
-        <Link className={style.link} href={ROUTES.blogPost}>
+        <Link className={style.link} href={`${ROUTES.blog}/1`}>
           <button type='button' className={button.primary}>
             {stepByStep.btn}
           </button>

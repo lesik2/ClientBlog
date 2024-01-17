@@ -1,11 +1,10 @@
 'use client';
 
-import {  useCallback, useState } from 'react';
+import { useCallback, useState } from 'react';
 import { useCloseList } from '@hooks/useCloseList';
 import style from '@styles/ui/dropDown.module.scss';
 import Image from 'next/image';
 import { IDropDown } from '@customTypes/index';
-
 
 export function DropDown({ value, setValue, selectValues }: IDropDown) {
   const [active, setActive] = useState(false);

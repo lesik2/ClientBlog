@@ -31,13 +31,15 @@
   .title {
     color: $primary-color;
   }
-  .categoryWrapper {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    justify-content: center;
-    .categoryTitle {
-      color: $primary-color;
+  .categories {
+    .categoryWrapper {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      justify-content: center;
+      .categoryTitle {
+        color: $primary-color;
+      }
     }
   }
 }
