@@ -7,10 +7,11 @@ import { useState } from 'react';
 import { DropDown } from '@components/ui/DropDown';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { UserRegularExpression } from '@validation/user';
-import { InfinityLoader } from '@/components/ui/InfinityLoader';
 import emailjs from '@emailjs/browser';
 import { SnackBar } from '@components/SnackBar';
 import { Dictionary } from '@lib/dictionary';
+
+import { InfinityLoader } from '@/components/ui/InfinityLoader';
 
 export type TMessageEmail = {
   user_name: string;

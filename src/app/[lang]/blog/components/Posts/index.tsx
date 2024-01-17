@@ -4,8 +4,8 @@ import style from '@styles/blog/posts.module.scss';
 import PostCard from '@components/ui/PostCard';
 import { useState } from 'react';
 
+import { CARDS } from '@/constants/cards';
 
-import { CARDS } from './constants';
 
 
 export default function Posts() {
@@ -28,11 +28,7 @@ export default function Posts() {
 
     const slicedCards = CARDS.slice(startIndex, endIndex);
 
-    return (
-        slicedCards.map((postCard, index) => (
-            <PostCard key={index} {...postCard} />
-        ))
-      )
+    return slicedCards.map((postCard, index) => <PostCard key={index} {...postCard} />);
   };
 
   return (
@@ -40,21 +36,20 @@ export default function Posts() {
       <div className={style.titleWrapper}>
         <h1 className={style.title}>All posts</h1>
       </div>
-      <div className={style.wrapperCards}>
-        {renderPostCards()}
-      </div>
+      <div className={style.wrapperCards}>{renderPostCards()}</div>
       <div className={style.wrapperButtons}>
-      <button className={style.button} type="button" onClick={handlePrevPage} disabled={currentPage===0}>
-        <h4>
-        {`< Prev `}
-        </h4>
-      </button>
-      <button className={style.button} type="button" onClick={handleNextPage} disabled={totalPages===currentPage+1}>
-        <h4>
-        {` Next > `}
-        </h4>
-      </button>
-    </div>
+        <button className={style.button} type='button' onClick={handlePrevPage} disabled={currentPage === 0}>
+          <h4>{`< Prev `}</h4>
+        </button>
+        <button
+          className={style.button}
+          type='button'
+          onClick={handleNextPage}
+          disabled={totalPages === currentPage + 1}
+        >
+          <h4>{` Next > `}</h4>
+        </button>
+      </div>
     </section>
-  )
+  );
 }

@@ -21,13 +21,12 @@ export default function Testimonials({ dictionary }: { dictionary: Dictionary })
           </p>
         </div>
         <div className={style.wrapperSlider}>
-        <Slider WrapperButtons={WrapperButtons}>
-          {REVIEW_CARDS.map((card, index) => (
-            <ReviewCard key={index} {...card} />
-          ))}
-        </Slider>
+          <Slider WrapperButtons={WrapperButtons}>
+            {REVIEW_CARDS.map((card, index) => (
+              <ReviewCard key={index} {...card} />
+            ))}
+          </Slider>
         </div>
-        
       </div>
     </div>
   );

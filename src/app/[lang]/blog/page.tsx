@@ -16,7 +16,7 @@ export default async function Blog({ params: { lang } }: { params: LocaleType })
       <Header />
       <Posts />
       <Categories />
-      <JoinOurTeam dictionary={dictionary}/>
+      <JoinOurTeam dictionary={dictionary} />
     </section>
   );
 }
