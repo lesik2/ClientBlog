@@ -1,0 +1,67 @@
+@import '../ui/typography.module.scss';
+@import '../colors.module.scss';
+
+.postsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 64px 78px 67px 81px;
+  width: 100%;
+  .titleWrapper {
+    width: 100%;
+    height: 96px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    &::before {
+      content: '';
+      left: 0px;
+      bottom: 0px;
+      opacity: 0.32;
+      height: 1px;
+      width: 100%;
+      position: absolute;
+      background-color: $light-gray-color;
+    }
+    margin-bottom: 64px;
+    .title {
+      color: $primary-color;
+    }
+  }
+  .wrapperCards {
+    width: 100%;
+    margin-bottom: 69px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 64px;
+  }
+
+  .wrapperButtons {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    margin-bottom: 67px;
+    gap: 17px;
+    .button {
+      color: $primary-color;
+      background-color: $white-color;
+      border: none;
+      outline: none;
+      transition: transform 0.2s;
+      &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+      &:disabled {
+        color: $light-gray-color;
+        cursor: default;
+        pointer-events: none;
+      }
+    }
+  }
+}
