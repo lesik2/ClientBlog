@@ -5,9 +5,10 @@ import button from '@styles/ui/button.module.scss';
 import { useState } from 'react';
 import { emailSchema } from '@validation/email';
 import emailjs from '@emailjs/browser';
-import { InfinityLoader } from '@components/InfinityLoader';
-import { SnackBar } from '@components/SnackBar';
+import { SnackBar } from '@components/ui/SnackBar';
 import { useForm, SubmitHandler } from 'react-hook-form';
+
+import { InfinityLoader } from '@/components/ui/InfinityLoader';
 
 export interface ISubscribeForm {
   placeholder: string;

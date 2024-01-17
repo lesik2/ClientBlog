@@ -30,7 +30,7 @@ export function MapComponent() {
   };
 
   return (
-    <section className={style.mapSection}>
+    <div className={style.mapSection}>
       <Map
         {...viewState}
         onMove={handleZoom}
@@ -46,6 +46,6 @@ export function MapComponent() {
         ))}
         <NavigationControl />
       </Map>
-    </section>
+    </div>
   );
 }

@@ -7,17 +7,18 @@ import { useState } from 'react';
 import { DropDown } from '@components/ui/DropDown';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { UserRegularExpression } from '@validation/user';
-import { InfinityLoader } from '@components/InfinityLoader';
 import emailjs from '@emailjs/browser';
-import { SnackBar } from '@components/SnackBar';
+import { SnackBar } from '@components/ui/SnackBar';
 import { Dictionary } from '@lib/dictionary';
+
+import { InfinityLoader } from '@/components/ui/InfinityLoader';
 
 export type TMessageEmail = {
   user_name: string;
   user_email: string;
   message: string;
 };
-export  function FormComponent({ dictionary }: { dictionary: Dictionary }) {
+export function FormComponent({ dictionary }: { dictionary: Dictionary }) {
   const { contactForm } = dictionary;
   const selectValues = contactForm.contactSelect.split(',');
   const [selectValue, setSelectValue] = useState(selectValues[0]);
@@ -54,7 +55,7 @@ export  function FormComponent({ dictionary }: { dictionary: Dictionary }) {
   };
 
   return (
-    <section className={style.sectionWrapper}>
+    <div className={style.sectionWrapper}>
       <form onSubmit={handleSubmit(onSubmit)} autoComplete='off' className={style.formWrapper}>
         <div className={inputStyle.inputWrapper}>
           <input
@@ -111,6 +112,6 @@ export  function FormComponent({ dictionary }: { dictionary: Dictionary }) {
           {success && <SnackBar message={success} />}
         </div>
       </form>
-    </section>
+    </div>
   );
 }

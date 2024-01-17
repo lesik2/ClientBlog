@@ -19,4 +19,24 @@ export const AUTHORS_CARDS = [
     description: 'Content Writer @Company',
     iconSrc: '/images/Leslie.png',
   },
+  {
+    title: 'Guy Hawkins',
+    description: 'Content Writer @Company',
+    iconSrc: '/images/Guy.png',
+  },
+  {
+    title: 'Eleanor Pena',
+    description: 'Content Writer @Company',
+    iconSrc: '/images/Eleanor.png',
+  },
+  {
+    title: 'Robert Fox',
+    description: 'Content Writer @Company',
+    iconSrc: '/images/Robert.png',
+  },
+  {
+    title: 'Jacob Jones',
+    description: 'Content Writer @Company',
+    iconSrc: '/images/Jacob.png',
+  },
 ];

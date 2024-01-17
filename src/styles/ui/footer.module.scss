@@ -97,6 +97,7 @@
         margin-bottom: 28px;
         .socialLink {
           transition: transform 0.2;
+          filter: invert(48%) sepia(10%) saturate(281%) hue-rotate(196deg) brightness(85%) contrast(85%);
           &:hover {
             transform: scale(1.1);
           }

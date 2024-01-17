@@ -3,8 +3,9 @@ import { Dictionary } from '@lib/dictionary';
 
 import { REVIEW_CARDS } from './constants';
 import ReviewCard from './components/ReviewCard';
+import WrapperButtons from './components/WrapperButtons';
 
-import Slider from '../Slider';
+import Slider from '../ui/Slider';
 
 export default function Testimonials({ dictionary }: { dictionary: Dictionary }) {
   const { testimonials } = dictionary;
@@ -19,11 +20,13 @@ export default function Testimonials({ dictionary }: { dictionary: Dictionary })
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
           </p>
         </div>
-        <Slider>
-          {REVIEW_CARDS.map((card, index) => (
-            <ReviewCard key={index} {...card} />
-          ))}
-        </Slider>
+        <div className={style.wrapperSlider}>
+          <Slider WrapperButtons={WrapperButtons}>
+            {REVIEW_CARDS.map((card, index) => (
+              <ReviewCard key={index} {...card} />
+            ))}
+          </Slider>
+        </div>
       </div>
     </div>
   );

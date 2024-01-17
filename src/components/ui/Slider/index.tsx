@@ -1,15 +1,16 @@
 'use client';
 
-import { ReactNode, useState } from 'react';
-import style from '@styles/home/testimonials.module.scss';
+import { FC, ReactNode, useState } from 'react';
 import slider from '@styles/home/slider.module.scss';
-import Image from 'next/image';
+import { IWrapperButtons } from '@components/Testimonials/components/WrapperButtons';
 
 export interface ISlider {
   children: ReactNode[];
+  WrapperButtons: FC<IWrapperButtons>;
 }
-const Slider = ({ children }: ISlider) => {
+const Slider = ({ children, WrapperButtons }: ISlider) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+
   const handlePrev = () => {
     setCurrentIndex((index) => {
       if (index === 0) return children.length - 1;
@@ -35,14 +36,7 @@ const Slider = ({ children }: ISlider) => {
           </div>
         ))}
       </div>
-      <div className={style.wrapperBtn}>
-        <button type='button' className={style.prevBtn} onClick={handlePrev}>
-          <Image height={20} width={20} src='/icons/arrowPrev.svg' alt='prev arrow' />
-        </button>
-        <button type='button' className={style.nextBtn} onClick={handleNext}>
-          <Image height={26} width={26} src='/icons/arrowNext.svg' alt='next arrow' />
-        </button>
-      </div>
+      <WrapperButtons handleClickNext={handleNext} handleClickPrev={handlePrev} />
     </div>
   );
 };

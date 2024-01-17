@@ -1,0 +1,19 @@
+@import '../ui/typography.module.scss';
+@import '../colors.module.scss';
+
+.categoriesSection {
+  padding: 0px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 48px;
+  .title {
+    color: $primary-color;
+  }
+  .wrapperCategories {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
+}

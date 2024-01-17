@@ -1,0 +1,44 @@
+@import '../ui/typography.module.scss';
+@import '../colors.module.scss';
+
+.ourTeamSection {
+  padding: 128px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 137px;
+    .imageContent {
+      position: relative;
+      &::before {
+        content: '';
+        background-color: $secondary-color;
+        position: absolute;
+        top: 114px;
+        left: -58px;
+        width: 103px;
+        height: 116px;
+        border-radius: 50px 0px 0px 0px;
+      }
+    }
+  }
+}
+.infoWrapper {
+  .description {
+    width: 519px;
+    @extend %body1;
+    color: $primary-color;
+  }
+  .title {
+    color: #232536;
+  }
+  .subtitle {
+    width: 519px;
+    color: $primary-color;
+    margin: 16px 0px;
+  }
+}
