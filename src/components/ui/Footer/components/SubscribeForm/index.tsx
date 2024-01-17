@@ -5,7 +5,7 @@ import button from '@styles/ui/button.module.scss';
 import { useState } from 'react';
 import { emailSchema } from '@validation/email';
 import emailjs from '@emailjs/browser';
-import { InfinityLoader } from '@components/InfinityLoader';
+import { InfinityLoader } from '@/components/ui/InfinityLoader';
 import { SnackBar } from '@components/SnackBar';
 import { useForm, SubmitHandler } from 'react-hook-form';
 
