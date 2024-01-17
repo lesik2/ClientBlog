@@ -6,8 +6,6 @@ import { useState } from 'react';
 
 import { CARDS } from '@/constants/cards';
 
-
-
 export default function Posts() {
   const [currentPage, setCurrentPage] = useState(0);
   const postsPerPage = 5;

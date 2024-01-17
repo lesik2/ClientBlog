@@ -8,7 +8,7 @@ import { DropDown } from '@components/ui/DropDown';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { UserRegularExpression } from '@validation/user';
 import emailjs from '@emailjs/browser';
-import { SnackBar } from '@components/SnackBar';
+import { SnackBar } from '@components/ui/SnackBar';
 import { Dictionary } from '@lib/dictionary';
 
 import { InfinityLoader } from '@/components/ui/InfinityLoader';

@@ -8,11 +8,11 @@ export default function Posts() {
       <div className={style.content}>
         <h1 className={style.title}>My Posts</h1>
         <div className={style.postsWrapper}>
-        {CARDS.slice(0,2).map((card)=>(
-          <PostCard key={card.title} {...card} size='medium'/>
-        ))}
+          {CARDS.slice(0, 2).map((card) => (
+            <PostCard key={card.title} {...card} size='medium' />
+          ))}
         </div>
       </div>
     </section>
-  )
+  );
 }
