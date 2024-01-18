@@ -6,7 +6,6 @@ import { SOCIAL_ICONS } from '@constants/socialIcons';
 import { IAuthor } from '@customTypes/models';
 
 export function AuthorCard({ fullName, description, iconSrc, id }: IAuthor) {
-
   return (
     <button id={id} type='button' className={style.wrapperCard}>
       <div className={style.content}>

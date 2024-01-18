@@ -8,9 +8,9 @@ import Header from './components/Header';
 import Main from './components/Main';
 import Posts from './components/Posts';
 
-import { IBlogPost } from '@/types';
+import { IDynamicRoute } from '@/types';
 
-export default async function BlogPost({ params: { lang, id } }: IBlogPost) {
+export default async function BlogPost({ params: { lang, id } }: IDynamicRoute) {
   const dictionary: Dictionary = await getDictionary(lang);
   const currentPost = POST_CARDS.find((card) => card.id === id);
   const currentAuthor = AUTHORS.find((author) => author.id === currentPost?.authorId);

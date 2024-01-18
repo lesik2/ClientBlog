@@ -12,7 +12,8 @@
     "title": "Step-by-step guide to choosing great font pairs",
     "subtitle": "Posted on",
     "StartFrom": "By",
-    "video": "Video about us"
+    "video": "Video about us",
+    "post": "Featured Post"
   },
   "footer": {
     "btn": "Subscribe",
@@ -92,5 +93,16 @@
     "ourTeamTitle": "Our team of creatives",
     "whyStartedTitle": "Why we started this Blog",
     "authorTitle": "List of Authors"
+  },
+  "blogPage": {
+    "categoryTitle": "All Categories",
+    "postsTitle": "All posts",
+    "btnPrev": "< Prev ",
+    "btnNext": " Next > "
+  },
+  "authorPage": {
+    "startTitle": "Hey there, I’m ",
+    "endTitle": " and welcome to my Blog",
+    "postTitle": "My Posts"
   }
 }

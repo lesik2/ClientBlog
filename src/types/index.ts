@@ -51,7 +51,7 @@ export interface IReviewCard {
   userAddress: string;
 }
 
-export interface IBlogPost {
+export interface IDynamicRoute {
   params: {
     lang: Locale;
     id: string;
