@@ -13,6 +13,7 @@ export interface IPostCard {
   size?: 'default' | 'medium' | 'small';
   authorId: string;
   date: string;
+  category: string;
 }
 export interface ICategoryCard {
   iconSrc: string;

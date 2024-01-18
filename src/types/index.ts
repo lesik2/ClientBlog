@@ -1,4 +1,4 @@
-import { Dispatch, FC, ReactNode } from 'react';
+import { Dispatch, FC, ReactNode, SetStateAction } from 'react';
 
 import { IAuthor, IPostCard } from './models';
 
@@ -60,4 +60,10 @@ export interface IBlogPost {
 export interface IHeaderBlogPost {
   author: IAuthor;
   post: IPostCard;
+}
+export interface IElasticSearch {
+  setSearch: Dispatch<SetStateAction<string>>;
+}
+export interface ICategories {
+  activeCategory: string;
 }

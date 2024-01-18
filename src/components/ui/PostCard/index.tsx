@@ -6,14 +6,13 @@ import Link from 'next/link';
 import { ROUTES } from '@/constants/routes';
 
 export default function PostCard({ imageSrc, tags, title, description, size = 'default', id }: IPostCard) {
-  const width = size === 'default' ? 490 : 412;
-
+  
   return (
     <Link href={`${ROUTES.blog}/${id}`}>
       <article
-        className={`${size === 'medium' ? style.postCardArticleMedium : ''} ${style.postCardArticleDefault}`}
+        className={`${size === 'medium' ? style.postCardArticleMedium : style.postCardArticleSmall} ${style.postCardArticleDefault}`}
       >
-        <Image src={imageSrc} alt='post image' width={width} height={318} />
+        <Image className={style.image} src={imageSrc} alt='post image' width={490} height={0} />
         <div className={style.infoWrapper}>
           <p className={style.tags}>{tags.join(' ')}</p>
           <h2 className={style.title}>{title}</h2>
