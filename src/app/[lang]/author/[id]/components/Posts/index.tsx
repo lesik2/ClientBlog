@@ -10,7 +10,7 @@ export default function Posts({ posts }: { posts: IPostCard[] }) {
         <h1 className={style.title}>My Posts</h1>
         <div className={style.postsWrapper}>
           {posts.length > 0 ? (
-            posts.map((card) => <PostCard key={card.id} {...card} size='medium' />)
+            posts.map((card) => <PostCard key={card.id} {...card} size='default' />)
           ) : (
             <h2 className={style.noContent}>This author has no posts yet</h2>
           )}

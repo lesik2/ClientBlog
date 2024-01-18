@@ -7,23 +7,18 @@ export const CONSTANTS = {
 };
 export const FOOTER_LINKS = [
   {
-    name: 'Home',
     to: ROUTES.home,
   },
   {
-    name: 'Blog',
     to: ROUTES.blog,
   },
   {
-    name: 'About us',
     to: ROUTES.aboutUs,
   },
   {
-    name: 'Contact us',
     to: ROUTES.contact,
   },
   {
-    name: 'Privacy Policy',
     to: ROUTES.privacyPolicy,
   },
 ];

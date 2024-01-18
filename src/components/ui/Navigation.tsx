@@ -18,7 +18,7 @@ export function Navigation({ type, nameOfLinks }: INavigation) {
     <nav>
       <ul className={nav.list}>
         {links.map((link, index) => (
-          <li key={link.name}>
+          <li key={link.to}>
             <Link className={`${paths === link.to ? nav.active : ''} ${nav.link}`} href={link.to}>
               {nameOfLinks[index]}
             </Link>

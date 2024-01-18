@@ -25,7 +25,7 @@ export default function Posts() {
 
     const slicedCards = POST_CARDS.slice(startIndex, endIndex);
 
-    return slicedCards.map((postCard) => <PostCard size='medium' key={postCard.id} {...postCard} />);
+    return slicedCards.map((postCard) => <PostCard  key={postCard.id} {...postCard} />);
   };
 
   return (

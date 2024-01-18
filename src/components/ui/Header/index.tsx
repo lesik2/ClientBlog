@@ -2,7 +2,7 @@ import style from '@styles/ui/header.module.scss';
 import { LocaleType } from '@customTypes/locale';
 
 import { CONSTANTS } from './constants';
-import LocaleSwitcher from './LocaleSwitcher';
+import LocaleSwitcher from './components/LocaleSwitcher';
 import OpenModal from './components/OpenModal';
 
 import { Navigation } from '../Navigation';

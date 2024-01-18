@@ -10,7 +10,7 @@ export interface IPostCard {
   tags: string[];
   title: string;
   description: string;
-  size?: 'default' | 'medium' | 'small';
+  size?: 'default' | 'small';
   authorId: string;
   date: string;
   category: string;
