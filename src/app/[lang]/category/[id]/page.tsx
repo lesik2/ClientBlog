@@ -29,11 +29,11 @@ export default function CategoryItem({ params: { id } }: { params: { id: string 
       <Header category={id} />
       <main className={style.main}>
         <section className={style.postsSection}>
-          {cards.length>0? cards.map((card) => (
-            <PostCard size='small' key={card.id} {...card} />
-          )):
-          <h1 className={style.title}>No posts found</h1>
-          }
+          {cards.length > 0 ? (
+            cards.map((card) => <PostCard size='small' key={card.id} {...card} />)
+          ) : (
+            <h2 className={style.title}>No posts found</h2>
+          )}
         </section>
         <aside className={style.aside}>
           <ElasticSearch setSearch={setSearch} />

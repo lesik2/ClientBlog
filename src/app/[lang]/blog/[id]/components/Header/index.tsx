@@ -18,15 +18,15 @@ export default function Header({ author, post }: IHeaderBlogPost) {
       </div>
       <h1 className={style.title}>{title}</h1>
       <div className={style.categories}>
-          <div  className={style.categoryWrapper}>
-            <Image
-              src={CATEGORIES.find((item) => item.category === category)?.iconSrc ?? ''}
-              alt='category'
-              width={48}
-              height={48}
-            />
-            <h4 className={style.categoryTitle}>{category}</h4>
-          </div>
+        <div className={style.categoryWrapper}>
+          <Image
+            src={CATEGORIES.find((item) => item.category === category)?.iconSrc ?? ''}
+            alt='category'
+            width={48}
+            height={48}
+          />
+          <h4 className={style.categoryTitle}>{category}</h4>
+        </div>
       </div>
     </header>
   );
