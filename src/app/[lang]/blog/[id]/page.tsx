@@ -21,7 +21,7 @@ export default async function BlogPost({ params: { lang, id } }: IBlogPost) {
         <section className={style.blogPostSection}>
           <Header author={currentAuthor} post={currentPost} />
           <Main imageSrc={currentPost.imageSrc} />
-          <Posts tag={currentPost.tags[0]} />
+          <Posts category={currentPost.category} />
           <JoinOurTeam dictionary={dictionary} />
         </section>
       )}

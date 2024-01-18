@@ -21,7 +21,13 @@
       align-items: flex-start;
       justify-content: center;
       min-width: 832px;
-      
+      max-height: 1100px;
+      overflow: auto;
+      .title {
+        color: $primary-color;
+        align-self: center;
+        text-align: center;
+      }
     }
     .aside {
       display: flex;
@@ -30,23 +36,6 @@
       justify-content: center;
       min-width: 296px;
       margin-top: 42px;
-      .title {
-        color: $primary-color;
-      }
-
-      .categoriesWrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 36px;
-        justify-content: center;
-        .categories {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 24px;
-        }
-      }
     }
   }
 }

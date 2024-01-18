@@ -8,7 +8,7 @@ import { IAuthor } from '@customTypes/models';
 export default function Header({ author }: { author: IAuthor }) {
   return (
     <header className={style.header}>
-      <Image src={author.iconSrc} alt='author image' width={251} height={294} />
+      <Image className={style.userIcon} src={author.iconSrc} alt='author image' width={260} height={260} />
       <div className={style.infoWrapper}>
         <h1 className={style.title}>{`Hey there, I’m ${author.fullName} and welcome to my Blog`}</h1>
         <p className={style.description}>

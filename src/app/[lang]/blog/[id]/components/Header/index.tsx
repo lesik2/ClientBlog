@@ -5,7 +5,7 @@ import { CATEGORIES } from '@constants/categories';
 
 export default function Header({ author, post }: IHeaderBlogPost) {
   const { fullName, iconSrc } = author;
-  const { date, title, tags } = post;
+  const { date, title, category } = post;
 
   return (
     <header className={style.headerSection}>
@@ -18,17 +18,15 @@ export default function Header({ author, post }: IHeaderBlogPost) {
       </div>
       <h1 className={style.title}>{title}</h1>
       <div className={style.categories}>
-        {tags.map((tag) => (
-          <div key={tag} className={style.categoryWrapper}>
+          <div  className={style.categoryWrapper}>
             <Image
-              src={CATEGORIES.find((item) => item.category === tag)?.iconSrc ?? ''}
+              src={CATEGORIES.find((item) => item.category === category)?.iconSrc ?? ''}
               alt='category'
               width={48}
               height={48}
             />
-            <h4 className={style.categoryTitle}>{tags.join(' ')}</h4>
+            <h4 className={style.categoryTitle}>{category}</h4>
           </div>
-        ))}
       </div>
     </header>
   );

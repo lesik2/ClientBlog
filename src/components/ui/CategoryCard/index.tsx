@@ -7,7 +7,7 @@ import Link from 'next/link';
 export default function CategoryCard({ iconSrc, category, description }: ICategoryCard) {
   return (
     <Link href={`${ROUTES.category}/${category}`}>
-        <div className={style.cardWrapper}>
+      <div className={style.cardWrapper}>
         <div className={style.iconWrapper}>
           <Image width={48} height={48} src={iconSrc} alt={category} />
         </div>
@@ -15,6 +15,5 @@ export default function CategoryCard({ iconSrc, category, description }: ICatego
         <p className={style.description}>{description}</p>
       </div>
     </Link>
-
   );
 }
