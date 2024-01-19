@@ -1,4 +1,5 @@
 import style from '@styles/blogPage/blog.module.scss';
+import { LocaleType } from '@customTypes/locale';
 
 import Header from './components/Header';
 import Posts from './components/Posts';
@@ -6,7 +7,6 @@ import Categories from './components/Cagories';
 
 import JoinOurTeam from '@/components/JoinOurTeam';
 import { Dictionary, getDictionary } from '@/lib/dictionary';
-import { LocaleType } from '@/types/locale';
 
 export default async function Blog({ params: { lang } }: { params: LocaleType }) {
   const dictionary: Dictionary = await getDictionary(lang);
