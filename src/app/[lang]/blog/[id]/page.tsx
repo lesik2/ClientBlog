@@ -9,11 +9,10 @@ import Header from './components/Header';
 import Main from './components/Main';
 import Posts from './components/Posts';
 
-
 export function generateStaticParams() {
   return POST_CARDS.map((post) => ({
     id: post.id,
-  }))
+  }));
 }
 
 export default async function BlogPost({ params: { lang, id } }: IDynamicRoute) {

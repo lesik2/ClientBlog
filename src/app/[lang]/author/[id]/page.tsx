@@ -7,12 +7,10 @@ import { Dictionary, getDictionary } from '@lib/dictionary';
 import Header from './components/Header';
 import Posts from './components/Posts';
 
-
-
 export function generateStaticParams() {
   return AUTHORS.map((author) => ({
     id: author.id,
-  }))
+  }));
 }
 
 export default async function AuthorPage({ params: { lang, id } }: IDynamicRoute) {

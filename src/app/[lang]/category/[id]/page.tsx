@@ -4,11 +4,18 @@ import style from '@styles/categoryPage/category.module.scss';
 import { POST_CARDS } from '@constants/cards';
 import PostCard from '@components/ui/PostCard';
 import { useState } from 'react';
+import { CATEGORIES } from '@constants/categories';
 
 import Header from './components/Header';
 import ElasticSearch from './components/ElasticSearch';
 import Categories from './components/Categories';
 import Tags from './components/Tags';
+
+export function generateStaticParams() {
+  return CATEGORIES.map((card) => ({
+    id: card.category,
+  }));
+}
 
 export default function CategoryItem({ params: { id } }: { params: { id: string } }) {
   const [search, setSearch] = useState('');
