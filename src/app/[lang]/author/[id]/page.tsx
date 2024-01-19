@@ -1,12 +1,19 @@
 import style from '@styles/authorPage/author.module.scss';
 import { AUTHORS } from '@constants/authors';
 import { POST_CARDS } from '@constants/cards';
+import { IDynamicRoute } from '@customTypes/index';
+import { Dictionary, getDictionary } from '@lib/dictionary';
 
 import Header from './components/Header';
 import Posts from './components/Posts';
 
-import { IDynamicRoute } from '@/types';
-import { Dictionary, getDictionary } from '@/lib/dictionary';
+
+
+export function generateStaticParams() {
+  return AUTHORS.map((author) => ({
+    id: author.id,
+  }))
+}
 
 export default async function AuthorPage({ params: { lang, id } }: IDynamicRoute) {
   const dictionary: Dictionary = await getDictionary(lang);
