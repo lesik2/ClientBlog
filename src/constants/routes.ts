@@ -1,6 +1,9 @@
 export const ROUTES = {
-  blogPost: '/blog/1',
+  home: '/',
   blog: '/blog',
   aboutUs: '/about-us',
   contact: '/contact',
+  author: '/author',
+  privacyPolicy: '/privacy-policy',
+  category: '/category',
 };

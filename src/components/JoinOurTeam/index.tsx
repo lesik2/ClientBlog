@@ -1,6 +1,6 @@
 import { ROUTES } from '@constants/routes';
 import Link from 'next/link';
-import style from '@styles/home/joinOurTeam.module.scss';
+import style from '@styles/homePage/joinOurTeam.module.scss';
 import button from '@styles/ui/button.module.scss';
 import { Dictionary } from '@lib/dictionary';
 

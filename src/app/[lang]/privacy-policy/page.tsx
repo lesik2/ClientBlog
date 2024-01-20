@@ -1,6 +1,6 @@
 import { Dictionary, getDictionary } from '@lib/dictionary';
 import { LocaleType } from '@customTypes/locale';
-import style from '@styles/privacyPolicy/privacyPolicy.module.scss';
+import style from '@styles/privacyPolicyPage/privacyPolicy.module.scss';
 
 export default async function PrivacyPolicy({ params: { lang } }: { params: LocaleType }) {
   const dictionary: Dictionary = await getDictionary(lang);

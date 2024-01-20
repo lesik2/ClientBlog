@@ -7,16 +7,10 @@ import { emailSchema } from '@validation/email';
 import emailjs from '@emailjs/browser';
 import { SnackBar } from '@components/ui/SnackBar';
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { ISubscribeForm, TSubscribeEmail } from '@customTypes/index';
 
 import { InfinityLoader } from '@/components/ui/InfinityLoader';
 
-export interface ISubscribeForm {
-  placeholder: string;
-  btnText: string;
-}
-export type TSubscribeEmail = {
-  user_email: string;
-};
 export default function SubscribeForm({ placeholder, btnText }: ISubscribeForm) {
   const [errorMessage, setErrorMessage] = useState<Error | null>(null);
   const [loading, setLoading] = useState(false);

@@ -1,3 +1,5 @@
+import { ROUTES } from '@constants/routes';
+
 export const CONSTANTS = {
   title: 'Modsen Client Blog',
   address: 'Finstreet 118 2561 Fintown',
@@ -5,23 +7,18 @@ export const CONSTANTS = {
 };
 export const FOOTER_LINKS = [
   {
-    name: 'Home',
-    to: '/',
+    to: ROUTES.home,
   },
   {
-    name: 'Blog',
-    to: '/blog',
+    to: ROUTES.blog,
   },
   {
-    name: 'About us',
-    to: '/about-us',
+    to: ROUTES.aboutUs,
   },
   {
-    name: 'Contact us',
-    to: '/contact',
+    to: ROUTES.contact,
   },
   {
-    name: 'Privacy Policy',
-    to: '/privacy-policy',
+    to: ROUTES.privacyPolicy,
   },
 ];

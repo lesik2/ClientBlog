@@ -1,13 +1,9 @@
 'use client';
 
-import { FC, ReactNode, useState } from 'react';
-import slider from '@styles/home/slider.module.scss';
-import { IWrapperButtons } from '@components/Testimonials/components/WrapperButtons';
+import { useState } from 'react';
+import slider from '@styles/homePage/slider.module.scss';
+import { ISlider } from '@customTypes/index';
 
-export interface ISlider {
-  children: ReactNode[];
-  WrapperButtons: FC<IWrapperButtons>;
-}
 const Slider = ({ children, WrapperButtons }: ISlider) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 

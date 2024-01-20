@@ -1,9 +1,9 @@
 import style from '@styles/ui/header.module.scss';
-import button from '@styles/ui/button.module.scss';
 import { LocaleType } from '@customTypes/locale';
 
 import { CONSTANTS } from './constants';
-import LocaleSwitcher from './LocaleSwitcher';
+import LocaleSwitcher from './components/LocaleSwitcher';
+import OpenModal from './components/OpenModal';
 
 import { Navigation } from '../Navigation';
 
@@ -19,9 +19,7 @@ export default async function Header({ lang }: LocaleType) {
       <LocaleSwitcher />
       <div className={style.wrapper}>
         <Navigation type='header' nameOfLinks={nameOfLinks} />
-        <button type='button' className={button.secondary}>
-          {stepByStep.btn}
-        </button>
+        <OpenModal btnText={stepByStep.btn} />
       </div>
     </header>
   );

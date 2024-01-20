@@ -1,41 +1,51 @@
-export const AUTHORS_CARDS = [
+import { IAuthor } from '@customTypes/models';
+
+export const AUTHORS: IAuthor[] = [
   {
-    title: 'Floyd Miles',
+    id: '1',
+    fullName: 'Floyd Miles',
     description: 'Content Writer @Company',
     iconSrc: '/images/Floyd.png',
   },
   {
-    title: 'Dianne Russell',
+    id: '2',
+    fullName: 'Dianne Russell',
     description: 'Content Writer @Company',
     iconSrc: '/images/Dianne.png',
   },
   {
-    title: 'Jenny Wilson',
+    id: '3',
+    fullName: 'Jenny Wilson',
     description: 'Content Writer @Company',
     iconSrc: '/images/Jenny.png',
   },
   {
-    title: 'Leslie Alexander',
+    id: '4',
+    fullName: 'Leslie Alexander',
     description: 'Content Writer @Company',
     iconSrc: '/images/Leslie.png',
   },
   {
-    title: 'Guy Hawkins',
+    id: '5',
+    fullName: 'Guy Hawkins',
     description: 'Content Writer @Company',
     iconSrc: '/images/Guy.png',
   },
   {
-    title: 'Eleanor Pena',
+    id: '6',
+    fullName: 'Eleanor Pena',
     description: 'Content Writer @Company',
     iconSrc: '/images/Eleanor.png',
   },
   {
-    title: 'Robert Fox',
+    id: '7',
+    fullName: 'Robert Fox',
     description: 'Content Writer @Company',
     iconSrc: '/images/Robert.png',
   },
   {
-    title: 'Jacob Jones',
+    id: '8',
+    fullName: 'Jacob Jones',
     description: 'Content Writer @Company',
     iconSrc: '/images/Jacob.png',
   },

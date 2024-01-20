@@ -1,8 +1,4 @@
-export interface ILocation {
-  id: number;
-  latitude: number;
-  longitude: number;
-}
+import { ILocation } from '@customTypes/models';
 
 export const CONTACTS_LOCATIONS: ILocation[] = [
   {

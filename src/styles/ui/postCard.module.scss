@@ -8,7 +8,15 @@
   width: 1146px;
   height: 318px;
   justify-content: center;
-
+  cursor: pointer;
+  transition: background-color 0.2s;
+  &:hover {
+    background-color: $white-light-gray-color;
+  }
+  .image {
+    height: 100%;
+    width: 40%;
+  }
   .infoWrapper {
     display: flex;
     flex-direction: column;
@@ -30,4 +38,7 @@
 }
 .postCardArticleMedium {
   width: 1024px;
+}
+.postCardArticleSmall {
+  width: 850px;
 }

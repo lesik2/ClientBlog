@@ -1,14 +1,18 @@
-import style from '@styles/blog/categories.module.scss';
+import style from '@styles/blogPage/categories.module.scss';
 import CategoryCard from '@components/ui/CategoryCard';
-import { CARDS } from '@components/ChooseCategory/constants';
+import { CATEGORIES } from '@constants/categories';
 
-export default function Categories() {
+import { Dictionary } from '@/lib/dictionary';
+
+export default function Categories({ dictionary }: { dictionary: Dictionary }) {
+  const { blogPage } = dictionary;
+
   return (
     <section className={style.categoriesSection}>
-      <h2 className={style.title}>All Categories</h2>
+      <h2 className={style.title}>{blogPage.categoryTitle}</h2>
       <div className={style.wrapperCategories}>
-        {CARDS.map((card) => (
-          <CategoryCard key={card.title} {...card} />
+        {CATEGORIES.map((card) => (
+          <CategoryCard key={card.category} {...card} />
         ))}
       </div>
     </section>

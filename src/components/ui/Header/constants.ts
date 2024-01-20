@@ -1,21 +1,19 @@
+import { ROUTES } from '@constants/routes';
+
 export const CONSTANTS = {
   title: 'Modsen Client Blog',
 };
 export const HEADER_LINKS = [
   {
-    name: 'Home',
-    to: '/',
+    to: ROUTES.home,
   },
   {
-    name: 'Blog',
-    to: '/blog',
+    to: ROUTES.blog,
   },
   {
-    name: 'About us',
-    to: '/about-us',
+    to: ROUTES.aboutUs,
   },
   {
-    name: 'Contact us',
-    to: '/contact',
+    to: ROUTES.contact,
   },
 ];

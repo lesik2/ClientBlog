@@ -1,6 +1,5 @@
 import style from '@styles/ui/footer.module.scss';
 import Image from 'next/image';
-import { ICONS } from '@constants/index';
 import { LocaleType } from '@customTypes/locale';
 
 import { CONSTANTS } from './constants';
@@ -8,6 +7,7 @@ import SubscribeForm from './components/SubscribeForm';
 
 import { Navigation } from '../Navigation';
 
+import { SOCIAL_ICONS } from '@/constants/socialIcons';
 import { getDictionary } from '@/lib/dictionary';
 
 export default async function Footer({ lang }: LocaleType) {
@@ -31,7 +31,7 @@ export default async function Footer({ lang }: LocaleType) {
             <p className={style.contact}>{CONSTANTS.email}</p>
           </div>
           <div className={style.socialWrapper}>
-            {ICONS.map((icon) => (
+            {SOCIAL_ICONS.map((icon) => (
               <a key={icon.src} className={style.socialLink} href='/'>
                 <Image {...icon} />
               </a>

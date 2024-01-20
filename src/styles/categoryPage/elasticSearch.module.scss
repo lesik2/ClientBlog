@@ -1,0 +1,68 @@
+@import '../ui/typography.module.scss';
+@import '../colors.module.scss';
+@import '../ui/button.module.scss';
+
+.elasticSearchWrapper {
+  position: relative;
+
+  .wrapperInput {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 296px;
+    height: 56px;
+    .input {
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      width: 100%;
+      border-radius: 6px;
+      border: 1px solid $light-gray-color;
+      width: 213px;
+      background: #fff;
+      padding: 15px 10px 15px 25px;
+      color: $primary-color;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 24px;
+      letter-spacing: -0.21px;
+      &::placeholder {
+        color: $primary-color;
+      }
+    }
+    .searchBtn {
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      @include buttonTheme;
+      padding: 11px 46px;
+      width: 83px;
+      height: 56px;
+      font-size: 16px;
+      line-height: 24px;
+      border-radius: 6px;
+    }
+  }
+  .list {
+    position: absolute;
+    top: 56px;
+    left: 0px;
+    padding: 0;
+    width: 210px;
+    border: 1px solid $white-light-gray-color;
+    border-radius: 6px;
+    background-color: $white-color;
+    .item {
+      padding: 5px 5px 5px 25px;
+      cursor: pointer;
+      border-radius: 6px;
+      @extend %body1;
+      color: $primary-color;
+      &:hover {
+        background-color: $white-light-gray-color;
+      }
+    }
+  }
+}
