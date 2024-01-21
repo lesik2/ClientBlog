@@ -12,6 +12,15 @@
       color: $primary-color;
       width: 414px;
       text-align: center;
+      @media (max-width: $tablet) {
+        font-size: 28px;
+        line-height: 32px;
+        width: 100%;
+      }
+      @media (max-width: $mobileL) {
+        font-size: 25px;
+        line-height: 26px;
+      }
     }
     .description {
       @extend %body1;
@@ -19,6 +28,16 @@
       text-align: center;
       margin: 16px 0px 32px 0px;
       width: 405px;
+      @media (max-width: $tablet) {
+        font-size: 14px;
+        width: 100%;
+      }
+      @media (max-width: $mobileL) {
+        font-size: 13px;
+      }
     }
+  }
+  @media (max-width: $tablet) {
+    padding: 60px 10px;
   }
 }

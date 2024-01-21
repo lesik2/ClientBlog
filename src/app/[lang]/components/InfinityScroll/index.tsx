@@ -2,8 +2,8 @@
 
 import JoinOurTeam from '@components/JoinOurTeam';
 import { useInView } from 'react-intersection-observer';
-import style from '@styles/homePage/infinityScroll.module.scss';
 import { Dictionary } from '@lib/dictionary';
+import style from '@styles/ui/infinityScroll.module.scss';
 
 import { useShowNewComponent } from './hooks/useShowNewComponent';
 
@@ -31,7 +31,7 @@ export default function InfinityScroll({ dictionary }: { dictionary: Dictionary 
 
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.5,
+    threshold: 0.9,
   });
 
   const currentIndex = useShowNewComponent(inView);

@@ -1,8 +1,9 @@
 import { ROUTES } from '@constants/routes';
 import { ICategoryCard } from '@customTypes/models';
-import style from '@styles/ui/categoryCard.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
+
+import style from './categoryCard.module.scss';
 
 export default function CategoryCard({ iconSrc, category, description }: ICategoryCard) {
   return (

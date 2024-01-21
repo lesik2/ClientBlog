@@ -38,6 +38,10 @@
           line-height: 40px;
           width: 80%;
         }
+        @media (max-width: $mobileL) {
+          font-size: 26px;
+          line-height: 32px;
+        }
       }
       .description {
         @extend %body1;
@@ -68,6 +72,9 @@
         align-items: center;
         justify-content: center;
         padding: 20px;
+      }
+      @media (max-width: $mobileL) {
+        padding: 0px;
       }
     }
     @media (max-width: $tablet) {

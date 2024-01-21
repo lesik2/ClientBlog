@@ -1,5 +1,3 @@
-@import '../ui/typography.module.scss';
-@import '../theme.module.scss';
 .wrapperCard {
   display: flex;
   align-items: center;
@@ -22,15 +20,27 @@
     justify-content: center;
     .icon {
       border-radius: 50%;
+      @media (max-width: $tablet) {
+        width: 100px;
+        height: 100px;
+      }
     }
     .title {
       color: $primary-color;
       margin-top: 20px;
+
+      @media (max-width: $tablet) {
+        font-size: 24px;
+        line-height: 26px;
+      }
     }
     .description {
       @extend %body2;
       font-family: var(--font-inter);
       color: $light-gray-color;
+      @media (max-width: $tablet) {
+        font-size: 13px;
+      }
     }
     .wrapperSocialLinks {
       display: flex;
@@ -44,5 +54,10 @@
         }
       }
     }
+  }
+  @media (max-width: $tablet) {
+    width: 250px;
+    height: 275px;
+    padding: 10px;
   }
 }

@@ -53,6 +53,9 @@
           @media (max-width: $laptopM) {
             font-size: 15px;
           }
+          @media (max-width: $tablet) {
+            font-size: 14px;
+          }
         }
         .title {
           color: $primary-color;
@@ -64,6 +67,10 @@
           @media (max-width: $laptopM) {
             font-size: 24px;
             line-height: 28px;
+          }
+          @media (max-width: $tablet) {
+            font-size: 22px;
+            line-height: 20px;
           }
         }
         .description {
@@ -88,19 +95,36 @@
           &:hover {
             color: #351b64;
           }
+          @media (max-width: $tablet) {
+            font-size: 15px;
+            line-height: 25px;
+          }
         }
         @media (max-width: $laptopL) {
           width: 45%;
+        }
+        @media (max-width: $tablet) {
+          width: 65%;
         }
       }
       @media (max-width: $laptopM) {
         padding: 40px;
         gap: 20px;
       }
+      @media (max-width: $tablet) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 0px;
+      }
     }
   }
   @media (max-width: $laptopL) {
     width: 100%;
     padding: 0 20px;
+  }
+  @media (max-width: $tablet) {
+    width: 100%;
+    padding: 0px 0px;
   }
 }

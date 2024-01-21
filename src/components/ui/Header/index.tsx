@@ -24,7 +24,7 @@ export default function Header({ dictionary }: { dictionary: Dictionary }) {
         <div className={style.menuWrapper}>
           <LocaleSwitcher />
           <div className={style.wrapper}>
-            <Navigation type='header' nameOfLinks={nameOfLinks} setIsOpen={setIsOpen} isFooter={false}/>
+            <Navigation type='header' nameOfLinks={nameOfLinks} setIsOpen={setIsOpen} isFooter={false} />
             <OpenModal btnText={stepByStep.btn} />
           </div>
         </div>

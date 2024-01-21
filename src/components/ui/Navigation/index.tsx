@@ -16,14 +16,13 @@ export function Navigation({ type, nameOfLinks, setIsOpen, isFooter }: INavigati
   const links = type === 'footer' ? FOOTER_LINKS : HEADER_LINKS;
 
   const handleCloseMenu = () => {
-    if(setIsOpen){
+    if (setIsOpen) {
       setIsOpen(false);
     }
-
   };
 
   return (
-    <nav className={`${isFooter?nav.inactive :''} ${nav.navigation}`}>
+    <nav className={`${isFooter ? nav.inactive : ''} ${nav.navigation}`}>
       <ul className={nav.list}>
         {links.map((link, index) => (
           <li className={nav.item} key={link.to} onClick={handleCloseMenu}>

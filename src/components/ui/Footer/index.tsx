@@ -19,7 +19,7 @@ export default async function Footer({ lang }: LocaleType) {
       <div className={style.content}>
         <div className={style.header}>
           <p className={style.title}>{CONSTANTS.title}</p>
-          <Navigation type='footer' nameOfLinks={nameOfLinks}  isFooter/>
+          <Navigation type='footer' nameOfLinks={nameOfLinks} isFooter />
         </div>
         <div className={style.submitWrapper}>
           <h2 className={style.subtitle}>{footer.text}</h2>

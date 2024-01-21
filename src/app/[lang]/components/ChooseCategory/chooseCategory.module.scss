@@ -11,6 +11,10 @@
     gap: 48px;
     .title {
       color: $primary-color;
+      @media (max-width: $tablet) {
+        font-size: 26px;
+        line-height: 32px;
+      }
     }
     .wrapperCards {
       display: flex;
@@ -21,6 +25,15 @@
       @media (max-width: $laptopM) {
         gap: 20px;
       }
+      @media (max-width: $tablet) {
+        padding: 10px;
+      }
     }
+    @media (max-width: $tablet) {
+      gap: 15px;
+    }
+  }
+  @media (max-width: $tablet) {
+    padding: 20px;
   }
 }
