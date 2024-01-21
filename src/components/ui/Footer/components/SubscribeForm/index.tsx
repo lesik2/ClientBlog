@@ -1,6 +1,5 @@
 'use client';
 
-import style from '@styles/ui/footer.module.scss';
 import button from '@styles/ui/button.module.scss';
 import { useState } from 'react';
 import { emailSchema } from '@validation/email';
@@ -8,8 +7,9 @@ import emailjs from '@emailjs/browser';
 import { SnackBar } from '@components/ui/SnackBar';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { ISubscribeForm, TSubscribeEmail } from '@customTypes/index';
+import { InfinityLoader } from '@components/ui/InfinityLoader';
 
-import { InfinityLoader } from '@/components/ui/InfinityLoader';
+import style from '../../footer.module.scss';
 
 export default function SubscribeForm({ placeholder, btnText }: ISubscribeForm) {
   const [errorMessage, setErrorMessage] = useState<Error | null>(null);

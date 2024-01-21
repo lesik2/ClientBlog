@@ -1,6 +1,3 @@
-@import '../theme.module.scss';
-@import './typography.module.scss';
-
 .footer {
   background-color: $primary-color;
   padding: 59px 80px 56px 80px;
@@ -36,7 +33,15 @@
       gap: 64px;
       .subtitle {
         color: $white-color;
-        width: 562px;
+        max-width: 562px;
+        @media (max-width: $laptopL) {
+          font-size: 30px;
+          line-height: 35px;
+        }
+        @media (max-width: $laptopM) {
+          font-size: 25px;
+          line-height: 25px;
+        }
       }
       .submitForm {
         display: flex;
@@ -62,6 +67,10 @@
           &:focus {
             border: 2px solid $white-color;
           }
+          @media (max-width: $tablet) {
+            height: 47px;
+            width: 290px;
+          }
         }
         .errorMessage {
           position: absolute;
@@ -80,6 +89,12 @@
           left: 50%;
           transform: translate(-50%, -50%);
         }
+      }
+      @media (max-width: $laptopM) {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 30px;
       }
     }
 

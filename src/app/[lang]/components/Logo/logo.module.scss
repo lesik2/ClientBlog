@@ -1,6 +1,3 @@
-@import '../ui/typography.module.scss';
-@import '../theme.module.scss';
-
 .wrapper {
   padding-bottom: 96px;
   display: flex;
@@ -10,6 +7,7 @@
     display: flex;
     align-items: center;
     gap: 86px;
+
     .wrapperInfo {
       display: flex;
       flex-direction: column;
@@ -21,6 +19,11 @@
       .title {
         color: $light-gray-color;
       }
+      @media (max-width: $laptopM) {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+      }
     }
     .wrapperLogos {
       display: flex;
@@ -28,8 +31,22 @@
       gap: 75px;
       .logoIcon {
         width: 100%;
+        max-width: 130px;
         height: 32px;
       }
+      @media (max-width: $laptopL) {
+        gap: 40px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+    @media (max-width: $laptopL) {
+      gap: 40px;
+    }
+    @media (max-width: $laptopM) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
   }
 }

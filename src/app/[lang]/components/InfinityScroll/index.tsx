@@ -16,9 +16,7 @@ import Testimonials from '../Testimonials';
 import Logo from '../Logo';
 import StepByStep from '../StepByStep';
 
-
-
-export default function InfinityScroll({ dictionary }: {dictionary: Dictionary}) {
+export default function InfinityScroll({ dictionary }: { dictionary: Dictionary }) {
   const components = [
     StepByStep,
     Posts,

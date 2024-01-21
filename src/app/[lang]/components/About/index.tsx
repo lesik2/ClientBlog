@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { ROUTES } from '@constants/routes';
-import style from '@styles/homePage/aboutUs.module.scss';
 import { Dictionary } from '@lib/dictionary';
 
+import style from './aboutUs.module.scss';
 import { AboutDescription, MissionDescription } from './constants';
 
 export default function About({ dictionary }: { dictionary: Dictionary }) {

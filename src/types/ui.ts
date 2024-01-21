@@ -6,5 +6,6 @@ export interface IButton {
 export interface INavigation {
   type: 'header' | 'footer';
   nameOfLinks: string[];
-  setIsOpen: Dispatch<SetStateAction<boolean>>;
+  setIsOpen?: Dispatch<SetStateAction<boolean>>;
+  isFooter: boolean;
 }

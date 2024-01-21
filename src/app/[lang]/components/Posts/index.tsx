@@ -1,10 +1,10 @@
-import style from '@styles/homePage/featuredPosts.module.scss';
 import Link from 'next/link';
 import { ROUTES } from '@constants/routes';
 import button from '@styles/ui/button.module.scss';
 import Image from 'next/image';
 import { Dictionary } from '@lib/dictionary';
 
+import style from './featuredPosts.module.scss';
 import { Post } from './components/Post';
 import { CONSTANTS, PostsData } from './constants';
 
@@ -20,7 +20,14 @@ export default function Posts({ dictionary }: { dictionary: Dictionary }) {
               <h2 className={style.title}>{posts.featuredTitle}</h2>
             </div>
             <div className={style.featuredPost}>
-              <Image src='/images/postsImage.png' alt='post' width={669} height={352} />
+              <Image 
+
+                src='/images/postsImage.png' 
+                alt='post' 
+                width={669} 
+                height={352} 
+                sizes="100vw"
+              />
               <p className={style.info}>
                 {posts.StartFrom}
                 <span className={style.infoMark}>{CONSTANTS.author}</span> | {posts.date}

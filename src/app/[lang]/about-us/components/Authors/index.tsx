@@ -3,8 +3,6 @@ import { AUTHORS } from '@constants/authors';
 import { AuthorCard } from '@components/ui/AuthorCard';
 import { Dictionary } from '@lib/dictionary';
 
-
-
 export default function Authors({ dictionary }: { dictionary: Dictionary }) {
   const { aboutUsPage } = dictionary;
 

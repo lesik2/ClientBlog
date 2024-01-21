@@ -1,14 +1,12 @@
-@import '../ui/typography.module.scss';
-@import '../theme.module.scss';
-
 .stepSection {
   position: relative;
   background-image: url('/images/stepBack.png');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 740px;
   padding: 128px 0px 0px 80px;
   width: 100%;
+  min-height: 850px;
+  height: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -40,13 +38,29 @@
       .subtitleMark {
         font-weight: 900;
       }
+      @media (max-width: $laptopM) {
+        font-size: 15px;
+      }
+      @media (max-width: $mobileL) {
+        font-size: 13px;
+      }
     }
 
     .title {
       @extend %display;
-      width: 803px;
+      max-width: 803px;
       color: $white-color;
       margin-bottom: 24px;
+      @media (max-width: $laptopM) {
+        font-size: 45px;
+      }
+      @media (max-width: $tablet) {
+        font-size: 35px;
+        text-align: center;
+      }
+      @media (max-width: $mobileL) {
+        font-size: 28px;
+      }
     }
     .info {
       color: $white-color;
@@ -58,15 +72,40 @@
       .infoMark {
         color: $secondary-color;
       }
+      @media (max-width: $mobileL) {
+        font-size: 14px;
+      }
     }
 
     .description {
       @extend %body1;
       color: $white-color;
-      width: 599px;
+      max-width: 599px;
+      @media (max-width: $tablet) {
+        text-align: center;
+        font-size: 14px;
+      }
+      @media (max-width: $mobileL) {
+        font-size: 13px;
+      }
     }
     .link {
       margin-top: 48px;
     }
+
+    @media (max-width: $tablet) {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  @media (max-width: $laptopM) {
+    min-height: 650px;
+  }
+  @media (max-width: $tablet) {
+    height: 100%;
+    min-height: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 10px 25px 10px;
   }
 }

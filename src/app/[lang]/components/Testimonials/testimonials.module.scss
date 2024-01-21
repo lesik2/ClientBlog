@@ -1,6 +1,3 @@
-@import '../ui/typography.module.scss';
-@import '../theme.module.scss';
-
 .wrapper {
   display: flex;
   align-items: center;
@@ -37,16 +34,46 @@
         line-height: 20px;
         letter-spacing: 3px;
         text-transform: uppercase;
+        @media (max-width: $laptopM) {
+          text-align: center;
+        }
       }
       .title {
         color: $primary-color;
         margin: 12px 0px 16px 0px;
         width: 345px;
+        @media (max-width: $laptopM) {
+          text-align: center;
+        }
       }
       .infoDescription {
         @extend %body1;
         color: $primary-color;
         width: 349px;
+        @media (max-width: $laptopM) {
+          text-align: center;
+        }
+      }
+      @media (max-width: $laptopL) {
+        &::after {
+          right: -40px;
+        }
+      }
+      @media (max-width: $laptopM) {
+        align-items: center;
+        justify-content: center;
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -17px;
+
+          top: auto;
+          right: auto;
+          width: 90%;
+          height: 1px;
+          background: $light-gray-color;
+          opacity: 0.4;
+        }
       }
     }
     .wrapperSlider {
@@ -90,6 +117,14 @@
           transform: scale(1.05);
         }
       }
+    }
+    @media (max-width: $laptopL) {
+      padding: 80px 100px 75px 80px;
+      gap: 100px;
+    }
+    @media (max-width: $laptopM) {
+      flex-direction: column;
+      align-items: center;
     }
   }
 }

@@ -1,8 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import slider from '@styles/homePage/slider.module.scss';
 import { ISlider } from '@customTypes/index';
+
+import slider from './slider.module.scss';
 
 const Slider = ({ children, WrapperButtons }: ISlider) => {
   const [currentIndex, setCurrentIndex] = useState(0);

@@ -1,6 +1,3 @@
-@import '../ui/typography.module.scss';
-@import '../theme.module.scss';
-
 .sectionPosts {
   padding: 128px 78px 128px 80px;
   background-color: $white-color;
@@ -12,11 +9,10 @@
     .postsWrapper {
       display: flex;
       align-items: center;
-      width: 100%;
       gap: 32px;
       justify-content: space-between;
-      width: 1282px;
-
+      max-width: 1280px;
+      width: 100%;
       .header {
         display: flex;
         align-items: center;
@@ -39,6 +35,9 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        @media (max-width: $laptopL) {
+          align-items: center;
+        }
       }
       .featuredPostsWrapper {
         display: flex;
@@ -72,6 +71,13 @@
           }
         }
       }
+      @media (max-width: $laptopL) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
+  }
+  @media (max-width: $laptopL) {
+    padding: 128px 20px 128px 20px;
   }
 }

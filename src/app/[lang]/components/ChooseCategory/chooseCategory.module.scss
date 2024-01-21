@@ -1,6 +1,3 @@
-@import '../ui/typography.module.scss';
-@import '../theme.module.scss';
-
 .wrapper {
   padding: 128px 80px;
   display: flex;
@@ -20,6 +17,10 @@
       align-items: center;
       justify-content: center;
       gap: 32px;
+      flex-wrap: wrap;
+      @media (max-width: $laptopM) {
+        gap: 20px;
+      }
     }
   }
 }

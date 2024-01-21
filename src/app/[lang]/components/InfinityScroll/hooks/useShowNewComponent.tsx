@@ -12,5 +12,4 @@ export function useShowNewComponent(inView: boolean) {
   }, [inView]);
 
   return currentIndex;
-
 }

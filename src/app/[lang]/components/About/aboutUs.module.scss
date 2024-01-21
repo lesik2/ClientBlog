@@ -1,6 +1,3 @@
-@import '../ui/typography.module.scss';
-@import '../theme.module.scss';
-
 .aboutUsSection {
   display: flex;
   align-items: center;
@@ -53,17 +50,33 @@
           letter-spacing: 3px;
           text-transform: uppercase;
           margin-bottom: 24px;
+          @media (max-width: $laptopM) {
+            font-size: 15px;
+          }
         }
         .title {
           color: $primary-color;
           width: 480px;
           margin-bottom: 16px;
+          @media (max-width: $laptopL) {
+            width: 100%;
+          }
+          @media (max-width: $laptopM) {
+            font-size: 24px;
+            line-height: 28px;
+          }
         }
         .description {
           @extend %body1;
           color: $dark-gray-color;
           margin-bottom: 16px;
           width: 516px;
+          @media (max-width: $laptopL) {
+            width: 100%;
+          }
+          @media (max-width: $laptopM) {
+            font-size: 13px;
+          }
         }
         .link {
           color: $third-color;
@@ -76,7 +89,18 @@
             color: #351b64;
           }
         }
+        @media (max-width: $laptopL) {
+          width: 45%;
+        }
+      }
+      @media (max-width: $laptopM) {
+        padding: 40px;
+        gap: 20px;
       }
     }
+  }
+  @media (max-width: $laptopL) {
+    width: 100%;
+    padding: 0 20px;
   }
 }
