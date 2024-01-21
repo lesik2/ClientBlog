@@ -1,0 +1,49 @@
+.navigation {
+  .list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    .item {
+      .link {
+        @extend %body1;
+        color: $white-color;
+        text-decoration: none;
+        transition: color 0.2s;
+        &:hover {
+          color: $light-gray-color;
+        }
+        @media (max-width: $laptopM) {
+          font-size: 14px;
+        }
+        @media (max-width: $tablet) {
+          width: 100%;
+          text-align: center;
+        }
+      }
+      .active {
+        color: $secondary-color;
+        font-weight: 700;
+      }
+      @media (max-width: $tablet) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    @media (max-width: $laptopM) {
+      gap: 15px;
+    }
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+  @media (max-width: $tablet) {
+    width: 100%;
+  }
+}

@@ -1,0 +1,33 @@
+.wrapperMenu {
+  @media (max-width: $tablet) {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 100vh;
+    transition: width 0.2s;
+    z-index: $menuBack;
+  }
+  .content {
+    @media (max-width: $tablet) {
+      position: fixed;
+      top: 0px;
+      right: -100%;
+      width: 300px;
+      height: 100vh;
+      background-color: $primary-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: right 0.4s;
+      z-index: $menu;
+    }
+  }
+  .activeContent {
+    right: 0px;
+  }
+}
+
+.activeWrapper {
+  width: 100%;
+}

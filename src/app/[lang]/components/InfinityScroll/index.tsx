@@ -2,8 +2,10 @@
 
 import JoinOurTeam from '@components/JoinOurTeam';
 import { useInView } from 'react-intersection-observer';
-import { useEffect, useState } from 'react';
 import style from '@styles/homePage/infinityScroll.module.scss';
+import { Dictionary } from '@lib/dictionary';
+
+import { useShowNewComponent } from './hooks/useShowNewComponent';
 
 import Posts from '../Posts';
 import SpecialPost from '../SpecialPost';
@@ -14,9 +16,9 @@ import Testimonials from '../Testimonials';
 import Logo from '../Logo';
 import StepByStep from '../StepByStep';
 
-import { IInfinityScroll } from '@/types';
 
-export default function InfinityScroll({ dictionary }: IInfinityScroll) {
+
+export default function InfinityScroll({ dictionary }: {dictionary: Dictionary}) {
   const components = [
     StepByStep,
     Posts,
@@ -29,18 +31,12 @@ export default function InfinityScroll({ dictionary }: IInfinityScroll) {
     JoinOurTeam,
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.5,
   });
 
-  useEffect(() => {
-    if (inView) {
-      setCurrentIndex((prevIndex) => prevIndex + 1);
-    }
-  }, [inView]);
+  const currentIndex = useShowNewComponent(inView);
 
   return (
     <>
