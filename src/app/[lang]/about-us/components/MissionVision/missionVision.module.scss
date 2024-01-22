@@ -19,6 +19,12 @@
       .subtitle {
         color: $primary-color;
         @extend %cap;
+        @media (max-width: $tablet) {
+          text-align: center;
+        }
+        @media (max-width: $mobileL) {
+          font-size: 15px;
+        }
       }
       .title {
         color: $primary-color;
@@ -30,6 +36,13 @@
           line-height: 30px;
           margin: 16px 0px 10px 0px;
         }
+        @media (max-width: $tablet) {
+          text-align: center;
+        }
+        @media (max-width: $mobileL) {
+          font-size: 20px;
+          line-height: 25px;
+        }
       }
       .description {
         max-width: 516px;
@@ -39,9 +52,23 @@
         @media (max-width: $laptopM) {
           font-size: 14px;
         }
+        @media (max-width: $tablet) {
+          text-align: center;
+        }
+        @media (max-width: $mobileL) {
+          font-size: 13px;
+        }
       }
       @media (max-width: $tablet) {
-        width: 70%;
+        width: 75%;
+        align-items: center;
+        justify-content: center;
+      }
+      @media (max-width: $mobileL) {
+        width: 77%;
+      }
+      @media (max-width: $mobileM) {
+        width: 85%;
       }
     }
     @media (max-width: $tablet) {
@@ -54,6 +81,9 @@
     padding: 60px 40px 40px 40px;
   }
   @media (max-width: $tablet) {
-    padding: 40px;
+    padding: 25px;
+  }
+  @media (max-width: $mobileL) {
+    padding: 20px 10px;
   }
 }

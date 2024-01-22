@@ -22,6 +22,12 @@
       .subtitle {
         @extend %cap;
         color: $primary-color;
+        @media (max-width: $tablet) {
+          font-size: 15px;
+        }
+        @media (max-width: $mobileL) {
+          font-size: 13px;
+        }
       }
       .title {
         width: 496px;
@@ -31,9 +37,29 @@
           font-size: 37px;
           line-height: 54px;
         }
+        @media (max-width: $tablet) {
+          font-size: 27px;
+          line-height: 44px;
+        }
+        @media (max-width: $mobileL) {
+          font-size: 26px;
+          line-height: 38px;
+        }
+        @media (max-width: $mobileM) {
+          font-size: 24px;
+          line-height: 33px;
+        }
       }
       @media (max-width: $laptopM) {
         width: 78%;
+      }
+      @media (max-width: $tablet) {
+        padding: 24px;
+        width: 85%;
+      }
+      @media (max-width: $mobileL) {
+        padding: 10px;
+        width: 90%;
       }
     }
     .description {
@@ -49,8 +75,21 @@
       width: 90%;
       left: 40px;
     }
+    @media (max-width: $mobileL) {
+      width: 100%;
+      left: 0px;
+    }
   }
   @media (max-width: $laptopM) {
     height: 235px;
+  }
+  @media (max-width: $tablet) {
+    height: 160px;
+  }
+  @media (max-width: $mobileL) {
+    height: 110px;
+  }
+  @media (max-width: $mobileM) {
+    height: 100px;
   }
 }
