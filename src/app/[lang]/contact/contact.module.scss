@@ -1,6 +1,3 @@
-@import '../ui/typography.module.scss';
-@import '../theme.module.scss';
-
 .contactSection {
   display: flex;
   align-items: center;
@@ -17,6 +14,16 @@
     .title {
       color: $primary-color;
       margin: 12px 0px 24px 0px;
+      @media (max-width: $tablet) {
+        font-size: 35px;
+        line-height: 50px;
+      }
+      @media (max-width: $mobileL) {
+        font-size: 30px;
+        line-height: 45px;
+        width: 90%;
+        text-align: center;
+      }
     }
     .subtitle {
       color: $primary-color;
@@ -27,6 +34,13 @@
       @extend %body1;
       width: 768px;
       text-align: center;
+      @media (max-width: $tablet) {
+        width: 80%;
+        font-size: 14px;
+      }
+    }
+    @media (max-width: $tablet) {
+      margin-bottom: 40px;
     }
   }
   .label {
@@ -58,15 +72,45 @@
           opacity: 0.1;
           background-color: $white-color;
         }
+        @media (max-width: $mobileL) {
+          &::before {
+            width: 100%;
+          }
+          width: 100%;
+        }
       }
       .infoTitle {
         color: $white-color;
+
+        @media (max-width: $mobileL) {
+          font-size: 16px;
+          line-height: 25px;
+        }
       }
       .infoDescription {
         @extend %body1;
         color: $white-color;
         opacity: 0.6;
       }
+      @media (max-width: $tablet) {
+        width: 50%;
+      }
+      @media (max-width: $mobileL) {
+        width: 60%;
+      }
     }
+    @media (max-width: $tablet) {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      padding: 48px 10px 48px 10px;
+    }
+    @media (max-width: $mobileL) {
+      gap: 20px;
+      padding: 30px 10px 30px 10px;
+    }
+  }
+  @media (max-width: $tablet) {
+    padding-top: 60px;
   }
 }

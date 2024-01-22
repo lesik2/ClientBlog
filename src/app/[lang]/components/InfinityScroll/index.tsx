@@ -31,7 +31,7 @@ export default function InfinityScroll({ dictionary }: { dictionary: Dictionary 
 
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.9,
+    threshold: 0.7,
   });
 
   const currentIndex = useShowNewComponent(inView);

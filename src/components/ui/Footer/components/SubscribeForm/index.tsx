@@ -9,7 +9,7 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import { ISubscribeForm, TSubscribeEmail } from '@customTypes/index';
 import { InfinityLoader } from '@components/ui/InfinityLoader';
 
-import style from '../../footer.module.scss';
+import style from './submitForm.module.scss';
 
 export default function SubscribeForm({ placeholder, btnText }: ISubscribeForm) {
   const [errorMessage, setErrorMessage] = useState<Error | null>(null);

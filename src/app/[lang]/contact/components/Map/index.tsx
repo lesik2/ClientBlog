@@ -1,10 +1,10 @@
 'use client';
 
 import Map, { Marker, NavigationControl, ViewStateChangeEvent } from 'react-map-gl';
-import style from '@styles/contactPage/map.module.scss';
 import { useState } from 'react';
 import Image from 'next/image';
 
+import style from './map.module.scss';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { CONTACTS_LOCATIONS } from './constants';
 

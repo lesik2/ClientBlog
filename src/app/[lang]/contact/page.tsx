@@ -1,7 +1,7 @@
-import style from '@styles/contactPage/contact.module.scss';
 import { LocaleType } from '@customTypes/locale';
 import { Dictionary, getDictionary } from '@lib/dictionary';
 
+import style from './contact.module.scss';
 import { MapComponent } from './components/Map/index';
 import { FormComponent } from './components/FormComponent/index';
 

@@ -49,65 +49,7 @@
           font-size: 18px;
         }
       }
-      .submitForm {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        gap: 24px;
-        @media (max-width: $tablet) {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-      }
-      .inputWrapper {
-        position: relative;
-        .input {
-          width: 323px;
-          height: 56px;
-          padding: 14px 10px 14px 25px;
-          background-color: inherit;
-          outline: none;
-          border: 1px solid $dark-gray-color;
-          @extend %body1;
-          color: $white-color;
-          &::placeholder {
-            color: $light-gray-color;
-          }
-          &:focus {
-            border: 2px solid $white-color;
-          }
-          @media (max-width: $tablet) {
-            height: 47px;
-            width: 290px;
-          }
-          @media (max-width: $mobileL) {
-            height: 40px;
-            width: 275px;
-            font-size: 14px;
-          }
-        }
-        .errorMessage {
-          position: absolute;
-          bottom: -30px;
-          left: 7px;
-          @extend %body1;
-          font-size: 16px;
-          color: #ff0000;
-          @media (max-width: $tablet) {
-            font-size: 14px;
-          }
-        }
-      }
-      .btnWrapper {
-        position: relative;
-        .loader {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-        }
-      }
+
       @media (max-width: $laptopM) {
         flex-direction: column;
         align-items: flex-start;
