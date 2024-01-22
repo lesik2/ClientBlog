@@ -1,6 +1,7 @@
 import Image from 'next/image';
-import style from '@styles/aboutUsPage/ourTeam.module.scss';
 import { Dictionary } from '@lib/dictionary';
+
+import style from './ourTeam.module.scss';
 
 export default function OurTeam({ dictionary }: { dictionary: Dictionary }) {
   const { aboutUsPage } = dictionary;
@@ -21,7 +22,13 @@ export default function OurTeam({ dictionary }: { dictionary: Dictionary }) {
           </p>
         </div>
         <div className={style.imageContent}>
-          <Image src='/images/aboutUsTeam.png' alt='our team' width={624} height={480} />
+          <Image 
+            src='/images/aboutUsTeam.png' 
+            alt='our team' 
+    
+            sizes="(max-width: 1460) 60vw,100vw"
+            fill
+          />
         </div>
       </div>
     </section>

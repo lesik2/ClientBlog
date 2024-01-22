@@ -1,7 +1,8 @@
-import style from '@styles/aboutUsPage/authors.module.scss';
 import { AUTHORS } from '@constants/authors';
 import { AuthorCard } from '@components/ui/AuthorCard';
 import { Dictionary } from '@lib/dictionary';
+
+import style from './authors.module.scss';
 
 export default function Authors({ dictionary }: { dictionary: Dictionary }) {
   const { aboutUsPage } = dictionary;

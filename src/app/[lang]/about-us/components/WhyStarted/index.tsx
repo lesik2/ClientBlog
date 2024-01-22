@@ -1,7 +1,9 @@
-import style from '@styles/aboutUsPage/whyStarted.module.scss';
-import ourTeam from '@styles/aboutUsPage/ourTeam.module.scss';
 import Image from 'next/image';
 import { Dictionary } from '@lib/dictionary';
+
+import style from './whyStarted.module.scss';
+
+import ourTeam from '../OurTeam/ourTeam.module.scss';
 
 export default function WhyStarted({ dictionary }: { dictionary: Dictionary }) {
   const { aboutUsPage } = dictionary;
@@ -10,7 +12,7 @@ export default function WhyStarted({ dictionary }: { dictionary: Dictionary }) {
     <section className={style.whyStartedSection}>
       <div className={style.content}>
         <div className={style.imageContent}>
-          <Image src='/images/aboutUsWhyStarted.png' alt='why started' width={624} height={480} />
+          <Image src='/images/aboutUsWhyStarted.png' alt='why started' sizes='100vw' fill />
         </div>
         <div className={ourTeam.infoWrapper}>
           <h2 className={ourTeam.title}>{aboutUsPage.whyStartedTitle}</h2>

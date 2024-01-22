@@ -1,6 +1,3 @@
-@import '../ui/typography.module.scss';
-@import '../theme.module.scss';
-
 .missionVisionSection {
   display: flex;
   justify-content: center;
@@ -13,25 +10,50 @@
     align-items: center;
     justify-content: center;
     gap: 32px;
+    width: 100%;
     .infoWrapper {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-
+      width: 50%;
       .subtitle {
         color: $primary-color;
         @extend %cap;
       }
       .title {
         color: $primary-color;
-        width: 464px;
+        width: 100%;
+        max-width: 480px;
         margin: 24px 0px 16px 0px;
+        @media (max-width: $laptopM) {
+          font-size: 23px;
+          line-height: 30px;
+          margin: 16px 0px 10px 0px;
+        }
       }
       .description {
-        width: 516px;
+        max-width: 516px;
+        width: 100%;
         @extend %body1;
         color: $light-gray-color;
+        @media (max-width: $laptopM) {
+          font-size: 14px;
+        }
+      }
+      @media (max-width: $tablet) {
+        width: 70%;
       }
     }
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: $laptopM) {
+    padding: 60px 40px 40px 40px;
+  }
+  @media (max-width: $tablet) {
+    padding: 40px;
   }
 }

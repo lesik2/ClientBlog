@@ -1,5 +1,6 @@
 import { Dictionary } from '@lib/dictionary';
-import style from '@styles/aboutUsPage/header.module.scss';
+
+import style from './header.module.scss';
 
 export default function Header({ dictionary }: { dictionary: Dictionary }) {
   const { aboutUsPage } = dictionary;

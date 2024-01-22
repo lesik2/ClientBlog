@@ -1,0 +1,87 @@
+.ourTeamSection {
+  padding: 128px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 137px;
+    width: 100%;
+    .imageContent {
+      width: 624px;
+      height: 480px;
+      position: relative;
+      &::before {
+        content: '';
+        z-index: 2;
+        background-color: $secondary-color;
+        position: absolute;
+        top: 114px;
+        left: -58px;
+        width: 103px;
+        height: 116px;
+        border-radius: 50px 0px 0px 0px;
+      }
+      @media (max-width: $laptopL) {
+        width: 500px;
+        height: 400px;
+      }
+      @media (max-width: $laptopM) {
+        width: 390px;
+        height: 290px;
+        &::before {
+          width: 73px;
+          height: 86px;
+          left: -40px;
+        }
+      }
+    }
+    @media (max-width: $laptopL) {
+      gap: 80px;
+    }
+    @media (max-width: $laptopM) {
+      gap: 25px;
+    }
+  }
+}
+.infoWrapper {
+  .description {
+    width: 519px;
+    @extend %body1;
+    color: $primary-color;
+    @media (max-width: $laptopL) {
+      width: 100%;
+    }
+    @media (max-width: $laptopM) {
+      font-size: 13px;
+    }
+  }
+  .title {
+    color: #232536;
+    @media (max-width: $laptopM) {
+      font-size: 26px;
+      line-height: 30px;
+    }
+  }
+  .subtitle {
+    width: 519px;
+    color: $primary-color;
+    margin: 16px 0px;
+    @media (max-width: $laptopL) {
+      width: 100%;
+    }
+    @media (max-width: $laptopM) {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+  @media (max-width: $laptopL) {
+    width: 40%;
+  }
+  @media (max-width: $laptopM) {
+    width: 45%;
+  }
+}
