@@ -1,9 +1,10 @@
 'use client';
 
 import Image from 'next/image';
-import style from '@styles/authorPage/header.module.scss';
 import { SOCIAL_ICONS } from '@constants/socialIcons';
 import { IAuthor } from '@customTypes/models';
+
+import style from './header.module.scss';
 
 import { Dictionary } from '@/lib/dictionary';
 
@@ -12,7 +13,17 @@ export default function Header({ author, dictionary }: { author: IAuthor; dictio
 
   return (
     <header className={style.header}>
-      <Image className={style.userIcon} src={author.iconSrc} alt='author image' width={260} height={260} />
+      <div className={style.userIconWrapper}>
+        <Image 
+          src={author.iconSrc} 
+          alt='author image' 
+          sizes='100vw'
+          fill
+          quality={100}
+          style={{objectFit: "contain"}}
+        />
+      </div>
+
       <div className={style.infoWrapper}>
         <h1
           className={style.title}

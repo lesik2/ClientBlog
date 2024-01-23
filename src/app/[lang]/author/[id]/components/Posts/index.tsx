@@ -1,5 +1,6 @@
 import PostCard from '@components/ui/PostCard';
-import style from '@styles/authorPage/posts.module.scss';
+
+import style from './posts.module.scss';
 
 import { IPostCard } from '@/types/models';
 import { Dictionary } from '@/lib/dictionary';
