@@ -1,7 +1,8 @@
 import Image from 'next/image';
-import style from '@styles/blogPage/header.module.scss';
 import buttonStyle from '@styles/ui/button.module.scss';
 import Link from 'next/link';
+
+import style from './header.module.scss';
 
 import { ROUTES } from '@/constants/routes';
 import { Dictionary } from '@/lib/dictionary';
@@ -27,7 +28,14 @@ export default function Header({ dictionary }: { dictionary: Dictionary }) {
           </button>
         </Link>
       </div>
-      <Image src='/images/BlogHeader.png' alt='step by step image' width={515} height={359} />
+      <div className={style.imageWrapper}>
+        <Image 
+        src='/images/BlogHeader.png' 
+        alt='step by step image' 
+        fill 
+        sizes="100vw"
+        />
+      </div>
     </header>
   );
 }

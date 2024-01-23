@@ -1,6 +1,3 @@
-@import '../ui/typography.module.scss';
-@import '../theme.module.scss';
-
 .postsSection {
   display: flex;
   flex-direction: column;
@@ -28,6 +25,24 @@
     margin-bottom: 64px;
     .title {
       color: $primary-color;
+      @media (max-width: $laptopM) {
+        font-size: 40px;
+        line-height: 50px;
+      }
+      @media (max-width: $tablet) {
+        font-size: 30px;
+        line-height: 35px;
+      }
+      @media (max-width: $mobileL) {
+        font-size: 25px;
+        line-height: 35px;
+      }
+    }
+    @media (max-width: $tablet) {
+      height: 60px;
+    }
+    @media (max-width: $mobileL) {
+      height: 40px;
     }
   }
   .wrapperCards {
@@ -38,6 +53,12 @@
     align-items: flex-start;
     justify-content: center;
     gap: 64px;
+    @media (max-width: $tablet) {
+      gap: 30px;
+      margin-bottom: 40px;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   .wrapperButtons {
@@ -62,6 +83,31 @@
         cursor: default;
         pointer-events: none;
       }
+      .btnText {
+        @media (max-width: $tablet) {
+          font-size: 20px;
+          line-height: 25px;
+        }
+        @media (max-width: $mobileL) {
+          font-size: 17px;
+          line-height: 20px;
+        }
+      }
     }
+    @media (max-width: $tablet) {
+      margin-bottom: 40px;
+      gap: 14px;
+    }
+  }
+  @media (max-width: $laptopL) {
+    padding: 60px 50px;
+  }
+  @media (max-width: $laptopM) {
+    padding: 50px 40px;
+  }
+  @media (max-width: $tablet) {
+    padding: 40px 10px;
+    align-items: center;
+    justify-content: center;
   }
 }

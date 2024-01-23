@@ -1,4 +1,4 @@
-import style from '@styles/ui/infinityLoader.module.scss';
+import style from './infinityLoader.module.scss';
 
 export function InfinityLoader() {
   return <div className={style.infinityScroll} />;

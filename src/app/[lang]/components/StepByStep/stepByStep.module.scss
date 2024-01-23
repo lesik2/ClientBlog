@@ -57,9 +57,12 @@
       @media (max-width: $tablet) {
         font-size: 35px;
         text-align: center;
+        margin-bottom: 20px;
+        line-height: 50px;
       }
       @media (max-width: $mobileL) {
         font-size: 28px;
+        line-height: 45px;
       }
     }
     .info {
@@ -87,6 +90,7 @@
       }
       @media (max-width: $mobileL) {
         font-size: 13px;
+        display: none;
       }
     }
     .link {
@@ -106,6 +110,6 @@
     min-height: auto;
     align-items: center;
     justify-content: center;
-    padding: 25px 10px 25px 10px;
+    padding: 35px 10px 35px 10px;
   }
 }
