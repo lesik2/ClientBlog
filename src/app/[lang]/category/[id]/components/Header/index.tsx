@@ -1,4 +1,4 @@
-import style from '@styles/categoryPage/header.module.scss';
+import style from './header.module.scss';
 
 export default function Header({ category }: { category: string }) {
   return (

@@ -1,6 +1,7 @@
-import style from '@styles/blogPage/categories.module.scss';
 import CategoryCard from '@components/ui/CategoryCard';
 import { CATEGORIES } from '@constants/categories';
+
+import style from './categories.module.scss';
 
 import { Dictionary } from '@/lib/dictionary';
 

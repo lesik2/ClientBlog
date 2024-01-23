@@ -1,5 +1,3 @@
-@import '../colors.module.scss';
-
 @mixin buttonTheme($color: $secondary-color, $hover: #edc14a) {
   display: flex;
   align-items: center;
@@ -25,9 +23,21 @@
 }
 .primary {
   @include buttonTheme;
+  @media (max-width: $laptopM) {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+  @media (max-width: $tablet) {
+    padding: 10px 25px;
+    font-size: 15px;
+  }
 }
 .secondary {
   @include buttonTheme($color: $white-color, $hover: $white-light-gray-color);
+  @media (max-width: $laptopM) {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
 }
 .formPrimary {
   @include buttonTheme;
@@ -35,4 +45,12 @@
   width: 768px;
   font-size: 24px;
   line-height: 32px;
+  @media (max-width: $tablet) {
+    width: 100%;
+    font-size: 20px;
+    padding: 14px 0px;
+  }
+  @media (max-width: $mobileL) {
+    padding: 12px 0px;
+  }
 }

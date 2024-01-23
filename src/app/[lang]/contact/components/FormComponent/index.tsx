@@ -1,7 +1,5 @@
 'use client';
 
-import style from '@styles/contactPage/form.module.scss';
-import inputStyle from '@styles/ui/contactInput.module.scss';
 import buttonStyle from '@styles/ui/button.module.scss';
 import { useState } from 'react';
 import { DropDown } from '@components/ui/DropDown';
@@ -11,6 +9,8 @@ import emailjs from '@emailjs/browser';
 import { SnackBar } from '@components/ui/SnackBar';
 import { Dictionary } from '@lib/dictionary';
 import { TMessageEmail } from '@customTypes/index';
+
+import style from './form.module.scss';
 
 import { InfinityLoader } from '@/components/ui/InfinityLoader';
 
@@ -53,9 +53,9 @@ export function FormComponent({ dictionary }: { dictionary: Dictionary }) {
   return (
     <div className={style.sectionWrapper}>
       <form onSubmit={handleSubmit(onSubmit)} autoComplete='off' className={style.formWrapper}>
-        <div className={inputStyle.inputWrapper}>
+        <div className={style.inputWrapper}>
           <input
-            className={inputStyle.contactInput}
+            className={style.contactInput}
             placeholder={contactForm.placeholderName}
             {...register('user_name', {
               required: true,
@@ -65,11 +65,11 @@ export function FormComponent({ dictionary }: { dictionary: Dictionary }) {
               },
             })}
           />
-          {errors.user_name && <p className={inputStyle.errorMessage}>{errors.user_name.message}</p>}
+          {errors.user_name && <p className={style.errorMessage}>{errors.user_name.message}</p>}
         </div>
-        <div className={inputStyle.inputWrapper}>
+        <div className={style.inputWrapper}>
           <input
-            className={inputStyle.contactInput}
+            className={style.contactInput}
             placeholder={contactForm.placeholderEmail}
             {...register('user_email', {
               required: true,
@@ -79,12 +79,12 @@ export function FormComponent({ dictionary }: { dictionary: Dictionary }) {
               },
             })}
           />
-          {errors.user_email && <p className={inputStyle.errorMessage}>{errors.user_email.message}</p>}
+          {errors.user_email && <p className={style.errorMessage}>{errors.user_email.message}</p>}
         </div>
         <DropDown value={selectValue} setValue={setSelectValue} selectValues={selectValues} />
-        <div className={inputStyle.inputWrapper}>
+        <div className={style.inputWrapper}>
           <textarea
-            className={`${inputStyle.contactInput} ${inputStyle.contactTextArea}`}
+            className={`${style.contactInput} ${style.contactTextArea}`}
             placeholder={contactForm.placeholderMessage}
             {...register('message', {
               required: true,
@@ -94,7 +94,7 @@ export function FormComponent({ dictionary }: { dictionary: Dictionary }) {
               },
             })}
           />
-          {errors.message && <p className={inputStyle.errorMessage}>{errors.message.message}</p>}
+          {errors.message && <p className={style.errorMessage}>{errors.message.message}</p>}
         </div>
         <div className={style.btnWrapper}>
           <button type='submit' className={buttonStyle.formPrimary} disabled={!isValid}>

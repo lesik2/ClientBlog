@@ -1,6 +1,7 @@
 import { IModal } from '@customTypes/modal';
 import Image from 'next/image';
-import style from '@styles/modal/modal.module.scss';
+
+import style from './modal.module.scss';
 
 import { Portal } from '../Portal';
 

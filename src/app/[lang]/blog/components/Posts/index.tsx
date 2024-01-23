@@ -1,10 +1,11 @@
 'use client';
 
-import style from '@styles/blogPage/posts.module.scss';
 import PostCard from '@components/ui/PostCard';
 import { useState } from 'react';
 import { POST_CARDS } from '@constants/cards';
 import { Dictionary } from '@lib/dictionary';
+
+import style from './posts.module.scss';
 
 export default function Posts({ dictionary }: { dictionary: Dictionary }) {
   const { blogPage } = dictionary;
@@ -38,7 +39,7 @@ export default function Posts({ dictionary }: { dictionary: Dictionary }) {
       <div className={style.wrapperCards}>{renderPostCards()}</div>
       <div className={style.wrapperButtons}>
         <button className={style.button} type='button' onClick={handlePrevPage} disabled={currentPage === 0}>
-          <h4>{blogPage.btnPrev}</h4>
+          <h4 className={style.btnText}>{blogPage.btnPrev}</h4>
         </button>
         <button
           className={style.button}
@@ -46,7 +47,7 @@ export default function Posts({ dictionary }: { dictionary: Dictionary }) {
           onClick={handleNextPage}
           disabled={totalPages === currentPage + 1}
         >
-          <h4>{blogPage.btnNext}</h4>
+          <h4 className={style.btnText}>{blogPage.btnNext}</h4>
         </button>
       </div>
     </section>

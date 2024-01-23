@@ -10,7 +10,8 @@ const nextConfig = {
     forceSwcTransforms: true,
   },
   sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
+    includePaths: [path.join(__dirname, 'src/styles')],
+    prependData: `@import "~@styles/theme.module.scss";`,
   },
 };
 

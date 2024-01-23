@@ -3,12 +3,14 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import button from '@styles/ui/button.module.scss';
-import header from '@styles/ui/header.module.scss';
+
+import header from '../../header.module.scss';
 
 import { i18n } from '@/i18n.config';
 
 export default function LocaleSwitcher() {
   const pathName = usePathname();
+
   const redirectedPathName = (locale: string) => {
     if (!pathName) return '/';
     const segments = pathName.split('/');

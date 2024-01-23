@@ -1,0 +1,72 @@
+.sectionWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 70px;
+  .formWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    .btnWrapper {
+      position: relative;
+      .loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      @media (max-width: $tablet) {
+        width: 100%;
+      }
+    }
+    .inputWrapper {
+      position: relative;
+      .contactInput {
+        width: 768px;
+        padding: 24px;
+        border-radius: 2px;
+        border: 1px solid $dark-gray-color;
+        @extend %body1;
+        color: $primary-color;
+        &::placeholder {
+          color: $primary-color;
+        }
+        @media (max-width: $tablet) {
+          width: 100%;
+          font-size: 14px;
+          padding: 18px;
+        }
+        @media (max-width: $mobileL) {
+          padding: 15px;
+        }
+      }
+      .contactTextArea {
+        height: 144px;
+        resize: none;
+      }
+      .errorMessage {
+        position: absolute;
+        bottom: -22px;
+        z-index: 2;
+        left: 7px;
+        @extend %body1;
+        font-size: 14px;
+        color: #ff0000;
+      }
+      @media (max-width: $tablet) {
+        width: 100%;
+      }
+    }
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
+  }
+  @media (max-width: $tablet) {
+    width: 80%;
+  }
+  @media (max-width: $mobileL) {
+    width: 95%;
+  }
+}

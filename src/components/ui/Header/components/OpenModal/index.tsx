@@ -1,12 +1,14 @@
 'use client';
 
-import style from '@styles/modal/modal.module.scss';
 import button from '@styles/ui/button.module.scss';
 import { useState } from 'react';
 import { Modal } from '@components/Modal';
 
+import style from './openModal.module.scss';
+
 export default function OpenModal({ btnText }: { btnText: string }) {
   const [isOpen, setIsOpen] = useState(false);
+
   const handleOpenModal = () => {
     setIsOpen(true);
   };

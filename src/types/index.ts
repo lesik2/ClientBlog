@@ -2,7 +2,6 @@ import { Dispatch, FC, ReactNode, SetStateAction } from 'react';
 
 import { IAuthor, IPostCard } from './models';
 
-import { Dictionary } from '@/lib/dictionary';
 import { Locale } from '@/i18n.config';
 
 export interface IPost {
@@ -16,9 +15,6 @@ export interface ISnackbar {
 export interface IWrapperButtons {
   handleClickNext: () => void;
   handleClickPrev: () => void;
-}
-export interface IInfinityScroll {
-  dictionary: Dictionary;
 }
 
 export interface IDropDown {

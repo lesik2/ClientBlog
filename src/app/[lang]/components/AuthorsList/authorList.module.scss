@@ -1,0 +1,39 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 128px 80px 96px 80px;
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+    justify-content: center;
+    .title {
+      color: $primary-color;
+      @media (max-width: $tablet) {
+        font-size: 26px;
+        line-height: 32px;
+      }
+    }
+    .wrapperAuthors {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      @media (max-width: $laptopM) {
+        gap: 20px;
+      }
+      @media (max-width: $tablet) {
+        gap: 10px;
+      }
+    }
+    @media (max-width: $tablet) {
+      gap: 15px;
+    }
+  }
+  @media (max-width: $tablet) {
+    padding: 20px;
+  }
+}

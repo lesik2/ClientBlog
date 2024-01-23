@@ -1,9 +1,10 @@
 import Image from 'next/image';
-import style from '@styles/homePage/specialPost.module.scss';
 import button from '@styles/ui/button.module.scss';
 import Link from 'next/link';
 import { ROUTES } from '@constants/routes';
 import { Dictionary } from '@lib/dictionary';
+
+import style from './specialPost.module.scss';
 
 export default function SpecialPost({ dictionary }: { dictionary: Dictionary }) {
   const { specialPost } = dictionary;
@@ -17,6 +18,7 @@ export default function SpecialPost({ dictionary }: { dictionary: Dictionary }) 
           width={949}
           src='/images/specialPostBack.png'
           alt='special post'
+          sizes='(max-width: 780px) 0vw, 100vw'
         />
         <div className={style.specialPostWrapper}>
           <p className={style.subtitle}>{specialPost.subtitle}</p>

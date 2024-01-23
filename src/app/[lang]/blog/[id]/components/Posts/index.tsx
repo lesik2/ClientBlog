@@ -1,5 +1,6 @@
-import style from '@styles/blogPost/posts.module.scss';
 import { POST_CARDS } from '@constants/cards';
+
+import style from './posts.module.scss';
 
 import PostCard from '../PostCard';
 

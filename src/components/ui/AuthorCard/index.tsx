@@ -1,11 +1,12 @@
 'use client';
 
-import style from '@styles/ui/authorCard.module.scss';
 import Image from 'next/image';
 import { SOCIAL_ICONS } from '@constants/socialIcons';
 import { IAuthor } from '@customTypes/models';
 import { ROUTES } from '@constants/routes';
 import { useRouter } from 'next/navigation';
+
+import style from './authorCard.module.scss';
 
 export function AuthorCard({ fullName, description, iconSrc, id }: IAuthor) {
   const router = useRouter();

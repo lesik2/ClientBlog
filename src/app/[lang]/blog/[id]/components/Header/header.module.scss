@@ -1,0 +1,87 @@
+.headerSection {
+  width: 58%;
+  height: 282px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 35px;
+  margin-bottom: 64px;
+
+  .userWrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+    .userInfo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      .userTitle {
+        color: $third-color;
+        @media (max-width: $laptopM) {
+          font-size: 24px;
+          line-height: 30px;
+        }
+        @media (max-width: $tablet) {
+          font-size: 20px;
+          line-height: 26px;
+        }
+      }
+      .userSubtitle {
+        color: $light-gray-color;
+        @extend %body1;
+        @media (max-width: $laptopM) {
+          font-size: 14px;
+        }
+        @media (max-width: $tablet) {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  .title {
+    color: $primary-color;
+    @media (max-width: $laptopM) {
+      font-size: 38px;
+      line-height: 50px;
+    }
+    @media (max-width: $tablet) {
+      font-size: 30px;
+      line-height: 40px;
+    }
+    @media (max-width: $mobileL) {
+      font-size: 25px;
+      line-height: 30px;
+    }
+  }
+  .categories {
+    .categoryWrapper {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      justify-content: center;
+      .categoryTitle {
+        color: $primary-color;
+        @media (max-width: $laptopM) {
+          font-size: 20px;
+          line-height: 26px;
+        }
+        @media (max-width: $tablet) {
+          font-size: 18px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+  @media (max-width: $laptopM) {
+    width: 65%;
+    margin-bottom: 50px;
+  }
+  @media (max-width: $tablet) {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  @media (max-width: $mobileL) {
+    width: 95%;
+  }
+}

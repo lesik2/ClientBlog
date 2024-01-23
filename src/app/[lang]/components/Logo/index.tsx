@@ -1,7 +1,7 @@
-import style from '@styles/homePage/logo.module.scss';
 import Image from 'next/image';
 import { Dictionary } from '@lib/dictionary';
 
+import style from './logo.module.scss';
 import { LOGO_ICONS } from './constants';
 
 export default function Logo({ dictionary }: { dictionary: Dictionary }) {

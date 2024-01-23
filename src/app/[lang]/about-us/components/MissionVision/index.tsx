@@ -1,5 +1,6 @@
 import { Dictionary } from '@lib/dictionary';
-import style from '@styles/aboutUsPage/missionVision.module.scss';
+
+import style from './missionVision.module.scss';
 
 export default function MissionVision({ dictionary }: { dictionary: Dictionary }) {
   const { aboutUsPage } = dictionary;

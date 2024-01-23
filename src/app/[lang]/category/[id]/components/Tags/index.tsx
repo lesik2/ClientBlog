@@ -1,6 +1,7 @@
-import style from '@styles/categoryPage/tags.module.scss';
 import { TAGS } from '@constants/tags';
 import { Dispatch, SetStateAction } from 'react';
+
+import style from './tags.module.scss';
 
 export interface ITags {
   setTags: Dispatch<SetStateAction<string[]>>;

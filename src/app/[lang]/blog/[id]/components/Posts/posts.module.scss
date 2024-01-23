@@ -1,0 +1,42 @@
+.postsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 64px;
+  .title {
+    color: $primary-color;
+    @media (max-width: $laptopM) {
+      font-size: 30px;
+      line-height: 40px;
+    }
+    @media (max-width: $tablet) {
+      font-size: 25px;
+      line-height: 32px;
+    }
+    @media (max-width: $mobileL) {
+      font-size: 22px;
+      line-height: 28px;
+    }
+  }
+  .wrapperPosts {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 32px;
+    max-width: 1280px;
+    @media (max-width: $laptopL) {
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+    }
+    @media (max-width: $laptopM) {
+      gap: 15px;
+    }
+  }
+  @media (max-width: $laptopL) {
+    gap: 44px;
+  }
+  @media (max-width: $laptopM) {
+    gap: 25px;
+  }
+}

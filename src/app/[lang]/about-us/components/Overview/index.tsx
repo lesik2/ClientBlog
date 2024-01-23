@@ -1,5 +1,6 @@
 import { Dictionary } from '@lib/dictionary';
-import style from '@styles/aboutUsPage/overview.module.scss';
+
+import style from './overview.module.scss';
 
 export default function Overview({ dictionary }: { dictionary: Dictionary }) {
   const { aboutUsPage } = dictionary;

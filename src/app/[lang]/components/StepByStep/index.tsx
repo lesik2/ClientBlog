@@ -1,9 +1,9 @@
 import button from '@styles/ui/button.module.scss';
-import style from '@styles/homePage/stepByStep.module.scss';
 import Link from 'next/link';
 import { ROUTES } from '@constants/routes';
 import { Dictionary } from '@lib/dictionary';
 
+import style from './stepByStep.module.scss';
 import { CONSTANTS } from './constants';
 
 export default function StepByStep({ dictionary }: { dictionary: Dictionary }) {

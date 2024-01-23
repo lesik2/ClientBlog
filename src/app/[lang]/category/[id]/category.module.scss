@@ -1,0 +1,50 @@
+.categorySection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  .main {
+    padding: 102px 76px 128px 79px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 147px;
+
+    .postsSection {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      align-items: flex-start;
+      justify-content: center;
+      max-height: 1100px;
+      overflow: auto;
+      .title {
+        color: $primary-color;
+        align-self: center;
+        text-align: center;
+      }
+    }
+    .aside {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      margin-top: 42px;
+      @media (max-width: $laptopM) {
+        margin-top: 25px;
+        width: 100%;
+      }
+    }
+    @media (max-width: $laptopL) {
+      padding: 50px 10px 50px 10px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 30px;
+    }
+    @media (max-width: $laptopM) {
+      flex-direction: column-reverse;
+    }
+  }
+}

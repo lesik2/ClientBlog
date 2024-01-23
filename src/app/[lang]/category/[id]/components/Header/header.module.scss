@@ -1,0 +1,69 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0px;
+  width: 100%;
+  background-color: $white-light-gray-color;
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    .title {
+      @extend %display;
+      color: $primary-color;
+      @media (max-width: $tablet) {
+        font-size: 45px;
+        line-height: 50px;
+      }
+      @media (max-width: $mobileL) {
+        font-size: 40px;
+        line-height: 40px;
+      }
+    }
+    .description {
+      text-align: center;
+      @extend %body1;
+      color: $light-gray-color;
+      margin: 16px 0px 32px 0px;
+      width: 100%;
+      @media (max-width: $tablet) {
+        font-size: 15px;
+        line-height: 22px;
+      }
+      @media (max-width: $mobileL) {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+    .category {
+      @extend %cap;
+      color: $primary-color;
+      @media (max-width: $tablet) {
+        font-size: 15px;
+        line-height: 20px;
+      }
+      @media (max-width: $mobileL) {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+    @media (max-width: $laptopM) {
+      width: 45%;
+    }
+    @media (max-width: $mobileL) {
+      width: 65%;
+    }
+  }
+  @media (max-width: $laptopM) {
+    padding: 60px 0px;
+  }
+  @media (max-width: $tablet) {
+    padding: 40px 0px;
+  }
+  @media (max-width: $mobileL) {
+    padding: 25px 0px;
+  }
+}

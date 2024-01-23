@@ -1,0 +1,100 @@
+.overviewSection {
+  width: 1288px;
+  height: 444px;
+  position: relative;
+  background-image: url('/images/aboutUsOverview.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  .overviewWrapper {
+    position: absolute;
+    left: 109px;
+    bottom: 23px;
+    padding: 32px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $secondary-color;
+    gap: 68px;
+    .resultWrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      .title {
+        @extend %display;
+        color: $primary-color;
+        @media (max-width: $laptopL) {
+          font-size: 46px;
+          line-height: 40px;
+        }
+        @media (max-width: $tablet) {
+          font-size: 28px;
+          line-height: 33px;
+        }
+        @media (max-width: $mobileL) {
+          font-size: 26px;
+          line-height: 30px;
+        }
+      }
+      .subtitle {
+        @extend %body1;
+        color: $primary-color;
+        @media (max-width: $laptopL) {
+          font-size: 15px;
+        }
+        @media (max-width: $tablet) {
+          font-size: 14px;
+        }
+        @media (max-width: $mobileL) {
+          font-size: 12px;
+          line-height: 20px;
+        }
+      }
+    }
+    @media (max-width: $laptopL) {
+      left: 30px;
+      padding: 25px 37px;
+      width: 70%;
+      max-width: 600px;
+      gap: 35px;
+    }
+    @media (max-width: $tablet) {
+      left: 10px;
+      width: 85%;
+      padding: 10px 13px;
+      gap: 15px;
+    }
+    @media (max-width: $mobileL) {
+      width: 88%;
+    }
+  }
+  .designWrapper {
+    position: absolute;
+    bottom: 0px;
+    left: 109px;
+    display: flex;
+    width: 861px;
+    align-items: center;
+    .first {
+      width: 36%;
+      background-color: $third-color;
+      height: 23px;
+    }
+    .second {
+      width: 64%;
+      background-color: $secondary-color;
+      height: 23px;
+    }
+    @media (max-width: $laptopL) {
+      width: 80%;
+      left: 30px;
+      max-width: 900px;
+    }
+    @media (max-width: $tablet) {
+      left: 10px;
+      width: 95%;
+    }
+  }
+  @media (max-width: $laptopL) {
+    width: 100%;
+  }
+}

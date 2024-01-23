@@ -1,0 +1,22 @@
+.aboutSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 80px 0px 80px;
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: $laptopL) {
+      width: 100%;
+    }
+  }
+  @media (max-width: $laptopL) {
+    width: 100%;
+    padding: 20px 20px 0px 20px;
+  }
+  @media (max-width: $laptopM) {
+    padding: 20px 0px 0px 0px;
+  }
+}
