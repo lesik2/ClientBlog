@@ -1,14 +1,24 @@
 import { IPostCard } from '@customTypes/models';
-import style from '@styles/blogPost/postCard.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ROUTES } from '@constants/routes';
 
+import style from './postCard.module.scss';
+
 export default function PostCard({ imageSrc, title, description, id }: IPostCard) {
   return (
-    <Link href={`${ROUTES.blog}/${id}`}>
+    <Link className={style.linkWrapper} href={`${ROUTES.blog}/${id}`}>
       <article className={style.postCardSection}>
-        <Image src={imageSrc} alt='post' width={405} height={318} />
+        <div className={style.imageWrapper}>
+          <Image 
+          src={imageSrc}
+          alt='post' 
+          style={{objectFit: "cover"}}
+          fill
+            sizes='100vw'
+          />
+        </div>
+       
         <p className={style.dateAuthor}>
           By <span className={style.mark}>John Doe</span> | Aug 23, 2021
         </p>

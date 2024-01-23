@@ -1,7 +1,8 @@
 import { IHeaderBlogPost } from '@customTypes/index';
-import style from '@styles/blogPost/header.module.scss';
 import Image from 'next/image';
 import { CATEGORIES } from '@constants/categories';
+
+import style from './header.module.scss';
 
 export default function Header({ author, post }: IHeaderBlogPost) {
   const { fullName, iconSrc } = author;
@@ -24,6 +25,7 @@ export default function Header({ author, post }: IHeaderBlogPost) {
             alt='category'
             width={48}
             height={48}
+            
           />
           <h4 className={style.categoryTitle}>{category}</h4>
         </div>

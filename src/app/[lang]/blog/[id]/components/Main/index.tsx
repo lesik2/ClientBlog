@@ -1,10 +1,21 @@
 import Image from 'next/image';
-import style from '@styles/blogPost/main.module.scss';
+
+import style from './main.module.scss';
 
 export default function Main({ imageSrc }: { imageSrc: string }) {
   return (
     <main className={style.mainSection}>
-      <Image className={style.image} src={imageSrc} alt='post' width={1280} height={582} />
+      <div className={style.imageWrapper}>
+        <Image 
+          src={imageSrc} 
+          alt='post' 
+          style={{objectFit: "cover"}}
+          quality={100}
+          fill
+          sizes='100vw'
+        />
+      </div>
+      
       <div className={style.content}>
         <article className={style.article}>
           <h2 className={style.title}>
@@ -38,13 +49,13 @@ export default function Main({ imageSrc }: { imageSrc: string }) {
           </p>
           <ul className={style.list}>
             <li>
-              <h4>Lorem ipsum dolor sit amet</h4>
+              <h4 className={style.listItem}>Lorem ipsum dolor sit amet</h4>
             </li>
             <li>
-              <h4>Non blandit massa enim nec scelerisque</h4>
+              <h4 className={style.listItem}>Non blandit massa enim nec scelerisque</h4>
             </li>
             <li>
-              <h4>Neque egestas congue quisque egestas</h4>
+              <h4 className={style.listItem}>Neque egestas congue quisque egestas</h4>
             </li>
           </ul>
           <p className={style.subtitle}>
