@@ -22,13 +22,7 @@ export default function OurTeam({ dictionary }: { dictionary: Dictionary }) {
           </p>
         </div>
         <div className={style.imageContent}>
-          <Image 
-            src='/images/aboutUsTeam.png' 
-            alt='our team' 
-    
-            sizes="(max-width: 1460) 60vw,100vw"
-            fill
-          />
+          <Image src='/images/aboutUsTeam.png' alt='our team' sizes='(max-width: 1460) 60vw,100vw' fill />
         </div>
       </div>
     </section>

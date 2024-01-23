@@ -25,7 +25,6 @@ export default function Header({ author, post }: IHeaderBlogPost) {
             alt='category'
             width={48}
             height={48}
-            
           />
           <h4 className={style.categoryTitle}>{category}</h4>
         </div>

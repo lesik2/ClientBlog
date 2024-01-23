@@ -29,12 +29,7 @@ export default function Header({ dictionary }: { dictionary: Dictionary }) {
         </Link>
       </div>
       <div className={style.imageWrapper}>
-        <Image 
-        src='/images/BlogHeader.png' 
-        alt='step by step image' 
-        fill 
-        sizes="100vw"
-        />
+        <Image src='/images/BlogHeader.png' alt='step by step image' fill sizes='100vw' />
       </div>
     </header>
   );

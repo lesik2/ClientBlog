@@ -6,16 +6,9 @@ export default function Main({ imageSrc }: { imageSrc: string }) {
   return (
     <main className={style.mainSection}>
       <div className={style.imageWrapper}>
-        <Image 
-          src={imageSrc} 
-          alt='post' 
-          style={{objectFit: "cover"}}
-          quality={100}
-          fill
-          sizes='100vw'
-        />
+        <Image src={imageSrc} alt='post' style={{ objectFit: 'cover' }} quality={100} fill sizes='100vw' />
       </div>
-      
+
       <div className={style.content}>
         <article className={style.article}>
           <h2 className={style.title}>

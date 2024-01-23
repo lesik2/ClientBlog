@@ -20,7 +20,14 @@ export default function Posts({ dictionary }: { dictionary: Dictionary }) {
               <h2 className={style.title}>{posts.featuredTitle}</h2>
             </div>
             <div className={style.featuredPost}>
-              <Image className={style.postImage} src='/images/postsImage.png' alt='post' width={669} height={352} sizes='100vw' />
+              <Image
+                className={style.postImage}
+                src='/images/postsImage.png'
+                alt='post'
+                width={669}
+                height={352}
+                sizes='100vw'
+              />
               <p className={style.info}>
                 {posts.StartFrom}
                 <span className={style.infoMark}>{CONSTANTS.author}</span> | {posts.date}

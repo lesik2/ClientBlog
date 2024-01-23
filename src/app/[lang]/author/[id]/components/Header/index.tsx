@@ -14,13 +14,13 @@ export default function Header({ author, dictionary }: { author: IAuthor; dictio
   return (
     <header className={style.header}>
       <div className={style.userIconWrapper}>
-        <Image 
-          src={author.iconSrc} 
-          alt='author image' 
+        <Image
+          src={author.iconSrc}
+          alt='author image'
           sizes='100vw'
           fill
           quality={100}
-          style={{objectFit: "contain"}}
+          style={{ objectFit: 'contain' }}
         />
       </div>
 

@@ -13,13 +13,7 @@ export default function PostCard({ imageSrc, tags, title, description, size = 'd
         className={`${size === 'small' ? style.postCardArticleSmall : ''} ${style.postCardArticleDefault}`}
       >
         <div className={`${size === 'small' ? style.imageWrapperSmall : ''} ${style.imageWrapper}`}>
-        <Image
-          src={imageSrc}
-          alt='post image'
-          fill
-          sizes='100vw'
-          style={{ objectFit: 'cover' }}
-        />
+          <Image src={imageSrc} alt='post image' fill sizes='100vw' style={{ objectFit: 'cover' }} />
         </div>
         <div className={style.infoWrapper}>
           <p className={style.tags}>{tags.join(' ')}</p>
