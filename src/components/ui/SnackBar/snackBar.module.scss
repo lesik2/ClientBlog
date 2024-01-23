@@ -22,4 +22,10 @@
   background-color: $white-light-gray-color;
   font-size: 17px;
   color: $primary-color;
+  @media (max-width: $tablet) {
+    font-size: 15px;
+  }
+  @media (max-width: $mobileL) {
+    font-size: 14px;
+  }
 }
