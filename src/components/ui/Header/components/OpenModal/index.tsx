@@ -19,7 +19,7 @@ export default function OpenModal({ btnText }: { btnText: string }) {
 
   return (
     <>
-      <button onClick={handleOpenModal} type='button' className={button.secondary}>
+      <button data-cy='open-modal' onClick={handleOpenModal} type='button' className={button.secondary}>
         {btnText}
       </button>
       {isOpen && (

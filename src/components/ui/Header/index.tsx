@@ -18,7 +18,7 @@ export default function Header({ dictionary }: { dictionary: Dictionary }) {
   const nameOfLinks = Object.values(navigation);
 
   return (
-    <header className={style.header}>
+    <header data-cy='header' className={style.header}>
       <p className={style.title}>{CONSTANTS.title}</p>
       <Menu isOpen={isOpen} setIsOpen={setIsOpen}>
         <div className={style.menuWrapper}>

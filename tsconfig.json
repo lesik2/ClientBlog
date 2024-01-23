@@ -7,6 +7,7 @@
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
+    "types": ["cypress"],
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",
@@ -17,7 +18,6 @@
     "allowSyntheticDefaultImports": true,
     "declaration": true,
     "declarationDir": "types",
-    "sourceMap": true,
     "checkJs": true,
     "forceConsistentCasingInFileNames": true,
     "useDefineForClassFields": true,
@@ -47,5 +47,5 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "typings/*.d.ts"],
-  "exclude": ["node_modules", ".vscode"]
+  "exclude": ["node_modules", ".vscode","cypress.config.ts", "cypress"]
 }

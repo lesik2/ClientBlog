@@ -15,5 +15,5 @@ export function SnackBar({ message }: ISnackbar) {
 
   useShowSnackBar(isOpen, setIsOpen);
 
-  return <>{isOpen && <div className={style.snackBarWrapper}>{message}</div>}</>;
+  return <>{isOpen && <div data-cy='snack-bar' className={style.snackBarWrapper}>{message}</div>}</>;
 }

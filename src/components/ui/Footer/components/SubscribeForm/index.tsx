@@ -54,18 +54,19 @@ export default function SubscribeForm({ placeholder, btnText }: ISubscribeForm) 
   };
 
   return (
-    <form className={style.submitForm} onSubmit={handleSubmit(sendEmail)} autoComplete='off'>
+    <form data-cy='form-footer' className={style.submitForm} onSubmit={handleSubmit(sendEmail)} autoComplete='off'>
       <div className={style.inputWrapper}>
         <input
+          data-cy='input-footer'
           placeholder={placeholder}
           className={style.input}
           onFocus={handleFocus}
           {...register('user_email', { required: true })}
         />
-        {errorMessage && <p className={style.errorMessage}>{errorMessage.message}</p>}
+        {errorMessage && <p data-cy='footer-error' className={style.errorMessage}>{errorMessage.message}</p>}
       </div>
       <div className={style.btnWrapper}>
-        <button className={button.primary} type='submit' disabled={loading}>
+        <button data-cy='button-footer' className={button.primary} type='submit' disabled={loading}>
           {btnText}
         </button>
         {loading && (
