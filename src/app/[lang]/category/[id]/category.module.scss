@@ -1,6 +1,3 @@
-@import '../ui/typography.module.scss';
-@import '../theme.module.scss';
-
 .categorySection {
   display: flex;
   flex-direction: column;
@@ -20,7 +17,6 @@
       gap: 32px;
       align-items: flex-start;
       justify-content: center;
-      min-width: 832px;
       max-height: 1100px;
       overflow: auto;
       .title {
@@ -34,8 +30,21 @@
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
-      min-width: 296px;
       margin-top: 42px;
+      @media (max-width: $laptopM) {
+        margin-top: 25px;
+        width: 100%;
+      }
+    }
+    @media (max-width: $laptopL) {
+      padding: 50px 10px 50px 10px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 30px;
+    }
+    @media (max-width: $laptopM) {
+      flex-direction: column-reverse;
     }
   }
 }

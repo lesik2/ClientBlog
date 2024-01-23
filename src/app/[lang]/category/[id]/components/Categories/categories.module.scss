@@ -1,10 +1,15 @@
-@import '../ui/typography.module.scss';
-@import '../theme.module.scss';
-
 .categoriesWrapper {
   .title {
     color: $primary-color;
     user-select: none;
+    @media (max-width: $laptopM) {
+      font-size: 26px;
+      line-height: 35px;
+    }
+    @media (max-width: $tablet) {
+      font-size: 22px;
+      line-height: 30px;
+    }
   }
   .wrapper {
     display: flex;
@@ -36,9 +41,30 @@
         align-items: center;
         justify-content: center;
       }
+      @media (max-width: $laptopM) {
+        width: 255px;
+        height: 80px;
+        gap: 12px;
+        padding: 15px 10px 15px 15px;
+      }
+      @media (max-width: $mobileL) {
+        width: 240px;
+        height: 70px;
+        padding: 10px;
+      }
     }
     .active {
       background: $secondary-color;
+    }
+    @media (max-width: $laptopM) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 10px;
+      width: 100%;
+    }
+    @media (max-width: $tablet) {
+      justify-content: center;
+      align-items: center;
     }
   }
 }

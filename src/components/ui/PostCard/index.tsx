@@ -12,7 +12,7 @@ export default function PostCard({ imageSrc, tags, title, description, size = 'd
       <article
         className={`${size === 'small' ? style.postCardArticleSmall : ''} ${style.postCardArticleDefault}`}
       >
-        <div className={style.imageWrapper}>
+        <div className={`${size === 'small' ? style.imageWrapperSmall : ''} ${style.imageWrapper}`}>
         <Image
           src={imageSrc}
           alt='post image'

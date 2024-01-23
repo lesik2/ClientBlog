@@ -112,4 +112,26 @@
 }
 .postCardArticleSmall {
   max-width: 850px;
+  .imageWrapperSmall {
+    height: 100%;
+    width: 35%;
+    position: relative;
+    min-width: 300px;
+    @media (max-width: $laptopM) {
+      min-width: 280px;
+      width: 30%;
+    }
+    @media (max-width: $tablet) {
+      width: 100%;
+      min-height: 260px;
+      min-width: auto;
+      height: 100%;
+    }
+    @media (max-width: $mobileL) {
+      min-height: 250px;
+    }
+    @media (max-width: $mobileM) {
+      min-height: 220px;
+    }
+  }
 }

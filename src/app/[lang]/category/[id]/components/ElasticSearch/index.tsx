@@ -1,7 +1,7 @@
 'use client';
 
 import { ChangeEvent, useState } from 'react';
-import style from '@styles/categoryPage/elasticSearch.module.scss';
+import style from '@styles/ui/elasticSearch.module.scss';
 import { TAGS } from '@constants/tags';
 
 import { IElasticSearch } from '@/types';
