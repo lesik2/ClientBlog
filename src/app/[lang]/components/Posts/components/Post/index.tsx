@@ -1,7 +1,4 @@
-
-
 import style from './post.module.scss';
-
 
 export interface IPost {
   title: string;

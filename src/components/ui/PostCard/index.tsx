@@ -5,7 +5,6 @@ import { ROUTES } from '@constants/routes';
 
 import style from './postCard.module.scss';
 
-
 export default function PostCard({ imageSrc, tags, title, description, size = 'default', id }: IPostCard) {
   return (
     <Link className={style.linkWrapper} href={`${ROUTES.blog}/${id}`}>

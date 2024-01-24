@@ -4,7 +4,6 @@ import { Dispatch, useCallback, useState } from 'react';
 import { useCloseList } from '@hooks/useCloseList';
 import Image from 'next/image';
 
-
 import style from './dropDown.module.scss';
 
 export interface IDropDown {

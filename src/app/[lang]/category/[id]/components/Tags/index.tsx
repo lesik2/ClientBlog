@@ -1,10 +1,8 @@
 import { TAGS } from '@constants/tags';
 
-
 import style from './tags.module.scss';
 
 import { ITags } from '../../interfaces';
-
 
 export default function Tags({ setTags, tags }: ITags) {
   const handleClick = (tag: string) => {

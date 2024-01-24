@@ -24,6 +24,10 @@
             font-size: 30px;
             line-height: 35px;
           }
+          @media (max-width: $mobileL) {
+            font-size: 25px;
+            line-height: 28px;
+          }
         }
         .link {
           color: $third-color;

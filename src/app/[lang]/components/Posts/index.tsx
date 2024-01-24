@@ -44,7 +44,7 @@ export default function Posts({ dictionary }: { dictionary: Dictionary }) {
           <div className={style.allPosts}>
             <div className={style.header}>
               <h2 className={style.title}>{posts.allPostsTitle}</h2>
-              <Link href={ROUTES.blog} className={style.link}>
+              <Link data-cy='all-posts-link' href={ROUTES.blog} className={style.link}>
                 {posts.link}
               </Link>
             </div>

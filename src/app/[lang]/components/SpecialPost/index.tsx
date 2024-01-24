@@ -28,7 +28,7 @@ export default function SpecialPost({ dictionary }: { dictionary: Dictionary }) 
             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
             nisi ut aliquip.
           </p>
-          <Link href={ROUTES.aboutUs}>
+          <Link data-cy='whyStartedLink' href={ROUTES.aboutUs}>
             <button type='button' className={button.primary}>
               {specialPost.btn}
             </button>

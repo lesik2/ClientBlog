@@ -1,9 +1,7 @@
 import { useEffect, useState } from 'react';
 
-
 import style from './snackBar.module.scss';
 import { useShowSnackBar } from './hooks/useShowSnackBar';
-
 
 export interface ISnackbar {
   message: string;

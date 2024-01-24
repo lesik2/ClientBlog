@@ -21,7 +21,7 @@ export default function About({ dictionary }: { dictionary: Dictionary }) {
             <p className={style.subtitle}>{aboutUs.aboutSubtitle}</p>
             <h2 className={style.title}>{aboutUs.aboutTitle}</h2>
             <p className={style.description}>{AboutDescription}</p>
-            <Link className={style.link} href={ROUTES.aboutUs}>
+            <Link data-cy='aboutUsLink' className={style.link} href={ROUTES.aboutUs}>
               Read More {'>'}
             </Link>
           </div>

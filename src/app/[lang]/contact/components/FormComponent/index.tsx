@@ -13,7 +13,6 @@ import style from './form.module.scss';
 
 import { TMessageEmail } from '../../interfaces';
 
-
 import { InfinityLoader } from '@/components/ui/InfinityLoader';
 
 export function FormComponent({ dictionary }: { dictionary: Dictionary }) {

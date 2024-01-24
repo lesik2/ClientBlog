@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 
-
 import slider from './slider.module.scss';
 
 import { ISlider } from '../../interfaces';
