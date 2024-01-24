@@ -3,7 +3,7 @@
 import { POST_CARDS } from '@constants/cards';
 import PostCard from '@components/ui/PostCard';
 import { useState } from 'react';
-import { Metadata } from 'next';
+
 
 import style from './category.module.scss';
 import Header from './components/Header';
@@ -11,9 +11,7 @@ import ElasticSearch from './components/ElasticSearch';
 import Categories from './components/Categories';
 import Tags from './components/Tags';
 
-export const metadata: Metadata = {
-  title: 'Category',
-};
+
 
 export default function CategoryItem({ params: { id } }: { params: { id: string } }) {
   const [search, setSearch] = useState('');
