@@ -1,11 +1,16 @@
 'use client';
 
-import { useCallback, useState } from 'react';
+import { Dispatch, useCallback, useState } from 'react';
 import { useCloseList } from '@hooks/useCloseList';
 import Image from 'next/image';
-import { IDropDown } from '@customTypes/index';
 
 import style from './dropDown.module.scss';
+
+export interface IDropDown {
+  value: string;
+  setValue: Dispatch<React.SetStateAction<string>>;
+  selectValues: string[];
+}
 
 export function DropDown({ value, setValue, selectValues }: IDropDown) {
   const [active, setActive] = useState(false);
@@ -27,11 +32,11 @@ export function DropDown({ value, setValue, selectValues }: IDropDown) {
 
   return (
     <div ref={wrapperRef} className={style.dropDownWrapper}>
-      <button type='button' onClick={handleClick} className={style.selectedValue}>
+      <button data-cy='dropDownButton' type='button' onClick={handleClick} className={style.selectedValue}>
         {value}
         <Image src='/icons/arrow.svg' alt='arrow' width={14} height={8} />
       </button>
-      <ul ref={listRef} className={`${active ? style.listActive : ''} ${style.list}`}>
+      <ul data-cy='dropDownList' ref={listRef} className={`${active ? style.listActive : ''} ${style.list}`}>
         {selectValues.map((item) => (
           <li key={item} onClick={() => handleSelect(item)} className={style.itemList}>
             {item}

@@ -36,12 +36,21 @@ export default function Posts({ dictionary }: { dictionary: Dictionary }) {
       <div className={style.titleWrapper}>
         <h1 className={style.title}>{blogPage.postsTitle}</h1>
       </div>
-      <div className={style.wrapperCards}>{renderPostCards()}</div>
+      <div data-cy='wrapperPosts' className={style.wrapperCards}>
+        {renderPostCards()}
+      </div>
       <div className={style.wrapperButtons}>
-        <button className={style.button} type='button' onClick={handlePrevPage} disabled={currentPage === 0}>
+        <button
+          data-cy='prevBtn'
+          className={style.button}
+          type='button'
+          onClick={handlePrevPage}
+          disabled={currentPage === 0}
+        >
           <h4 className={style.btnText}>{blogPage.btnPrev}</h4>
         </button>
         <button
+          data-cy='nextBtn'
           className={style.button}
           type='button'
           onClick={handleNextPage}

@@ -1,6 +1,10 @@
-import { IPost } from '@customTypes/index';
-
 import style from './post.module.scss';
+
+export interface IPost {
+  title: string;
+  author: string;
+  date: string;
+}
 
 export function Post({ title, author, date }: IPost) {
   return (

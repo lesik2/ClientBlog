@@ -1,9 +1,10 @@
 import { CATEGORIES } from '@constants/categories';
 import Image from 'next/image';
-import { ICategories } from '@customTypes/index';
 import { useRouter, usePathname } from 'next/navigation';
 
 import style from './categories.module.scss';
+
+import { ICategories } from '../../interfaces';
 
 import { ROUTES } from '@/constants/routes';
 import { URL_CATEGORY } from '@/constants/regular';
@@ -23,9 +24,10 @@ export default function Categories({ activeCategory }: ICategories) {
   return (
     <div className={style.categoriesWrapper}>
       <h2 className={style.title}>Categories</h2>
-      <div className={style.wrapper}>
+      <div data-cy='categoriesWrapper' className={style.wrapper}>
         {CATEGORIES.map((card) => (
           <button
+            data-cy={card.category}
             type='button'
             key={card.category}
             className={`${activeCategory === card.category ? style.active : ''} ${style.card}`}

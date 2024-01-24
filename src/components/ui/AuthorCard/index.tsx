@@ -15,7 +15,7 @@ export function AuthorCard({ fullName, description, iconSrc, id }: IAuthor) {
   };
 
   return (
-    <button type='button' className={style.wrapperCard} onClick={handleClick}>
+    <button data-cy={fullName} type='button' className={style.wrapperCard} onClick={handleClick}>
       <div className={style.content}>
         <Image className={style.icon} width={128} height={128} src={iconSrc} alt={`icon of ${fullName}`} />
         <h3 className={style.title}>{fullName}</h3>

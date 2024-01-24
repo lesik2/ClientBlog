@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react';
-import { ISnackbar } from '@customTypes/index';
 
 import style from './snackBar.module.scss';
 import { useShowSnackBar } from './hooks/useShowSnackBar';
+
+export interface ISnackbar {
+  message: string;
+}
 
 export function SnackBar({ message }: ISnackbar) {
   const [isOpen, setIsOpen] = useState(true);
@@ -15,5 +18,13 @@ export function SnackBar({ message }: ISnackbar) {
 
   useShowSnackBar(isOpen, setIsOpen);
 
-  return <>{isOpen && <div className={style.snackBarWrapper}>{message}</div>}</>;
+  return (
+    <>
+      {isOpen && (
+        <div data-cy='snack-bar' className={style.snackBarWrapper}>
+          {message}
+        </div>
+      )}
+    </>
+  );
 }

@@ -8,9 +8,10 @@ import { UserRegularExpression } from '@validation/user';
 import emailjs from '@emailjs/browser';
 import { SnackBar } from '@components/ui/SnackBar';
 import { Dictionary } from '@lib/dictionary';
-import { TMessageEmail } from '@customTypes/index';
 
 import style from './form.module.scss';
+
+import { TMessageEmail } from '../../interfaces';
 
 import { InfinityLoader } from '@/components/ui/InfinityLoader';
 
@@ -52,9 +53,15 @@ export function FormComponent({ dictionary }: { dictionary: Dictionary }) {
 
   return (
     <div className={style.sectionWrapper}>
-      <form onSubmit={handleSubmit(onSubmit)} autoComplete='off' className={style.formWrapper}>
+      <form
+        data-cy='contactForm'
+        onSubmit={handleSubmit(onSubmit)}
+        autoComplete='off'
+        className={style.formWrapper}
+      >
         <div className={style.inputWrapper}>
           <input
+            data-cy='contactUserInput'
             className={style.contactInput}
             placeholder={contactForm.placeholderName}
             {...register('user_name', {
@@ -69,6 +76,7 @@ export function FormComponent({ dictionary }: { dictionary: Dictionary }) {
         </div>
         <div className={style.inputWrapper}>
           <input
+            data-cy='contactEmailInput'
             className={style.contactInput}
             placeholder={contactForm.placeholderEmail}
             {...register('user_email', {
@@ -84,6 +92,7 @@ export function FormComponent({ dictionary }: { dictionary: Dictionary }) {
         <DropDown value={selectValue} setValue={setSelectValue} selectValues={selectValues} />
         <div className={style.inputWrapper}>
           <textarea
+            data-cy='contactMessageTextInput'
             className={`${style.contactInput} ${style.contactTextArea}`}
             placeholder={contactForm.placeholderMessage}
             {...register('message', {
@@ -97,7 +106,12 @@ export function FormComponent({ dictionary }: { dictionary: Dictionary }) {
           {errors.message && <p className={style.errorMessage}>{errors.message.message}</p>}
         </div>
         <div className={style.btnWrapper}>
-          <button type='submit' className={buttonStyle.formPrimary} disabled={!isValid}>
+          <button
+            data-cy='contactSubmit'
+            type='submit'
+            className={buttonStyle.formPrimary}
+            disabled={!isValid}
+          >
             {contactForm.btn}
           </button>
           {loading && (

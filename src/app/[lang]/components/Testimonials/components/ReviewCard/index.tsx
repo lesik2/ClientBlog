@@ -1,7 +1,8 @@
-import { IReviewCard } from '@customTypes/index';
 import Image from 'next/image';
 
 import style from './reviewCard.module.scss';
+
+import { IReviewCard } from '../../interfaces';
 
 export default function ReviewCard({ iconSrc, text, userName, userAddress }: IReviewCard) {
   return (

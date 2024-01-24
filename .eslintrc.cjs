@@ -26,7 +26,7 @@ module.exports = {
     "tsconfigRootDir": __dirname,
     "sourceType": "module"
   },
-  ignorePatterns: ['.eslintrc.cjs','next.config.js'],
+  ignorePatterns: ['.eslintrc.cjs','next.config.js','cypress.config.ts','cypress'],
   parser: '@typescript-eslint/parser',
   plugins: ['react-refresh', "import", "jsx-a11y", "promise", "react", "@typescript-eslint", "prettier"],
   rules: {

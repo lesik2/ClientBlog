@@ -30,7 +30,7 @@ export function MapComponent() {
   };
 
   return (
-    <div className={style.mapSection}>
+    <div className={style.mapSection} data-cy='contactMap'>
       <Map
         {...viewState}
         onMove={handleZoom}

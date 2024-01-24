@@ -1,14 +1,13 @@
 import Image from 'next/image';
 import { IPostCard } from '@customTypes/models';
 import Link from 'next/link';
+import { ROUTES } from '@constants/routes';
 
 import style from './postCard.module.scss';
 
-import { ROUTES } from '@/constants/routes';
-
 export default function PostCard({ imageSrc, tags, title, description, size = 'default', id }: IPostCard) {
   return (
-    <Link className={style.linkWrapper} href={`${ROUTES.blog}/${id}`}>
+    <Link data-cy='postCard' className={style.linkWrapper} href={`${ROUTES.blog}/${id}`}>
       <article
         className={`${size === 'small' ? style.postCardArticleSmall : ''} ${style.postCardArticleDefault}`}
       >
