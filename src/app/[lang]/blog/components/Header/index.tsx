@@ -22,7 +22,7 @@ export default function Header({ dictionary }: { dictionary: Dictionary }) {
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur. Excepteur sint occaecat cupidatat non proident.
         </p>
-        <Link href={`${ROUTES.blog}/1`}>
+        <Link data-cy='blogLink' href={`${ROUTES.blog}/1`}>
           <button type='button' className={buttonStyle.primary}>
             {stepByStep.btn}
           </button>

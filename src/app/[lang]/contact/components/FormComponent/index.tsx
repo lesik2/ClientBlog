@@ -53,7 +53,12 @@ export function FormComponent({ dictionary }: { dictionary: Dictionary }) {
 
   return (
     <div className={style.sectionWrapper}>
-      <form data-cy='contactForm' onSubmit={handleSubmit(onSubmit)} autoComplete='off' className={style.formWrapper}>
+      <form
+        data-cy='contactForm'
+        onSubmit={handleSubmit(onSubmit)}
+        autoComplete='off'
+        className={style.formWrapper}
+      >
         <div className={style.inputWrapper}>
           <input
             data-cy='contactUserInput'
@@ -87,7 +92,7 @@ export function FormComponent({ dictionary }: { dictionary: Dictionary }) {
         <DropDown value={selectValue} setValue={setSelectValue} selectValues={selectValues} />
         <div className={style.inputWrapper}>
           <textarea
-          data-cy='contactMessageTextInput'
+            data-cy='contactMessageTextInput'
             className={`${style.contactInput} ${style.contactTextArea}`}
             placeholder={contactForm.placeholderMessage}
             {...register('message', {
@@ -101,7 +106,12 @@ export function FormComponent({ dictionary }: { dictionary: Dictionary }) {
           {errors.message && <p className={style.errorMessage}>{errors.message.message}</p>}
         </div>
         <div className={style.btnWrapper}>
-          <button data-cy='contactSubmit' type='submit' className={buttonStyle.formPrimary} disabled={!isValid}>
+          <button
+            data-cy='contactSubmit'
+            type='submit'
+            className={buttonStyle.formPrimary}
+            disabled={!isValid}
+          >
             {contactForm.btn}
           </button>
           {loading && (
