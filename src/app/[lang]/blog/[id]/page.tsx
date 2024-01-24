@@ -3,6 +3,7 @@ import { Dictionary, getDictionary } from '@lib/dictionary';
 import { POST_CARDS } from '@constants/cards';
 import { AUTHORS } from '@constants/authors';
 import { IDynamicRoute } from '@customTypes/index';
+import { Metadata } from 'next';
 
 import style from './blogPost.module.scss';
 import Header from './components/Header';
@@ -14,6 +15,10 @@ export function generateStaticParams() {
     id: post.id,
   }));
 }
+
+export const metadata: Metadata = {
+  title: 'Post',
+};
 
 export default async function BlogPost({ params: { lang, id } }: IDynamicRoute) {
   const dictionary: Dictionary = await getDictionary(lang);

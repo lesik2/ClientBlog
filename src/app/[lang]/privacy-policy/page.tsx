@@ -1,8 +1,12 @@
 import { Dictionary, getDictionary } from '@lib/dictionary';
 import { LocaleType } from '@customTypes/locale';
+import { Metadata } from 'next';
 
 import style from './privacyPolicy.module.scss';
 
+export const metadata: Metadata = {
+  title: 'Privacy Policy',
+};
 export default async function PrivacyPolicy({ params: { lang } }: { params: LocaleType }) {
   const dictionary: Dictionary = await getDictionary(lang);
   const { privacyPolicy } = dictionary;

@@ -1,9 +1,15 @@
 import { LocaleType } from '@customTypes/locale';
 import { Dictionary, getDictionary } from '@lib/dictionary';
+import { Metadata } from 'next';
 
 import style from './contact.module.scss';
 import { MapComponent } from './components/Map/index';
 import { FormComponent } from './components/FormComponent/index';
+
+
+export const metadata: Metadata = {
+  title: 'Contact',
+};
 
 export default async function Contact({ params: { lang } }: { params: LocaleType }) {
   const dictionary: Dictionary = await getDictionary(lang);
