@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import { IPostCard } from '@customTypes/models';
 import Link from 'next/link';
+import { ROUTES } from '@constants/routes';
 
 import style from './postCard.module.scss';
 
-import { ROUTES } from '@/constants/routes';
 
 export default function PostCard({ imageSrc, tags, title, description, size = 'default', id }: IPostCard) {
   return (

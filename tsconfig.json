@@ -47,5 +47,5 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "typings/*.d.ts"],
-  "exclude": ["node_modules", ".vscode","cypress.config.ts", "cypress"]
+  "exclude": ["node_modules", ".vscode", "cypress.config.ts", "cypress"]
 }

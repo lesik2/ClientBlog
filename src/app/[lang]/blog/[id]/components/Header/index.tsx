@@ -1,8 +1,9 @@
-import { IHeaderBlogPost } from '@customTypes/index';
 import Image from 'next/image';
 import { CATEGORIES } from '@constants/categories';
 
 import style from './header.module.scss';
+
+import { IHeaderBlogPost } from '../../interfaces';
 
 export default function Header({ author, post }: IHeaderBlogPost) {
   const { fullName, iconSrc } = author;

@@ -1,9 +1,10 @@
 import { CATEGORIES } from '@constants/categories';
 import Image from 'next/image';
-import { ICategories } from '@customTypes/index';
 import { useRouter, usePathname } from 'next/navigation';
 
 import style from './categories.module.scss';
+
+import { ICategories } from '../../interfaces';
 
 import { ROUTES } from '@/constants/routes';
 import { URL_CATEGORY } from '@/constants/regular';

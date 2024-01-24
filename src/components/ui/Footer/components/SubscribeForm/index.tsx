@@ -6,10 +6,11 @@ import { emailSchema } from '@validation/email';
 import emailjs from '@emailjs/browser';
 import { SnackBar } from '@components/ui/SnackBar';
 import { useForm, SubmitHandler } from 'react-hook-form';
-import { ISubscribeForm, TSubscribeEmail } from '@customTypes/index';
 import { InfinityLoader } from '@components/ui/InfinityLoader';
 
 import style from './submitForm.module.scss';
+
+import { ISubscribeForm, TSubscribeEmail } from '../../interfaces';
 
 export default function SubscribeForm({ placeholder, btnText }: ISubscribeForm) {
   const [errorMessage, setErrorMessage] = useState<Error | null>(null);
@@ -54,7 +55,12 @@ export default function SubscribeForm({ placeholder, btnText }: ISubscribeForm) 
   };
 
   return (
-    <form data-cy='form-footer' className={style.submitForm} onSubmit={handleSubmit(sendEmail)} autoComplete='off'>
+    <form
+      data-cy='form-footer'
+      className={style.submitForm}
+      onSubmit={handleSubmit(sendEmail)}
+      autoComplete='off'
+    >
       <div className={style.inputWrapper}>
         <input
           data-cy='input-footer'
@@ -63,7 +69,11 @@ export default function SubscribeForm({ placeholder, btnText }: ISubscribeForm) 
           onFocus={handleFocus}
           {...register('user_email', { required: true })}
         />
-        {errorMessage && <p data-cy='footer-error' className={style.errorMessage}>{errorMessage.message}</p>}
+        {errorMessage && (
+          <p data-cy='footer-error' className={style.errorMessage}>
+            {errorMessage.message}
+          </p>
+        )}
       </div>
       <div className={style.btnWrapper}>
         <button data-cy='button-footer' className={button.primary} type='submit' disabled={loading}>

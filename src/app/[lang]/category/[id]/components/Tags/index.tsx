@@ -1,12 +1,11 @@
 import { TAGS } from '@constants/tags';
-import { Dispatch, SetStateAction } from 'react';
+
 
 import style from './tags.module.scss';
 
-export interface ITags {
-  setTags: Dispatch<SetStateAction<string[]>>;
-  tags: string[];
-}
+import { ITags } from '../../interfaces';
+
+
 export default function Tags({ setTags, tags }: ITags) {
   const handleClick = (tag: string) => {
     const isExist = tags.includes(tag);

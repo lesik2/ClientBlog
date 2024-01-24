@@ -26,8 +26,11 @@ export function Navigation({ type, nameOfLinks, setIsOpen, isFooter }: INavigati
       <ul className={nav.list} data-cy='navigation-list'>
         {links.map((link, index) => (
           <li className={nav.item} key={link.to} onClick={handleCloseMenu}>
-            <Link data-cy={`${isFooter?'footer-':'header-'}${link.to}`} 
-            className={`${paths === link.to ? nav.active : ''} ${nav.link}`} href={link.to}>
+            <Link
+              data-cy={`${isFooter ? 'footer-' : 'header-'}${link.to}`}
+              className={`${paths === link.to ? nav.active : ''} ${nav.link}`}
+              href={link.to}
+            >
               {nameOfLinks[index]}
             </Link>
           </li>

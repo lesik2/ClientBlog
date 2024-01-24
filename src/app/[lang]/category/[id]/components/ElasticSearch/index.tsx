@@ -4,7 +4,7 @@ import { ChangeEvent, useState } from 'react';
 import style from '@styles/ui/elasticSearch.module.scss';
 import { TAGS } from '@constants/tags';
 
-import { IElasticSearch } from '@/types';
+import { IElasticSearch } from '../../interfaces';
 
 export default function ElasticSearch({ setSearch }: IElasticSearch) {
   const [value, setValue] = useState('');

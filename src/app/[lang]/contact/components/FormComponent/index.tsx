@@ -8,9 +8,11 @@ import { UserRegularExpression } from '@validation/user';
 import emailjs from '@emailjs/browser';
 import { SnackBar } from '@components/ui/SnackBar';
 import { Dictionary } from '@lib/dictionary';
-import { TMessageEmail } from '@customTypes/index';
 
 import style from './form.module.scss';
+
+import { TMessageEmail } from '../../interfaces';
+
 
 import { InfinityLoader } from '@/components/ui/InfinityLoader';
 
