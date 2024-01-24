@@ -1,4 +1,4 @@
-describe('Home page', () => {
+describe('Blog page', () => {
   beforeEach(() => {
     cy.visit('/blog');
     cy.url().should('include', '/blog');

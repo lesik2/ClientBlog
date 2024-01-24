@@ -17,9 +17,10 @@ export default function Tags({ setTags, tags }: ITags) {
   return (
     <div className={style.tagsWrapper}>
       <h2 className={style.title}>All Tags</h2>
-      <div className={style.wrapper}>
+      <div data-cy='tagsWrapper' className={style.wrapper}>
         {TAGS.map((tag) => (
           <button
+            data-cy={`card-${tag}`}
             className={`${tags.includes(tag) ? style.active : ''} ${style.tag}`}
             type='button'
             key={tag}

@@ -19,15 +19,15 @@ export default function ElasticSearch({ setSearch }: IElasticSearch) {
   };
 
   return (
-    <div className={style.elasticSearchWrapper}>
+    <div data-cy='elasticSearch' className={style.elasticSearchWrapper}>
       <div className={style.wrapperInput}>
-        <input value={value} onChange={handleInput} className={style.input} placeholder='Search for tag...' />
-        <button className={style.searchBtn} type='button' onClick={() => handleSearchTag(value)}>
+        <input data-cy='searchInput' value={value} onChange={handleInput} className={style.input} placeholder='Search for tag...' />
+        <button  data-cy='searchButton' className={style.searchBtn} type='button' onClick={() => handleSearchTag(value)}>
           Search
         </button>
       </div>
       {value && !TAGS.includes(value) && (
-        <ul className={style.list}>
+        <ul  data-cy='searchList' className={style.list}>
           {TAGS.filter((tag) => tag.toLowerCase().startsWith(value.toLowerCase())).map((tag) => (
             <li className={style.item} key={tag} onClick={() => handleSearchTag(tag)}>
               {tag}
