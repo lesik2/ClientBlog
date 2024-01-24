@@ -104,7 +104,10 @@
           width: 45%;
         }
         @media (max-width: $tablet) {
-          width: 65%;
+          width: 70%;
+        }
+        @media (max-width: $mobileL) {
+          width: 85%;
         }
       }
       @media (max-width: $laptopM) {
