@@ -2,7 +2,12 @@
 
 import { useEffect } from 'react';
 
-export default function Error({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) {
+export interface IError{
+  error: Error & { digest?: string };
+  reset:  () => void;
+}
+
+export default function Error({ error, reset }: IError) {
   useEffect(() => {
     console.error(error);
   }, [error]);
