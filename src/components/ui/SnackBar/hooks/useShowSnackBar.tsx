@@ -1,13 +1,25 @@
-import { useEffect, Dispatch } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
-export function useShowSnackBar(isOpen: boolean, setIsOpen: Dispatch<React.SetStateAction<boolean>>): void {
+export function useShowSnackBar(): [boolean, () => void] {
+  const [isOpen, setIsOpen] = useState(true);
+
+  const closeSnackBar = useCallback(() => {
+    setIsOpen(false);
+  }, []);
+
+  const openSnackBar = useCallback(() => {
+    setIsOpen(true);
+  }, []);
+
   useEffect(() => {
     if (!isOpen) return () => {};
 
-    const idTimer = setTimeout(() => setIsOpen(false), 4000);
+    const idTimer = setTimeout(closeSnackBar, 4000);
 
     return () => {
       clearTimeout(idTimer);
     };
-  }, [isOpen, setIsOpen]);
+  }, [isOpen, closeSnackBar]);
+
+  return [isOpen, openSnackBar];
 }
