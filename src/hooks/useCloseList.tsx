@@ -2,11 +2,15 @@
 
 import { RefObject, useEffect, useRef } from 'react';
 
+import { useLatest } from './useLatest';
+
 export function useCloseList(
   handleCloseList: () => void,
 ): [RefObject<HTMLDivElement>, RefObject<HTMLUListElement>] {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const listRef = useRef<HTMLUListElement>(null);
+
+  const latestHandleCloseList = useLatest(handleCloseList);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -16,7 +20,7 @@ export function useCloseList(
         listRef.current &&
         !listRef.current.contains(event.target as Node)
       ) {
-        handleCloseList();
+        latestHandleCloseList.current();
       }
     };
 
@@ -25,7 +29,7 @@ export function useCloseList(
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [wrapperRef, listRef, handleCloseList]);
+  }, [wrapperRef, listRef, latestHandleCloseList]);
 
   return [wrapperRef, listRef];
 }
