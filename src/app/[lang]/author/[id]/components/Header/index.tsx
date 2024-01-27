@@ -3,12 +3,14 @@
 import Image from 'next/image';
 import { SOCIAL_ICONS } from '@constants/socialIcons';
 import { IAuthor } from '@customTypes/models';
+import _ from 'lodash';
+import { memo } from 'react';
 
 import style from './header.module.scss';
 
 import { Dictionary } from '@/lib/dictionary';
 
-export default function Header({ author, dictionary }: { author: IAuthor; dictionary: Dictionary }) {
+const Header = memo(({ author, dictionary }: { author: IAuthor; dictionary: Dictionary }) => {
   const { authorPage } = dictionary;
 
   return (
@@ -47,4 +49,6 @@ export default function Header({ author, dictionary }: { author: IAuthor; dictio
       </div>
     </header>
   );
-}
+}, _.isEqual);
+
+export default Header;

@@ -6,7 +6,6 @@ import style from './contact.module.scss';
 import { MapComponent } from './components/Map/index';
 import { FormComponent } from './components/FormComponent/index';
 
-
 export const metadata: Metadata = {
   title: 'Contact',
 };

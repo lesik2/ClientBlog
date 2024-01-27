@@ -1,13 +1,17 @@
 import { Dictionary } from '@lib/dictionary';
+import { useMemo } from 'react';
 
 import style from './testimonials.module.scss';
 import { REVIEW_CARDS } from './constants';
-import ReviewCard from './components/ReviewCard';
-import WrapperButtons from './components/WrapperButtons';
-import Slider from './components/Slider/index';
+import ReviewCard from './atoms/ReviewCard';
+import Slider from './atoms/Slider/index';
 
 export default function Testimonials({ dictionary }: { dictionary: Dictionary }) {
   const { testimonials } = dictionary;
+  const reviewCards = useMemo(
+    () => REVIEW_CARDS.map((card, index) => <ReviewCard key={index} {...card} />),
+    [],
+  );
 
   return (
     <div className={style.wrapper}>
@@ -20,11 +24,7 @@ export default function Testimonials({ dictionary }: { dictionary: Dictionary })
           </p>
         </div>
         <div className={style.wrapperSlider}>
-          <Slider WrapperButtons={WrapperButtons}>
-            {REVIEW_CARDS.map((card, index) => (
-              <ReviewCard key={index} {...card} />
-            ))}
-          </Slider>
+          <Slider>{reviewCards}</Slider>
         </div>
       </div>
     </div>

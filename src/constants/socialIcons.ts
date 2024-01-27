@@ -23,4 +23,4 @@ export const SOCIAL_ICONS = [
     height: 16,
     alt: 'linkedin',
   },
-];
+] as const;

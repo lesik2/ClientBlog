@@ -2,13 +2,14 @@ import JoinOurTeam from '@components/JoinOurTeam';
 import { Dictionary, getDictionary } from '@lib/dictionary';
 import { POST_CARDS } from '@constants/cards';
 import { AUTHORS } from '@constants/authors';
-import { IDynamicRoute } from '@customTypes/index';
-
+import { useMemo } from 'react';
 
 import style from './blogPost.module.scss';
 import Header from './components/Header';
 import Main from './components/Main';
 import Posts from './components/Posts';
+
+import { IDynamicRoute } from '@/types/dynamicRoute';
 
 export function generateStaticParams() {
   return POST_CARDS.map((post) => ({
@@ -16,11 +17,15 @@ export function generateStaticParams() {
   }));
 }
 
-
 export default async function BlogPost({ params: { lang, id } }: IDynamicRoute) {
   const dictionary: Dictionary = await getDictionary(lang);
-  const currentPost = POST_CARDS.find((card) => card.id === id);
-  const currentAuthor = AUTHORS.find((author) => author.id === currentPost?.authorId);
+
+  const currentPost = useMemo(() => POST_CARDS.find((card) => card.id === id), [id]);
+
+  const currentAuthor = useMemo(
+    () => AUTHORS.find((author) => author.id === currentPost?.authorId),
+    [currentPost],
+  );
 
   return (
     <>

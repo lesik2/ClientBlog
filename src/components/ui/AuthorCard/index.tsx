@@ -5,10 +5,11 @@ import { SOCIAL_ICONS } from '@constants/socialIcons';
 import { IAuthor } from '@customTypes/models';
 import { ROUTES } from '@constants/routes';
 import { useRouter } from 'next/navigation';
+import { memo } from 'react';
 
 import style from './authorCard.module.scss';
 
-export function AuthorCard({ fullName, description, iconSrc, id }: IAuthor) {
+export const AuthorCard = memo(({ fullName, description, iconSrc, id }: IAuthor) => {
   const router = useRouter();
   const handleClick = () => {
     router.push(`${ROUTES.author}/${id}`);
@@ -30,4 +31,4 @@ export function AuthorCard({ fullName, description, iconSrc, id }: IAuthor) {
       </div>
     </button>
   );
-}
+});

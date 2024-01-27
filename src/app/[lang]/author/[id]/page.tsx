@@ -1,11 +1,13 @@
 import { AUTHORS } from '@constants/authors';
 import { POST_CARDS } from '@constants/cards';
-import { IDynamicRoute } from '@customTypes/index';
 import { Dictionary, getDictionary } from '@lib/dictionary';
+import { useMemo } from 'react';
 
 import style from './author.module.scss';
 import Header from './components/Header';
 import Posts from './components/Posts';
+
+import { IDynamicRoute } from '@/types/dynamicRoute';
 
 export function generateStaticParams() {
   return AUTHORS.map((author) => ({
@@ -15,8 +17,9 @@ export function generateStaticParams() {
 
 export default async function AuthorPage({ params: { lang, id } }: IDynamicRoute) {
   const dictionary: Dictionary = await getDictionary(lang);
-  const author = AUTHORS.find((item) => item.id === id);
-  const authorCards = POST_CARDS.filter((card) => card.authorId === id);
+
+  const author = useMemo(() => AUTHORS.find((item) => item.id === id), [id]);
+  const authorCards = useMemo(() => POST_CARDS.filter((card) => card.authorId === id), [id]);
 
   return (
     <>

@@ -148,6 +148,8 @@ module.exports = {
     "jsx-a11y/no-noninteractive-element-interactions":'off',
     "@typescript-eslint/no-unsafe-assignment":'off',
     "@typescript-eslint/no-unsafe-argument":'off',
-    "jsx-a11y/no-static-element-interactions":'off'
+    "jsx-a11y/no-static-element-interactions":'off',
+    "react/display-name":'off',
+    "@typescript-eslint/unbound-method": "off"
   },
 }

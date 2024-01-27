@@ -3,13 +3,15 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { INavigation } from '@customTypes/ui';
+import _ from 'lodash';
+import { memo } from 'react';
 
 import nav from './navigation.module.scss';
 
 import { HEADER_LINKS } from '../Header/constants';
 import { FOOTER_LINKS } from '../Footer/constants';
 
-export function Navigation({ type, nameOfLinks, setIsOpen, isFooter }: INavigation) {
+export const Navigation = memo(({ type, nameOfLinks, setIsOpen, isFooter }: INavigation) => {
   const pathname = usePathname();
   const paths = `/${pathname.split('/').slice(2).join('')}`;
 
@@ -38,4 +40,4 @@ export function Navigation({ type, nameOfLinks, setIsOpen, isFooter }: INavigati
       </ul>
     </nav>
   );
-}
+}, _.isEqual);

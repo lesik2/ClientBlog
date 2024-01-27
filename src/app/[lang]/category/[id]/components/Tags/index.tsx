@@ -7,6 +7,7 @@ import style from './tags.module.scss';
 import { ITags } from '../../interfaces';
 
 const Tags = memo(({ setTags, tags }: ITags) => {
+  
   const handleClick = (tag: string) => () => {
     const exists = tags.includes(tag);
 

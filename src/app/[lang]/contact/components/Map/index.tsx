@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 import style from './map.module.scss';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import { CONTACTS_LOCATIONS } from './constants';
+import { CONSTANTS_LOCATIONS } from './constants';
 
 export const initialCoordinatesMap = {
   latitude: 53.9022,
@@ -37,7 +37,7 @@ export function MapComponent() {
         mapboxAccessToken={process.env.NEXT_PUBLIC_MAP_TOKEN ?? ''}
         mapStyle='mapbox://styles/mapbox/streets-v12'
       >
-        {CONTACTS_LOCATIONS.map((location) => (
+        {CONSTANTS_LOCATIONS.map((location) => (
           <Marker key={location.id} longitude={location.longitude} latitude={location.latitude}>
             <button type='button' className={style.markerBtn}>
               <Image src='/icons/marker.svg' alt='marker of map' width={25} height={25} />

@@ -25,3 +25,13 @@ export interface ILocation {
   latitude: number;
   longitude: number;
 }
+
+export type Tags =
+  | 'Business'
+  | 'Experience'
+  | 'Screen'
+  | 'Technology'
+  | 'Marketing'
+  | 'Life'
+  | 'Economy'
+  | 'Startup';

@@ -1,11 +1,13 @@
 import Image from 'next/image';
 import { CATEGORIES } from '@constants/categories';
+import { memo } from 'react';
+import _ from 'lodash';
 
 import style from './header.module.scss';
 
 import { IHeaderBlogPost } from '../../interfaces';
 
-export default function Header({ author, post }: IHeaderBlogPost) {
+const Header = memo(({ author, post }: IHeaderBlogPost) => {
   const { fullName, iconSrc } = author;
   const { date, title, category } = post;
 
@@ -32,4 +34,6 @@ export default function Header({ author, post }: IHeaderBlogPost) {
       </div>
     </header>
   );
-}
+}, _.isEqual);
+
+export default Header;

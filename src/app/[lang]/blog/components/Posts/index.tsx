@@ -1,7 +1,7 @@
 'use client';
 
 import PostCard from '@components/ui/PostCard';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { POST_CARDS } from '@constants/cards';
 import { Dictionary } from '@lib/dictionary';
 
@@ -22,14 +22,14 @@ export default function Posts({ dictionary }: { dictionary: Dictionary }) {
     setCurrentPage((prevPage) => prevPage - 1);
   };
 
-  const renderPostCards = () => {
+  const renderPostCards = useMemo(() => {
     const startIndex = currentPage * postsPerPage;
     const endIndex = startIndex + postsPerPage;
 
     const slicedCards = POST_CARDS.slice(startIndex, endIndex);
 
     return slicedCards.map((postCard) => <PostCard key={postCard.id} {...postCard} />);
-  };
+  }, [currentPage]);
 
   return (
     <section className={style.postsSection}>
@@ -37,7 +37,7 @@ export default function Posts({ dictionary }: { dictionary: Dictionary }) {
         <h1 className={style.title}>{blogPage.postsTitle}</h1>
       </div>
       <div data-cy='wrapperPosts' className={style.wrapperCards}>
-        {renderPostCards()}
+        {renderPostCards}
       </div>
       <div className={style.wrapperButtons}>
         <button

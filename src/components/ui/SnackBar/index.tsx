@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 import style from './snackBar.module.scss';
 import { useShowSnackBar } from './hooks/useShowSnackBar';
@@ -8,15 +8,13 @@ export interface ISnackbar {
 }
 
 export function SnackBar({ message }: ISnackbar) {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, openSnackBar] = useShowSnackBar();
 
   useEffect(() => {
     if (message) {
-      setIsOpen(true);
+      openSnackBar();
     }
-  }, [message]);
-
-  useShowSnackBar(isOpen, setIsOpen);
+  }, [message, openSnackBar]);
 
   return (
     <>

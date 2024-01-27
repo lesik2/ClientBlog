@@ -1,8 +1,7 @@
-'use client';
-
-import { Dispatch, useCallback, useState } from 'react';
+import { Dispatch, memo, useState } from 'react';
 import { useCloseList } from '@hooks/useCloseList';
 import Image from 'next/image';
+import _ from 'lodash';
 
 import style from './dropDown.module.scss';
 
@@ -12,18 +11,18 @@ export interface IDropDown {
   selectValues: string[];
 }
 
-export function DropDown({ value, setValue, selectValues }: IDropDown) {
+export const DropDown = memo(({ value, setValue, selectValues }: IDropDown) => {
   const [active, setActive] = useState(false);
 
   const handleClick = () => {
     setActive(!active);
   };
 
-  const handleCloseList = useCallback(() => {
+  const handleCloseList = () => {
     setActive(false);
-  }, []);
+  };
 
-  const handleSelect = (select: string) => {
+  const handleSelect = (select: string) => () => {
     setValue(select);
     handleCloseList();
   };
@@ -38,11 +37,11 @@ export function DropDown({ value, setValue, selectValues }: IDropDown) {
       </button>
       <ul data-cy='dropDownList' ref={listRef} className={`${active ? style.listActive : ''} ${style.list}`}>
         {selectValues.map((item) => (
-          <li key={item} onClick={() => handleSelect(item)} className={style.itemList}>
+          <li key={item} onClick={handleSelect(item)} className={style.itemList}>
             {item}
           </li>
         ))}
       </ul>
     </div>
   );
-}
+}, _.isEqual);

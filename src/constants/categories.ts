@@ -21,4 +21,4 @@ export const CATEGORIES: ICategoryCard[] = [
     category: 'Technology',
     description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
   },
-];
+] as const;
