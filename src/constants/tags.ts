@@ -7,4 +7,4 @@ export const TAGS = [
   'Life',
   'Economy',
   'Startup',
-];
+] as const;

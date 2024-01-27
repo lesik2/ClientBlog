@@ -67,4 +67,4 @@ export const POST_CARDS: IPostCard[] = [
     date: '27th January 2022',
     category: 'Economy',
   },
-];
+] as const;

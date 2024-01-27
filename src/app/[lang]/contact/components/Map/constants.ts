@@ -1,6 +1,6 @@
 import { ILocation } from '@customTypes/models';
 
-export const CONTACTS_LOCATIONS: ILocation[] = [
+export const CONSTANTS_LOCATIONS: ILocation[] = [
   {
     id: 1,
     latitude: 55.751244,
@@ -16,4 +16,4 @@ export const CONTACTS_LOCATIONS: ILocation[] = [
     latitude: 52.2297,
     longitude: 21.0122,
   },
-];
+] as const;

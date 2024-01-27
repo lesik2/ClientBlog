@@ -49,4 +49,4 @@ export const AUTHORS: IAuthor[] = [
     description: 'Content Writer @Company',
     iconSrc: '/images/Jacob.png',
   },
-];
+] as const;

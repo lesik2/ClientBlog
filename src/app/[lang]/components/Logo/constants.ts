@@ -4,4 +4,4 @@ export const LOGO_ICONS = [
   '/icons/Logo3.svg',
   '/icons/Logo4.svg',
   '/icons/Logo5.svg',
-];
+] as const;

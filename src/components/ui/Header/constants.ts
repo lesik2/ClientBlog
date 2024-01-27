@@ -2,7 +2,7 @@ import { ROUTES } from '@constants/routes';
 
 export const CONSTANTS = {
   title: 'Modsen Client Blog',
-};
+} as const;
 export const HEADER_LINKS = [
   {
     to: ROUTES.home,
@@ -16,4 +16,4 @@ export const HEADER_LINKS = [
   {
     to: ROUTES.contact,
   },
-];
+] as const;

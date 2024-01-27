@@ -6,4 +6,4 @@ export const ROUTES = {
   author: '/author',
   privacyPolicy: '/privacy-policy',
   category: '/category',
-};
+} as const;

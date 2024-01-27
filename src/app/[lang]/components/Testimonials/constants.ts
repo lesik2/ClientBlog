@@ -35,4 +35,4 @@ export const REVIEW_CARDS = [
     userAddress: 'New york, USA',
     userName: 'Jonathan Vallem',
   },
-];
+] as const;
