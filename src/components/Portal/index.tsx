@@ -1,11 +1,13 @@
 import { IPortal } from '@customTypes/modal';
-import { useState, useLayoutEffect } from 'react';
+import { useState } from 'react';
 import ReactDOM from 'react-dom';
+
+import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicLayoutEffect';
 
 export const Portal = ({ children }: IPortal) => {
   const [modalContainer] = useState(document.createElement('div'));
 
-  useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     let modalRoot = document.getElementById('modal-root');
     if (!modalRoot) {
       const tempEl = document.createElement('div');
