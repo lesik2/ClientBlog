@@ -1,21 +1,21 @@
 'use client';
 
 import button from '@styles/ui/button.module.scss';
-import { useState } from 'react';
+import { memo, useCallback, useState } from 'react';
 import { Modal } from '@components/Modal';
 
 import style from './openModal.module.scss';
 
-export default function OpenModal({ btnText }: { btnText: string }) {
+const OpenModal = memo(({ btnText }: { btnText: string }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpenModal = () => {
     setIsOpen(true);
   };
 
-  const handleCloseModal = () => {
+  const handleCloseModal = useCallback(() => {
     setIsOpen(false);
-  };
+  }, []);
 
   return (
     <>
@@ -27,12 +27,14 @@ export default function OpenModal({ btnText }: { btnText: string }) {
           <iframe
             className={style.videoWrapper}
             allowFullScreen
-            src='https://www.youtube.com/embed/ZlbHdYMWSOA?si=K-gZ-omumwnOJumc?rel=0;&autoplay=1'
-            title='YouTube video player'
-            allow='autoplay'
+            src='https://www.youtube.com/embed/ZlbHdYMWSOA?si=K-gZ-omumwnOJumc&rel=0;&autoplay=1'
+            title='How to write a blog posts for beginners'
+            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
           />
         </Modal>
       )}
     </>
   );
-}
+});
+
+export default OpenModal;
