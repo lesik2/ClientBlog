@@ -5,15 +5,14 @@ import { useState } from 'react';
 import { DropDown } from '@components/ui/DropDown';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { UserRegularExpression } from '@validation/user';
-import emailjs from '@emailjs/browser';
 import { SnackBar } from '@components/ui/SnackBar';
 import { Dictionary } from '@lib/dictionary';
+import { sendMessageViaEmail } from '@api/sendEmail';
+import { InfinityLoader } from '@components/ui/InfinityLoader';
 
 import style from './form.module.scss';
 
-import { TMessageEmail } from '../../interfaces';
-
-import { InfinityLoader } from '@/components/ui/InfinityLoader';
+import { MessageEmail } from '../../interfaces';
 
 export function FormComponent({ dictionary }: { dictionary: Dictionary }) {
   const { contactForm } = dictionary;
@@ -26,22 +25,17 @@ export function FormComponent({ dictionary }: { dictionary: Dictionary }) {
     handleSubmit,
     formState: { isValid, errors },
     reset,
-  } = useForm<TMessageEmail>({
+  } = useForm<MessageEmail>({
     mode: 'onChange',
   });
 
-  const onSubmit: SubmitHandler<TMessageEmail> = async (data) => {
+  const onSubmit: SubmitHandler<MessageEmail> = async (data) => {
     setSuccess('');
     const userData = { ...data, selectValue };
     reset();
     setLoading(true);
-    emailjs
-      .send(
-        process.env.NEXT_PUBLIC_SERVICE_ID ?? '',
-        process.env.NEXT_PUBLIC_TEMPLATE_ID_USER_EMAIL ?? '',
-        userData,
-        process.env.NEXT_PUBLIC_PUBLIC_KEY,
-      )
+
+    sendMessageViaEmail(process.env.NEXT_PUBLIC_TEMPLATE_ID_USER_EMAIL ?? '', userData)
       .then((result) => {
         if (result.status === 200) {
           setSuccess(contactForm.successMessage);

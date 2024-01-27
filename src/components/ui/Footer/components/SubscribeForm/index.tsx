@@ -3,38 +3,34 @@
 import button from '@styles/ui/button.module.scss';
 import { useState } from 'react';
 import { emailSchema } from '@validation/email';
-import emailjs from '@emailjs/browser';
 import { SnackBar } from '@components/ui/SnackBar';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { InfinityLoader } from '@components/ui/InfinityLoader';
 
 import style from './submitForm.module.scss';
 
-import { ISubscribeForm, TSubscribeEmail } from '../../interfaces';
+import { ISubscribeForm, SubscribeEmail } from '../../interfaces';
+
+import { sendMessageViaEmail } from '@/api/sendEmail';
 
 export default function SubscribeForm({ placeholder, btnText }: ISubscribeForm) {
   const [errorMessage, setErrorMessage] = useState<Error | null>(null);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState('');
 
-  const { register, handleSubmit, reset } = useForm<TSubscribeEmail>({
+  const { register, handleSubmit, reset } = useForm<SubscribeEmail>({
     mode: 'onChange',
   });
 
-  const sendEmail: SubmitHandler<TSubscribeEmail> = async (data) => {
+  const sendEmail: SubmitHandler<SubscribeEmail> = async (data) => {
     setSuccess('');
     reset();
 
     try {
       await emailSchema.validate(data);
       setLoading(true);
-      emailjs
-        .send(
-          process.env.NEXT_PUBLIC_SERVICE_ID ?? '',
-          process.env.NEXT_PUBLIC_TEMPLATE_ID_SUBSCRIBE ?? '',
-          data,
-          process.env.NEXT_PUBLIC_PUBLIC_KEY,
-        )
+
+      sendMessageViaEmail(process.env.NEXT_PUBLIC_TEMPLATE_ID_SUBSCRIBE ?? '', data)
         .then((result) => {
           if (result.status === 200) {
             setSuccess(`We have received you email: ${data.user_email}`);
