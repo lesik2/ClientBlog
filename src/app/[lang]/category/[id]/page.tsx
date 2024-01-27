@@ -2,8 +2,7 @@
 
 import { POST_CARDS } from '@constants/cards';
 import PostCard from '@components/ui/PostCard';
-import { useState } from 'react';
-
+import { useMemo, useState } from 'react';
 
 import style from './category.module.scss';
 import Header from './components/Header';
@@ -11,21 +10,17 @@ import ElasticSearch from './components/ElasticSearch';
 import Categories from './components/Categories';
 import Tags from './components/Tags';
 
-
-
 export default function CategoryItem({ params: { id } }: { params: { id: string } }) {
   const [search, setSearch] = useState('');
   const [tags, setTags] = useState<string[]>([]);
 
-  const cards = POST_CARDS.filter((card) => card.category === id)
-    .filter((card) => {
-      if (search !== '') {
-        return card.tags.includes(search);
-      }
-
-      return true;
-    })
-    .filter((card) => tags.every((tag) => card.tags.includes(tag)));
+  const cards = useMemo(
+    () =>
+      POST_CARDS.filter((card) => card.category === id)
+        .filter((card) => (search !== '' ? card.tags.includes(search) : true))
+        .filter((card) => tags.every((tag) => card.tags.includes(tag))),
+    [search, tags, id],
+  );
 
   return (
     <section className={style.categorySection}>
