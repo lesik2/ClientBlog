@@ -10,7 +10,7 @@ export default function Error({ error, reset }: { error: Error & { digest?: stri
   return (
     <div>
       <h2>Something went wrong!</h2>
-      <button type='button' onClick={() => reset()}>
+      <button type='button' onClick={reset}>
         Try again
       </button>
     </div>
