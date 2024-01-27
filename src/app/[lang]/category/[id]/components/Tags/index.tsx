@@ -1,17 +1,16 @@
 import { TAGS } from '@constants/tags';
+import _ from 'lodash';
+import { memo } from 'react';
 
 import style from './tags.module.scss';
 
 import { ITags } from '../../interfaces';
 
-export default function Tags({ setTags, tags }: ITags) {
-  const handleClick = (tag: string) => {
-    const isExist = tags.includes(tag);
-    if (isExist) {
-      setTags(tags.filter((item) => item !== tag));
-    } else {
-      setTags([...tags, tag]);
-    }
+const Tags = memo(({ setTags, tags }: ITags) => {
+  const handleClick = (tag: string) => () => {
+    const exists = tags.includes(tag);
+
+    setTags(exists ? tags.filter((item) => item !== tag) : [...tags, tag]);
   };
 
   return (
@@ -24,7 +23,7 @@ export default function Tags({ setTags, tags }: ITags) {
             className={`${tags.includes(tag) ? style.active : ''} ${style.tag}`}
             type='button'
             key={tag}
-            onClick={() => handleClick(tag)}
+            onClick={handleClick(tag)}
           >
             {tag}
           </button>
@@ -32,4 +31,6 @@ export default function Tags({ setTags, tags }: ITags) {
       </div>
     </div>
   );
-}
+}, _.isEqual);
+
+export default Tags;
