@@ -2,6 +2,6 @@ export interface ISubscribeForm {
   placeholder: string;
   btnText: string;
 }
-export type TSubscribeEmail = {
+export type SubscribeEmail = {
   user_email: string;
 };
