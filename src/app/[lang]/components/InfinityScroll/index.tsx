@@ -27,7 +27,7 @@ export default function InfinityScroll({ dictionary }: { dictionary: Dictionary 
     Logo,
     Testimonials,
     JoinOurTeam,
-  ];
+  ] as const;
 
   const { ref, inView } = useInView({
     triggerOnce: false,
