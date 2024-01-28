@@ -27,40 +27,22 @@ h6 {
   padding: 0;
 }
 h1 {
-  font-size: 48px;
-  line-height: 64px;
-  letter-spacing: -2px;
-  font-weight: 700;
-  letter-spacing: 1px;
+  @include title1();
 }
 h2 {
-  font-size: 36px;
-  line-height: 48px;
-  letter-spacing: -2px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
+  @include title2();
 }
 h3 {
-  font-size: 28px;
-  line-height: 36px;
-  letter-spacing: -1px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
+  @include title3();
 }
 h4 {
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 700;
+  @include title4();
 }
 h5 {
-  font-size: 20px;
-  line-height: 32px;
-  font-weight: 700;
+  @include title5();
 }
 h6 {
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 700;
+  @include title6();
 }
 
 img,

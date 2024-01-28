@@ -1,14 +1,8 @@
-@import './ui/typography.module.scss';
-
-$primary-color: #232536;
-$secondary-color: #ffd050;
-$third-color: #592ea9;
-$dark-gray-color: #4c4c4c;
-$light-gray-color: #6d6e76;
-$white-dark-gray-color: #f4f4f4;
-$white-light-gray-color: #f4f0f8;
-$white-pink-color: #fbf6ea;
-$white-color: #ffffff;
+@import './ui/colors.scss';
+@import './ui/typography.scss';
+@import './ui/space.scss';
+@import './ui/zIndex.scss';
+@import './ui/media.scss';
 
 $mobileS: 320px;
 $mobileM: 375px;
@@ -22,22 +16,3 @@ $burgerMenu: 1000;
 $modal: 1000;
 $menu: 900;
 $menuBack: 800;
-
-:export {
-  primaryColor: $primary-color;
-  secondaryColor: $secondary-color;
-  thirdColor: $third-color;
-  darkGrayColor: $dark-gray-color;
-  lightGrayColor: $light-gray-color;
-  whiteDarkGrayColor: $white-dark-gray-color;
-  whiteLightGrayColor: $white-light-gray-color;
-  whitePinkColor: $white-pink-color;
-  whiteColor: $white-color;
-  mobileS: $mobileS;
-  mobileM: $mobileM;
-  mobileL: $mobileL;
-  tablet: $tablet;
-  laptop: $laptop;
-  laptopM: $laptopM;
-  laptopL: $laptopL;
-}

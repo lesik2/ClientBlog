@@ -1,0 +1,28 @@
+$ui-step: 4px;
+
+@mixin ui-margin($direction, $size) {
+  @if ($direction == top) {
+    margin-top: $ui-step * $size;
+  }
+  @if ($direction == bottom) {
+    margin-bottom: $ui-step * $size;
+  }
+  @if ($direction == left) {
+    margin-left: $ui-step * $size;
+  }
+  @if ($direction == right) {
+    margin-right: $ui-step * $size;
+  }
+}
+
+@mixin ui-height($size) {
+  height: $ui-step * $size;
+}
+
+@mixin ui-width($size) {
+  width: $ui-step * $size;
+}
+
+@mixin ui-padding($size) {
+  padding: $ui-step * $size;
+}

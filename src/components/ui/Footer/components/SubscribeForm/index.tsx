@@ -6,12 +6,12 @@ import { emailSchema } from '@validation/email';
 import { SnackBar } from '@components/ui/SnackBar';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { InfinityLoader } from '@components/ui/InfinityLoader';
+import { sendMessageViaEmail } from '@api/sendEmail';
 
 import style from './submitForm.module.scss';
 
 import { ISubscribeForm, SubscribeEmail } from '../../interfaces';
 
-import { sendMessageViaEmail } from '@/api/sendEmail';
 
 export default function SubscribeForm({ placeholder, btnText }: ISubscribeForm) {
   const [errorMessage, setErrorMessage] = useState<Error | null>(null);
