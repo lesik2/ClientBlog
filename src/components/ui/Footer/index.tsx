@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { LocaleType } from '@customTypes/locale';
+import { getDictionary } from '@lib/dictionary';
 
 import style from './footer.module.scss';
 import { CONSTANTS } from './constants';
@@ -8,7 +9,6 @@ import SubscribeForm from './components/SubscribeForm';
 import { Navigation } from '../Navigation';
 
 import { SOCIAL_ICONS } from '@/constants/socialIcons';
-import { getDictionary } from '@/lib/dictionary';
 
 export default async function Footer({ lang }: LocaleType) {
   const { navigation, footer } = await getDictionary(lang);
