@@ -1,49 +1,60 @@
 .cardWrapper {
-  width: 296px;
-  height: 228px;
+  @include ui-height(57);
+  @include ui-width(74);
+
   border: 1px solid $light-gray-color;
   padding: 32px;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+
   transition: background-color 0.3s;
+
   &:hover {
-    cursor: pointer;
-    background-color: $secondary-color;
-    border: none;
+    @media #{$ui-mouse-device} {
+      background-color: $secondary-color;
+      cursor: pointer;
+      border: none;
+    }
   }
+
   .iconWrapper {
-    width: 48px;
-    height: 48px;
+    @include ui-height(12);
+    @include ui-width(12);
+
     background-color: $white-pink-color;
     border-radius: 5px;
     position: relative;
+
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
   .icon {
-    z-index: 2;
+    z-index: $ui-index-main;
   }
+
   .title {
-    margin: 16px 0px 4px 0px;
+    @include ui-margin(top, 4);
     color: $primary-color;
-    @media (max-width: $tablet) {
-      font-size: 24px;
-      line-height: 28px;
-    }
   }
+
   .description {
+    @include ui-margin(top, 1);
     color: $light-gray-color;
-    width: 232px;
+    @include ui-width(58);
   }
-  @media (max-width: $tablet) {
-    width: 220px;
-    height: 165px;
+
+  @media #{$ui-tablet} {
+    @include ui-height(41);
+    @include ui-width(55);
     padding: 15px;
   }
-  @media (max-width: $mobileL) {
+
+  @media #{$ui-mobileL} {
     padding: 8px;
   }
 }

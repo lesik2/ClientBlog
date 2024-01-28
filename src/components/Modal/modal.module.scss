@@ -4,11 +4,15 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: $modal;
+
+  z-index: $ui-index-modal;
+
+  background-color: $modal-back-color;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   .content {
     position: relative;
     display: flex;
@@ -21,17 +25,23 @@
       top: -35px;
       width: 35px;
       height: 35px;
-      border-radius: 50%;
-      transition: background-color 0.2s;
-      background-color: $white-color;
+
       border: none;
       outline: none;
-      cursor: pointer;
+      border-radius: 50%;
+
+      transition: background-color 0.2s;
+      background-color: $white-color;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       &:hover {
-        background-color: $light-gray-color;
+        @media #{$ui-mouse-device} {
+          background-color: $light-gray-color;
+          cursor: pointer;
+        }
       }
     }
   }

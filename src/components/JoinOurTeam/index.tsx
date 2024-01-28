@@ -15,7 +15,7 @@ export default function JoinOurTeam({ dictionary }: { dictionary: Dictionary }) 
         <p className={style.description}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
         </p>
-        <Link data-cy='join-our-team-link' href={ROUTES.contact} className={style.link}>
+        <Link  data-cy='join-our-team-link' href={ROUTES.contact} className={style.link}>
           <button type='button' className={button.primary}>
             {joinOurTeam.btn}
           </button>

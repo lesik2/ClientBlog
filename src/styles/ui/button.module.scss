@@ -21,8 +21,8 @@
   &:hover {
     @media #{$ui-mouse-device} {
       background-color: $hover;
+      cursor: pointer;
     }
-    cursor: pointer;
   }
 
   &:disabled {

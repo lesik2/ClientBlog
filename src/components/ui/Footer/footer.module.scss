@@ -1,18 +1,20 @@
 .footer {
   background-color: $primary-color;
-  padding: 59px 80px 56px 80px;
+  padding: 60px 80px 60px 80px;
 
   .content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     .header {
       height: 85px;
       display: flex;
       width: 100%;
       align-items: flex-start;
       justify-content: space-between;
+
       .title {
         color: $white-color;
         font-size: 24px;
@@ -21,52 +23,11 @@
         line-height: 48px;
       }
     }
-    .submitWrapper {
-      width: 100%;
-      height: 256px;
-      background: #2e3040;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0px 64px 0px 64px;
-      gap: 64px;
-      .subtitle {
-        color: $white-color;
-        max-width: 562px;
-        letter-spacing: 1px;
-        @media (max-width: $laptopL) {
-          font-size: 30px;
-          line-height: 35px;
-        }
-        @media (max-width: $laptopM) {
-          font-size: 25px;
-          line-height: 25px;
-        }
-        @media (max-width: $tablet) {
-          font-size: 20px;
-        }
-        @media (max-width: $mobileL) {
-          font-size: 16px;
-        }
-      }
-
-      @media (max-width: $laptopM) {
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        gap: 30px;
-      }
-      @media (max-width: $tablet) {
-        padding: 0px 20px;
-      }
-      @media (max-width: $mobileL) {
-        padding: 0px 10px;
-      }
-    }
 
     .contactsWrapper {
-      height: 104px;
+      @include ui-height(26);
       width: 100%;
+
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
@@ -76,14 +37,19 @@
         gap: 26px;
         align-items: center;
         margin-bottom: 28px;
+
         .socialLink {
           transition: transform 0.2;
           filter: invert(48%) sepia(10%) saturate(281%) hue-rotate(196deg) brightness(85%) contrast(85%);
+
           &:hover {
-            transform: scale(1.1);
+            @media #{$ui-mouse-device} {
+              transform: scale(1.1);
+            }
           }
         }
-        @media (max-width: $tablet) {
+
+        @media #{$ui-tablet} {
           margin-bottom: 18px;
         }
       }
@@ -93,14 +59,16 @@
         align-items: flex-start;
 
         .contact {
-          @extend %body1;
-          color: $light-gray-color;
-          @media (max-width: $tablet) {
+          @include body1();
+
+          @media #{$ui-tablet} {
             font-size: 14px;
+            gap: 3px;
           }
         }
       }
-      @media (max-width: $mobileL) {
+
+      @media #{$ui-mobileL} {
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
@@ -109,7 +77,42 @@
     }
   }
 
-  @media (max-width: $tablet) {
+  @media #{$ui-tablet} {
     padding: 30px;
+  }
+}
+
+.submitWrapper {
+  width: 100%;
+  @include ui-height(64);
+
+  background: #2e3040;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0px 65px 0px 65px;
+  gap: 64px;
+
+  .subtitle {
+    color: $white-color;
+    max-width: 562px;
+    letter-spacing: 1px;
+  }
+
+  @media #{$ui-laptopM} {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  @media #{$ui-tablet} {
+    padding: 0px 20px;
+  }
+
+  @media #{$ui-mobileL} {
+    padding: 0px 10px;
   }
 }

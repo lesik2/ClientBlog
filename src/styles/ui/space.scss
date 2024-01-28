@@ -22,7 +22,3 @@ $ui-step: 4px;
 @mixin ui-width($size) {
   width: $ui-step * $size;
 }
-
-@mixin ui-padding($size) {
-  padding: $ui-step * $size;
-}

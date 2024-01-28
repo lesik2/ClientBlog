@@ -1,136 +1,132 @@
 .postCardArticleDefault {
   display: flex;
   align-items: center;
-  gap: 32px;
-  max-width: 1146px;
-  width: 100%;
-  height: 318px;
   justify-content: center;
+
+  gap: 32px;
+  max-width: 1145px;
+  width: 100%;
+  @include ui-height(79);
+
   cursor: pointer;
   transition: background-color 0.2s;
+
   &:hover {
-    background-color: $white-light-gray-color;
+    @media #{$ui-mouse-device} {
+      background-color: $white-light-gray-color;
+    }
   }
+
   .imageWrapper {
     height: 100%;
     width: 45%;
     position: relative;
     min-width: 480px;
-    @media (max-width: $laptopM) {
+
+    @media #{$ui-laptopM} {
       min-width: 300px;
       width: 30%;
     }
-    @media (max-width: $tablet) {
+
+    @media #{$ui-tablet} {
       width: 100%;
       min-height: 318px;
       min-width: auto;
       height: 100%;
     }
-    @media (max-width: $mobileL) {
+
+    @media #{$ui-mobileL} {
       min-height: 250px;
     }
-    @media (max-width: $mobileM) {
+
+    @media #{$ui-mobileM} {
       min-height: 220px;
     }
   }
-  .infoWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 55%;
-    .tags {
-      @extend %cap;
-      color: $third-color;
-      @media (max-width: $tablet) {
-        font-size: 15px;
-        line-height: 17px;
-      }
-      @media (max-width: $mobileL) {
-        font-size: 14px;
-      }
-    }
-    .title {
-      color: $primary-color;
-      margin: 20px 0px 16px 0px;
-      @media (max-width: $laptopM) {
-        font-size: 29px;
-        line-height: 38px;
-      }
-      @media (max-width: $tablet) {
-        font-size: 24px;
-        line-height: 30px;
-      }
-      @media (max-width: $mobileL) {
-        font-size: 21px;
-        line-height: 25px;
-      }
-    }
-    .description {
-      @extend %body1;
-      color: $light-gray-color;
-      @media (max-width: $laptopM) {
-        font-size: 15px;
-        line-height: 22px;
-      }
-      @media (max-width: $tablet) {
-        font-size: 14px;
-        line-height: 15px;
-      }
-      @media (max-width: $mobileL) {
-        font-size: 13px;
-        line-height: 15px;
-      }
-    }
-    @media (max-width: $laptopM) {
-      width: 70%;
-    }
-    @media (max-width: $tablet) {
-      width: 100%;
-    }
-  }
-  @media (max-width: $laptopM) {
+
+  @media #{$ui-laptopM} {
     gap: 20px;
     height: 280px;
   }
-  @media (max-width: $tablet) {
+
+  @media #{$ui-tablet} {
     flex-direction: column;
     width: 405px;
     height: 100%;
     gap: 25px;
   }
-  @media (max-width: $mobileL) {
+
+  @media #{$ui-mobileL} {
     width: 330px;
   }
-  @media (max-width: $mobileM) {
+
+  @media #{$ui-mobileM} {
     width: 310px;
   }
 }
+
+.infoWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 55%;
+
+  .tags {
+    @include cap($third-color);
+  }
+
+  .title {
+    color: $primary-color;
+    @include ui-margin(top, 5);
+  }
+
+  .description {
+    @include body1();
+    @include ui-margin(top, 4);
+  }
+
+  @media #{$ui-laptopM} {
+    width: 70%;
+  }
+
+  @media #{$ui-tablet} {
+    width: 100%;
+  }
+}
+
 .linkWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .postCardArticleSmall {
   max-width: 850px;
+
   .imageWrapperSmall {
     height: 100%;
     width: 35%;
+
     position: relative;
     min-width: 300px;
-    @media (max-width: $laptopM) {
+
+    @media #{$ui-laptopM} {
       min-width: 280px;
       width: 30%;
     }
-    @media (max-width: $tablet) {
+
+    @media #{$ui-tablet} {
       width: 100%;
       min-height: 260px;
       min-width: auto;
       height: 100%;
     }
-    @media (max-width: $mobileL) {
+
+    @media #{$ui-mobileL} {
       min-height: 250px;
     }
-    @media (max-width: $mobileM) {
+
+    @media #{$ui-mobileM} {
       min-height: 220px;
     }
   }

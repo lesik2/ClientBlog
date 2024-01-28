@@ -6,29 +6,37 @@
     margin: 0;
     padding: 0;
     list-style: none;
+
     .item {
       .link {
-        @extend %body1;
-        color: $white-color;
+        @include body1($white-color);
+
         text-decoration: none;
         transition: color 0.2s;
+
         &:hover {
-          color: $light-gray-color;
+          @media #{$ui-mouse-device} {
+            color: $light-gray-color;
+          }
         }
-        @media (max-width: $laptopM) {
+
+        @media #{$ui-laptopM} {
           font-size: 14px;
         }
-        @media (max-width: $tablet) {
+
+        @media #{$ui-tablet} {
           width: 100%;
           text-align: center;
           font-size: 20px;
         }
       }
+
       .active {
         color: $secondary-color;
         font-weight: 700;
       }
-      @media (max-width: $tablet) {
+
+      @media #{$ui-tablet} {
         width: 100%;
         display: flex;
         justify-content: center;
@@ -36,21 +44,24 @@
       }
     }
 
-    @media (max-width: $laptopM) {
+    @media #{$ui-laptopM} {
       gap: 15px;
     }
-    @media (max-width: $tablet) {
+
+    @media #{$ui-tablet} {
       flex-direction: column;
       width: 100%;
       gap: 25px;
     }
   }
-  @media (max-width: $tablet) {
+
+  @media #{$ui-tablet} {
     width: 100%;
   }
 }
+
 .inactive {
-  @media (max-width: $tablet) {
+  @media #{$ui-tablet} {
     display: none;
   }
 }
