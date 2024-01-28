@@ -9,7 +9,7 @@
     justify-content: center;
 
     .header {
-      height: 85px;
+      @include ui-height(21);
       display: flex;
       width: 100%;
       align-items: flex-start;
@@ -53,6 +53,7 @@
           margin-bottom: 18px;
         }
       }
+
       .contactsInfo {
         display: flex;
         flex-direction: column;
