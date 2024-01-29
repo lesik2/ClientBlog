@@ -1,10 +1,10 @@
 import Image from 'next/image';
-import { Dictionary } from '@lib/dictionary';
+import { IStaticRoute } from '@customTypes/staticRoute';
 
 import style from './logo.module.scss';
 import { LOGO_ICONS } from './constants';
 
-export default function Logo({ dictionary }: { dictionary: Dictionary }) {
+export default function Logo({ dictionary }: IStaticRoute) {
   const { logos } = dictionary;
 
   return (

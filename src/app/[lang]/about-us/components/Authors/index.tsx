@@ -1,10 +1,12 @@
 import { AUTHORS } from '@constants/authors';
 import { AuthorCard } from '@components/ui/AuthorCard';
-import { Dictionary } from '@lib/dictionary';
+
 
 import style from './authors.module.scss';
 
-export default function Authors({ dictionary }: { dictionary: Dictionary }) {
+import { IStaticRoute } from '@/types/staticRoute';
+
+export default function Authors({ dictionary, lang }: IStaticRoute) {
   const { aboutUsPage } = dictionary;
 
   return (
@@ -12,7 +14,7 @@ export default function Authors({ dictionary }: { dictionary: Dictionary }) {
       <h2 className={style.title}>{aboutUsPage.authorTitle}</h2>
       <div className={style.wrapper}>
         {AUTHORS.map((author) => (
-          <AuthorCard key={author.id} {...author} />
+          <AuthorCard key={author.id} {...author} lang={lang} />
         ))}
       </div>
     </section>

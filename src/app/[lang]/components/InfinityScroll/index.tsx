@@ -2,8 +2,8 @@
 
 import JoinOurTeam from '@components/JoinOurTeam';
 import { useInView } from 'react-intersection-observer';
-import { Dictionary } from '@lib/dictionary';
 import style from '@styles/ui/infinityScroll.module.scss';
+import { IStaticRoute } from '@customTypes/staticRoute';
 
 import { useShowNewComponent } from './hooks/useShowNewComponent';
 
@@ -16,7 +16,7 @@ import Testimonials from '../Testimonials';
 import Logo from '../Logo';
 import StepByStep from '../StepByStep';
 
-export default function InfinityScroll({ dictionary }: { dictionary: Dictionary }) {
+export default function InfinityScroll({ dictionary, lang }: IStaticRoute) {
   const components = [
     StepByStep,
     Posts,
@@ -41,7 +41,7 @@ export default function InfinityScroll({ dictionary }: { dictionary: Dictionary 
       {components.map((Component, index) =>
         index <= currentIndex ? (
           <section key={index} ref={index === currentIndex ? ref : undefined} className={style.fadeIn}>
-            <Component dictionary={dictionary} />
+            <Component dictionary={dictionary} lang={lang} />
           </section>
         ) : null,
       )}

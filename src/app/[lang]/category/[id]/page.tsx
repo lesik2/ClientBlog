@@ -10,7 +10,9 @@ import ElasticSearch from './components/ElasticSearch';
 import Categories from './components/Categories';
 import Tags from './components/Tags';
 
-export default function CategoryItem({ params: { id } }: { params: { id: string } }) {
+import { IDynamicRoute } from '@/types/dynamicRoute';
+
+export default function CategoryItem({ params: { id, lang } }: IDynamicRoute) {
   const [search, setSearch] = useState('');
   const [tags, setTags] = useState<string[]>([]);
 
@@ -28,14 +30,14 @@ export default function CategoryItem({ params: { id } }: { params: { id: string 
       <main className={style.main}>
         <section className={style.postsSection}>
           {cards.length > 0 ? (
-            cards.map((card) => <PostCard size='small' key={card.id} {...card} />)
+            cards.map((card) => <PostCard size='small' key={card.id} {...card} lang={lang}/>)
           ) : (
             <h2 className={style.title}>No posts found</h2>
           )}
         </section>
         <aside className={style.aside}>
           <ElasticSearch setSearch={setSearch} />
-          <Categories activeCategory={id} />
+          <Categories activeCategory={id} lang={lang}/>
           <Tags tags={tags} setTags={setTags} />
         </aside>
       </main>

@@ -28,7 +28,7 @@ export default async function RootLayout({
   return (
     <html lang={params.lang}>
       <body className={`${sen.className} ${inter.variable}`}>
-        <Header dictionary={dictionary} />
+        <Header dictionary={dictionary} lang={params.lang} />
         <main>{children}</main>
         <Footer lang={params.lang} />
       </body>

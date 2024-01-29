@@ -2,11 +2,12 @@ import Image from 'next/image';
 import button from '@styles/ui/button.module.scss';
 import Link from 'next/link';
 import { ROUTES } from '@constants/routes';
-import { Dictionary } from '@lib/dictionary';
 
 import style from './specialPost.module.scss';
 
-export default function SpecialPost({ dictionary }: { dictionary: Dictionary }) {
+import { IStaticRoute } from '@/types/staticRoute';
+
+export default function SpecialPost({ dictionary, lang }: IStaticRoute) {
   const { specialPost } = dictionary;
 
   return (
@@ -28,7 +29,7 @@ export default function SpecialPost({ dictionary }: { dictionary: Dictionary }) 
             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
             nisi ut aliquip.
           </p>
-          <Link data-cy='whyStartedLink' href={ROUTES.aboutUs}>
+          <Link data-cy='whyStartedLink' href={`/${lang}${ROUTES.aboutUs}`}>
             <button type='button' className={button.primary}>
               {specialPost.btn}
             </button>

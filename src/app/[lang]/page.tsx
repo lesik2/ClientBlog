@@ -12,5 +12,5 @@ export const metadata: Metadata = {
 export default async function Home({ params: { lang } }: { params: LocaleType }) {
   const dictionary: Dictionary = await getDictionary(lang);
 
-  return <InfinityScroll dictionary={dictionary} />;
+  return <InfinityScroll dictionary={dictionary} lang={lang}/>;
 }

@@ -9,10 +9,10 @@ import { memo } from 'react';
 
 import style from './authorCard.module.scss';
 
-export const AuthorCard = memo(({ fullName, description, iconSrc, id }: IAuthor) => {
+export const AuthorCard = memo(({ fullName, description, iconSrc, id, lang }: IAuthor) => {
   const router = useRouter();
   const handleClick = () => {
-    router.push(`${ROUTES.author}/${id}`);
+    router.push(`/${lang}${ROUTES.author}/${id}`);
   };
 
   return (

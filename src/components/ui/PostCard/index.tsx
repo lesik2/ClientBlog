@@ -6,8 +6,8 @@ import { memo } from 'react';
 
 import style from './postCard.module.scss';
 
-const PostCard = memo(({ imageSrc, tags, title, description, size = 'default', id }: IPostCard) => (
-  <Link data-cy='postCard' className={style.linkWrapper} href={`${ROUTES.blog}/${id}`}>
+const PostCard = memo(({ imageSrc, tags, title, description, size = 'default', id, lang }: IPostCard) => (
+  <Link data-cy='postCard' className={style.linkWrapper} href={`/${lang}${ROUTES.blog}/${id}`}>
     <article
       className={`${size === 'small' ? style.postCardArticleSmall : ''} ${style.postCardArticleDefault}`}
     >

@@ -6,8 +6,8 @@ import { memo } from 'react';
 
 import style from './categoryCard.module.scss';
 
-const CategoryCard = memo(({ iconSrc, category, description }: ICategoryCard) => (
-  <Link data-cy={category} href={`${ROUTES.category}/${category}`}>
+const CategoryCard = memo(({ iconSrc, category, description, lang }: ICategoryCard) => (
+  <Link data-cy={category} href={`/${lang}${ROUTES.category}/${category}`}>
     <div className={style.cardWrapper}>
       <div className={style.iconWrapper}>
         <Image width={48} height={48} src={iconSrc} alt={category} />

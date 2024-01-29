@@ -1,8 +1,11 @@
+import { Locale } from '@/i18n.config';
+
 export interface IAuthor {
   id: string;
   fullName: string;
   description: string;
   iconSrc: string;
+  lang: Locale;
 }
 export interface IPostCard {
   id: string;
@@ -14,11 +17,13 @@ export interface IPostCard {
   authorId: string;
   date: string;
   category: string;
+  lang: Locale;
 }
 export interface ICategoryCard {
   iconSrc: string;
   category: string;
   description: string;
+  lang: Locale;
 }
 export interface ILocation {
   id: number;

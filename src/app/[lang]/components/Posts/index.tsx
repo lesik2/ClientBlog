@@ -2,13 +2,13 @@ import Link from 'next/link';
 import { ROUTES } from '@constants/routes';
 import button from '@styles/ui/button.module.scss';
 import Image from 'next/image';
-import { Dictionary } from '@lib/dictionary';
+import { IStaticRoute } from '@customTypes/staticRoute';
 
 import style from './featuredPosts.module.scss';
 import { Post } from './components/Post';
 import { CONSTANTS, PostsData } from './constants';
 
-export default function Posts({ dictionary }: { dictionary: Dictionary }) {
+export default function Posts({ dictionary, lang }: IStaticRoute) {
   const { posts } = dictionary;
 
   return (
@@ -34,7 +34,7 @@ export default function Posts({ dictionary }: { dictionary: Dictionary }) {
               </p>
               <h3 className={style.subtitle}>{CONSTANTS.subtitle}</h3>
               <p className={style.description}>{CONSTANTS.description}</p>
-              <Link href={`${ROUTES.blog}/1`} className={style.link}>
+              <Link href={`${lang}${ROUTES.blog}/1`} className={style.link}>
                 <button type='button' className={button.primary}>
                   {posts.btn}
                 </button>

@@ -11,7 +11,7 @@ import nav from './navigation.module.scss';
 import { HEADER_LINKS } from '../Header/constants';
 import { FOOTER_LINKS } from '../Footer/constants';
 
-export const Navigation = memo(({ type, nameOfLinks, setIsOpen, isFooter }: INavigation) => {
+export const Navigation = memo(({ type, nameOfLinks, setIsOpen, isFooter, lang }: INavigation) => {
   const pathname = usePathname();
   const paths = `/${pathname.split('/').slice(2).join('')}`;
 
@@ -31,7 +31,7 @@ export const Navigation = memo(({ type, nameOfLinks, setIsOpen, isFooter }: INav
             <Link
               data-cy={`${isFooter ? 'footer-' : 'header-'}${link.to}`}
               className={`${paths === link.to ? nav.active : ''} ${nav.link}`}
-              href={link.to}
+              href={`/${lang}${link.to}`}
             >
               {nameOfLinks[index]}
             </Link>

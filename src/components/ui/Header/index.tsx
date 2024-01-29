@@ -12,7 +12,14 @@ import OpenModal from './components/OpenModal';
 
 import { Navigation } from '../Navigation';
 
-export default function Header({ dictionary }: { dictionary: Dictionary }) {
+import { Locale } from '@/i18n.config';
+
+export interface IHeader{
+  dictionary: Dictionary;
+  lang: Locale;
+}
+
+export default function Header({ dictionary, lang }: IHeader) {
   const [isOpen, setIsOpen] = useState(false);
   const { navigation, stepByStep } = dictionary;
   const nameOfLinks = Object.values(navigation);
@@ -24,7 +31,13 @@ export default function Header({ dictionary }: { dictionary: Dictionary }) {
         <div className={style.menuWrapper}>
           <LocaleSwitcher />
           <div className={style.wrapper}>
-            <Navigation type='header' nameOfLinks={nameOfLinks} setIsOpen={setIsOpen} isFooter={false} />
+            <Navigation 
+              lang={lang}
+              type='header' 
+              nameOfLinks={nameOfLinks} 
+              setIsOpen={setIsOpen} 
+              isFooter={false} 
+            />
             <OpenModal btnText={stepByStep.btn} />
           </div>
         </div>

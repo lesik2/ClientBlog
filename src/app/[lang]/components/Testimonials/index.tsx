@@ -1,12 +1,13 @@
-import { Dictionary } from '@lib/dictionary';
+
 import { useMemo } from 'react';
+import { IStaticRoute } from '@customTypes/staticRoute';
 
 import style from './testimonials.module.scss';
 import { REVIEW_CARDS } from './constants';
 import ReviewCard from './atoms/ReviewCard';
 import Slider from './atoms/Slider/index';
 
-export default function Testimonials({ dictionary }: { dictionary: Dictionary }) {
+export default function Testimonials({ dictionary }: IStaticRoute) {
   const { testimonials } = dictionary;
   const reviewCards = useMemo(
     () => REVIEW_CARDS.map((card, index) => <ReviewCard key={index} {...card} />),

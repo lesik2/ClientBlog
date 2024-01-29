@@ -3,11 +3,11 @@
 import PostCard from '@components/ui/PostCard';
 import { useMemo, useState } from 'react';
 import { POST_CARDS } from '@constants/cards';
-import { Dictionary } from '@lib/dictionary';
+import { IStaticRoute } from '@customTypes/staticRoute';
 
 import style from './posts.module.scss';
 
-export default function Posts({ dictionary }: { dictionary: Dictionary }) {
+export default function Posts({ dictionary, lang }: IStaticRoute) {
   const { blogPage } = dictionary;
   const [currentPage, setCurrentPage] = useState(0);
   const postsPerPage = 5;
@@ -28,8 +28,8 @@ export default function Posts({ dictionary }: { dictionary: Dictionary }) {
 
     const slicedCards = POST_CARDS.slice(startIndex, endIndex);
 
-    return slicedCards.map((postCard) => <PostCard key={postCard.id} {...postCard} />);
-  }, [currentPage]);
+    return slicedCards.map((postCard) => <PostCard key={postCard.id} {...postCard} lang={lang} />);
+  }, [currentPage, lang]);
 
   return (
     <section className={style.postsSection}>

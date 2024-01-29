@@ -5,9 +5,9 @@ import Link from 'next/link';
 import style from './header.module.scss';
 
 import { ROUTES } from '@/constants/routes';
-import { Dictionary } from '@/lib/dictionary';
+import { IStaticRoute } from '@/types/staticRoute';
 
-export default function Header({ dictionary }: { dictionary: Dictionary }) {
+export default function Header({ dictionary, lang }: IStaticRoute) {
   const { stepByStep } = dictionary;
 
   return (
@@ -22,7 +22,7 @@ export default function Header({ dictionary }: { dictionary: Dictionary }) {
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur. Excepteur sint occaecat cupidatat non proident.
         </p>
-        <Link data-cy='blogLink' href={`${ROUTES.blog}/1`}>
+        <Link data-cy='blogLink' href={`${lang}${ROUTES.blog}/1`}>
           <button type='button' className={buttonStyle.primary}>
             {stepByStep.btn}
           </button>

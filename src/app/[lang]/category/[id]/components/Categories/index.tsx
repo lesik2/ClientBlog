@@ -9,14 +9,14 @@ import style from './categories.module.scss';
 
 import { ICategories } from '../../interfaces';
 
-const Categories = memo(({ activeCategory }: ICategories) => {
+const Categories = memo(({ activeCategory, lang }: ICategories) => {
   const router = useRouter();
   const pathname = usePathname();
 
   const handleClick = (category: string) => () => {
     const currentPathname = pathname;
 
-    const newCategoryPathname = currentPathname.replace(URL_CATEGORY, `${ROUTES.category}/${category}`);
+    const newCategoryPathname = currentPathname.replace(URL_CATEGORY, `/${lang}${ROUTES.category}/${category}`);
 
     router.replace(newCategoryPathname);
   };

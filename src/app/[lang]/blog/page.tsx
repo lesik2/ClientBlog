@@ -18,10 +18,10 @@ export default async function Blog({ params: { lang } }: { params: LocaleType })
 
   return (
     <section className={style.blogSection}>
-      <Header dictionary={dictionary} />
-      <Posts dictionary={dictionary} />
-      <Categories dictionary={dictionary} />
-      <JoinOurTeam dictionary={dictionary} />
+      <Header dictionary={dictionary} lang={lang}/>
+      <Posts dictionary={dictionary} lang={lang}/>
+      <Categories dictionary={dictionary} lang={lang}/>
+      <JoinOurTeam dictionary={dictionary} lang={lang}/>
     </section>
   );
 }

@@ -30,7 +30,7 @@ export default async function BlogPost({ params: { lang, id } }: IDynamicRoute) 
           <Header author={currentAuthor} post={currentPost} />
           <Main imageSrc={currentPost.imageSrc} />
           <Posts category={currentPost.category} />
-          <JoinOurTeam dictionary={dictionary} />
+          <JoinOurTeam dictionary={dictionary} lang={lang}/>
         </section>
       )}
     </>

@@ -6,8 +6,15 @@ import style from './posts.module.scss';
 
 import { IPostCard } from '@/types/models';
 import { Dictionary } from '@/lib/dictionary';
+import { Locale } from '@/i18n.config';
 
-const Posts = memo(({ posts, dictionary }: { posts: IPostCard[]; dictionary: Dictionary }) => {
+export interface IPostsAuthor{
+  posts: IPostCard[];
+  dictionary: Dictionary;
+  lang: Locale;
+}
+
+const Posts = memo(({ posts, dictionary, lang }: IPostsAuthor) => {
   const { authorPage } = dictionary;
 
   return (
@@ -16,7 +23,7 @@ const Posts = memo(({ posts, dictionary }: { posts: IPostCard[]; dictionary: Dic
         <h1 className={style.title}>{authorPage.postTitle}</h1>
         <div className={style.postsWrapper}>
           {posts.length > 0 ? (
-            posts.map((card) => <PostCard key={card.id} {...card} size='default' />)
+            posts.map((card) => <PostCard key={card.id} {...card} size='default' lang={lang}/>)
           ) : (
             <h2 className={style.noContent}>This author has no posts yet</h2>
           )}

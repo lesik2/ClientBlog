@@ -1,12 +1,12 @@
 import button from '@styles/ui/button.module.scss';
 import Link from 'next/link';
 import { ROUTES } from '@constants/routes';
-import { Dictionary } from '@lib/dictionary';
+import { IStaticRoute } from '@customTypes/staticRoute';
 
 import style from './stepByStep.module.scss';
 import { CONSTANTS } from './constants';
 
-export default function StepByStep({ dictionary }: { dictionary: Dictionary }) {
+export default function StepByStep({ dictionary, lang }: IStaticRoute) {
   const { stepByStep } = dictionary;
 
   return (
@@ -24,7 +24,7 @@ export default function StepByStep({ dictionary }: { dictionary: Dictionary }) {
           {stepByStep.date}
         </p>
         <p className={style.description}>{CONSTANTS.description}</p>
-        <Link data-cy='stepByStepLink' className={style.link} href={`${ROUTES.blog}/1`}>
+        <Link data-cy='stepByStepLink' className={style.link} href={`${lang}${ROUTES.blog}/1`}>
           <button type='button' className={button.primary}>
             {stepByStep.btn}
           </button>
