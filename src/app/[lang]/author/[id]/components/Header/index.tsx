@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { SOCIAL_ICONS } from '@constants/socialIcons';
 import { IAuthor } from '@customTypes/models';
-import _ from 'lodash';
+import isEqual from 'lodash.isequal';
 import { memo } from 'react';
 
 import style from './header.module.scss';
@@ -49,6 +49,6 @@ const Header = memo(({ author, dictionary }: { author: IAuthor; dictionary: Dict
       </div>
     </header>
   );
-}, _.isEqual);
+}, isEqual);
 
 export default Header;

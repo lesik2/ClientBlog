@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { CATEGORIES } from '@constants/categories';
 import { memo } from 'react';
-import _ from 'lodash';
+import isEqual from 'lodash.isequal';
 
 import style from './header.module.scss';
 
@@ -34,6 +34,6 @@ const Header = memo(({ author, post }: IHeaderBlogPost) => {
       </div>
     </header>
   );
-}, _.isEqual);
+}, isEqual);
 
 export default Header;

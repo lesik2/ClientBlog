@@ -2,7 +2,6 @@ import { AUTHORS } from '@constants/authors';
 import { POST_CARDS } from '@constants/cards';
 import { Dictionary, getDictionary } from '@lib/dictionary';
 
-
 import style from './author.module.scss';
 import Header from './components/Header';
 import Posts from './components/Posts';

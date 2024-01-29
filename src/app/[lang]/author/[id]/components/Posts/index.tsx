@@ -1,5 +1,5 @@
 import PostCard from '@components/ui/PostCard';
-import _ from 'lodash';
+import isEqual from 'lodash.isequal';
 import { memo } from 'react';
 
 import style from './posts.module.scss';
@@ -24,6 +24,6 @@ const Posts = memo(({ posts, dictionary }: { posts: IPostCard[]; dictionary: Dic
       </div>
     </section>
   );
-}, _.isEqual);
+}, isEqual);
 
 export default Posts;

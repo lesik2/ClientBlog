@@ -1,5 +1,5 @@
 import { TAGS } from '@constants/tags';
-import _ from 'lodash';
+import isEqual from 'lodash.isequal';
 import { memo } from 'react';
 
 import style from './tags.module.scss';
@@ -31,6 +31,6 @@ const Tags = memo(({ setTags, tags }: ITags) => {
       </div>
     </div>
   );
-}, _.isEqual);
+}, isEqual);
 
 export default Tags;

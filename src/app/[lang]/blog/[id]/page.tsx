@@ -3,7 +3,6 @@ import { Dictionary, getDictionary } from '@lib/dictionary';
 import { POST_CARDS } from '@constants/cards';
 import { AUTHORS } from '@constants/authors';
 
-
 import style from './blogPost.module.scss';
 import Header from './components/Header';
 import Main from './components/Main';
@@ -22,7 +21,7 @@ export default async function BlogPost({ params: { lang, id } }: IDynamicRoute) 
 
   const currentPost = POST_CARDS.find((card) => card.id === id);
 
-  const currentAuthor = AUTHORS.find((author) => author.id === currentPost?.authorId)
+  const currentAuthor = AUTHORS.find((author) => author.id === currentPost?.authorId);
 
   return (
     <>

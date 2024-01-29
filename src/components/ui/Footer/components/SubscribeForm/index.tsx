@@ -12,7 +12,6 @@ import style from './submitForm.module.scss';
 
 import { ISubscribeForm, ISubscribeEmail } from '../../interfaces';
 
-
 export default function SubscribeForm({ placeholder, btnText }: ISubscribeForm) {
   const [errorMessage, setErrorMessage] = useState<Error | null>(null);
   const [loading, setLoading] = useState(false);

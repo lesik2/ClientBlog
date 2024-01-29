@@ -1,7 +1,7 @@
 import { Dispatch, memo, useState } from 'react';
 import { useCloseList } from '@hooks/useCloseList';
 import Image from 'next/image';
-import _ from 'lodash';
+import isEqual from 'lodash.isequal';
 
 import style from './dropDown.module.scss';
 
@@ -44,4 +44,4 @@ export const DropDown = memo(({ value, setValue, selectValues }: IDropDown) => {
       </ul>
     </div>
   );
-}, _.isEqual);
+}, isEqual);
