@@ -5,7 +5,7 @@ export interface IAuthor {
   fullName: string;
   description: string;
   iconSrc: string;
-  lang: Locale;
+  lang?: Locale;
 }
 export interface IPostCard {
   id: string;
@@ -17,13 +17,13 @@ export interface IPostCard {
   authorId: string;
   date: string;
   category: string;
-  lang: Locale;
+  lang?: Locale;
 }
 export interface ICategoryCard {
   iconSrc: string;
   category: string;
   description: string;
-  lang: Locale;
+  lang?: Locale;
 }
 export interface ILocation {
   id: number;
