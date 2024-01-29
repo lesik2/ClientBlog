@@ -25,7 +25,7 @@ export default async function AuthorPage({ params: { lang, id } }: IDynamicRoute
       {author ? (
         <section className={style.sectionAuthor}>
           <Header author={author} dictionary={dictionary} />
-          <Posts posts={authorCards} dictionary={dictionary} lang={lang}/>
+          <Posts posts={authorCards} dictionary={dictionary} lang={lang} />
         </section>
       ) : (
         <h1>Not Found</h1>

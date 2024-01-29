@@ -16,7 +16,10 @@ const Categories = memo(({ activeCategory, lang }: ICategories) => {
   const handleClick = (category: string) => () => {
     const currentPathname = pathname;
 
-    const newCategoryPathname = currentPathname.replace(URL_CATEGORY, `/${lang}${ROUTES.category}/${category}`);
+    const newCategoryPathname = currentPathname.replace(
+      URL_CATEGORY,
+      `/${lang}${ROUTES.category}/${category}`,
+    );
 
     router.replace(newCategoryPathname);
   };

@@ -14,7 +14,7 @@ import { Navigation } from '../Navigation';
 
 import { Locale } from '@/i18n.config';
 
-export interface IHeader{
+export interface IHeader {
   dictionary: Dictionary;
   lang: Locale;
 }
@@ -31,12 +31,12 @@ export default function Header({ dictionary, lang }: IHeader) {
         <div className={style.menuWrapper}>
           <LocaleSwitcher />
           <div className={style.wrapper}>
-            <Navigation 
+            <Navigation
               lang={lang}
-              type='header' 
-              nameOfLinks={nameOfLinks} 
-              setIsOpen={setIsOpen} 
-              isFooter={false} 
+              type='header'
+              nameOfLinks={nameOfLinks}
+              setIsOpen={setIsOpen}
+              isFooter={false}
             />
             <OpenModal btnText={stepByStep.btn} />
           </div>

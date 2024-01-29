@@ -13,7 +13,7 @@ export default function ChooseCategory({ dictionary, lang }: IStaticRoute) {
         <h2 className={style.title}>{chooseCategory.title}</h2>
         <div className={style.wrapperCards}>
           {CATEGORIES.map((card) => (
-            <CategoryCard key={card.category} {...card} lang={lang}/>
+            <CategoryCard key={card.category} {...card} lang={lang} />
           ))}
         </div>
       </div>

@@ -5,7 +5,7 @@ import { IStaticRoute } from '@customTypes/staticRoute';
 import style from './aboutUs.module.scss';
 import { AboutDescription, MissionDescription } from './constants';
 
-export default function About({ dictionary,lang }: IStaticRoute) {
+export default function About({ dictionary, lang }: IStaticRoute) {
   const { aboutUs } = dictionary;
 
   return (

@@ -30,14 +30,14 @@ export default function CategoryItem({ params: { id, lang } }: IDynamicRoute) {
       <main className={style.main}>
         <section className={style.postsSection}>
           {cards.length > 0 ? (
-            cards.map((card) => <PostCard size='small' key={card.id} {...card} lang={lang}/>)
+            cards.map((card) => <PostCard size='small' key={card.id} {...card} lang={lang} />)
           ) : (
             <h2 className={style.title}>No posts found</h2>
           )}
         </section>
         <aside className={style.aside}>
           <ElasticSearch setSearch={setSearch} />
-          <Categories activeCategory={id} lang={lang}/>
+          <Categories activeCategory={id} lang={lang} />
           <Tags tags={tags} setTags={setTags} />
         </aside>
       </main>

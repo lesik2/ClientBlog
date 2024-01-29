@@ -1,11 +1,10 @@
-
 import { AuthorCard } from '@components/ui/AuthorCard';
 import { AUTHORS } from '@constants/authors';
 import { IStaticRoute } from '@customTypes/staticRoute';
 
 import style from './authorList.module.scss';
 
-export default function AuthorsList({ dictionary, lang }: IStaticRoute ) {
+export default function AuthorsList({ dictionary, lang }: IStaticRoute) {
   const { authorList } = dictionary;
   const cards = AUTHORS.slice(0, 4);
 

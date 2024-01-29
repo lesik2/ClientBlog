@@ -26,8 +26,8 @@ export default async function AboutUs({ params: { lang } }: { params: LocaleType
         <MissionVision dictionary={dictionary} />
         <OurTeam dictionary={dictionary} />
         <WhyStarted dictionary={dictionary} />
-        <Authors dictionary={dictionary} lang={lang}/>
-        <JoinOurTeam dictionary={dictionary} lang={lang}/>
+        <Authors dictionary={dictionary} lang={lang} />
+        <JoinOurTeam dictionary={dictionary} lang={lang} />
       </div>
     </section>
   );

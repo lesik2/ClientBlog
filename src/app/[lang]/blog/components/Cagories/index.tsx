@@ -4,7 +4,6 @@ import { IStaticRoute } from '@customTypes/staticRoute';
 
 import style from './categories.module.scss';
 
-
 export default function Categories({ dictionary, lang }: IStaticRoute) {
   const { blogPage } = dictionary;
 
