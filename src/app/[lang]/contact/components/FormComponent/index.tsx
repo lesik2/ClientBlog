@@ -12,7 +12,7 @@ import { InfinityLoader } from '@components/ui/InfinityLoader';
 
 import style from './form.module.scss';
 
-import { MessageEmail } from '../../interfaces';
+import { IMessageEmail } from '../../interfaces';
 
 export function FormComponent({ dictionary }: { dictionary: Dictionary }) {
   const { contactForm } = dictionary;
@@ -25,11 +25,11 @@ export function FormComponent({ dictionary }: { dictionary: Dictionary }) {
     handleSubmit,
     formState: { isValid, errors },
     reset,
-  } = useForm<MessageEmail>({
+  } = useForm<IMessageEmail>({
     mode: 'onChange',
   });
 
-  const onSubmit: SubmitHandler<MessageEmail> = async (data) => {
+  const onSubmit: SubmitHandler<IMessageEmail> = async (data) => {
     setSuccess('');
     const userData = { ...data, selectValue };
     reset();

@@ -10,7 +10,7 @@ import { sendMessageViaEmail } from '@api/sendEmail';
 
 import style from './submitForm.module.scss';
 
-import { ISubscribeForm, SubscribeEmail } from '../../interfaces';
+import { ISubscribeForm, ISubscribeEmail } from '../../interfaces';
 
 
 export default function SubscribeForm({ placeholder, btnText }: ISubscribeForm) {
@@ -18,11 +18,11 @@ export default function SubscribeForm({ placeholder, btnText }: ISubscribeForm) 
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState('');
 
-  const { register, handleSubmit, reset } = useForm<SubscribeEmail>({
+  const { register, handleSubmit, reset } = useForm<ISubscribeEmail>({
     mode: 'onChange',
   });
 
-  const sendEmail: SubmitHandler<SubscribeEmail> = async (data) => {
+  const sendEmail: SubmitHandler<ISubscribeEmail> = async (data) => {
     setSuccess('');
     reset();
 
