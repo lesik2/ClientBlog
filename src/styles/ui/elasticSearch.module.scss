@@ -1,0 +1,85 @@
+@import './button.module.scss';
+
+.elasticSearchWrapper {
+  position: relative;
+
+  .wrapperInput {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include ui-width(74);
+    @include ui-height(14);
+
+    .input {
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      width: 100%;
+
+      border-radius: 6px;
+      border: 1px solid $light-gray-color;
+
+      @include ui-width(53);
+      padding: 15px 10px 15px 25px;
+
+      background: #fff;
+      color: $primary-color;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 24px;
+      letter-spacing: -0.21px;
+
+      &::placeholder {
+        color: $primary-color;
+      }
+    }
+
+    .searchBtn {
+      @include ui-width(21);
+      @include ui-height(14);
+      @include buttonTheme;
+
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+
+      padding: 11px 46px;
+      border-radius: 6px;
+
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  .list {
+    position: absolute;
+    top: 56px;
+    left: 0px;
+
+    padding: 0;
+    @include ui-width(52);
+
+    border: 1px solid $white-light-gray-color;
+    border-radius: 6px;
+
+    background-color: $white-color;
+
+    .item {
+      @include body1($primary-color);
+
+      padding: 5px 5px 5px 25px;
+      cursor: pointer;
+      border-radius: 6px;
+
+      &:hover {
+        @media #{$ui-mouse-device} {
+          background-color: $white-light-gray-color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+.whyStartedSection {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding-bottom: 37px;
+  margin-bottom: 91px;
+  .content {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    justify-content: center;
+    .imageContent {
+      width: 624px;
+      height: 480px;
+      position: relative;
+      &::before {
+        content: '';
+        z-index: 2;
+        width: 74px;
+        height: 74px;
+        position: absolute;
+        left: 107px;
+        bottom: -37px;
+        border-radius: 50%;
+        background-color: $third-color;
+      }
+      @media (max-width: $laptopL) {
+        width: 500px;
+        height: 400px;
+      }
+      @media (max-width: $laptopM) {
+        width: 390px;
+        height: 290px;
+        &::before {
+          width: 50px;
+          height: 50px;
+          bottom: -25px;
+        }
+      }
+      @media (max-width: $tablet) {
+        &::before {
+          display: none;
+        }
+      }
+      @media (max-width: $mobileL) {
+        width: 330px;
+        height: 230px;
+      }
+      @media (max-width: $mobileM) {
+        width: 300px;
+        height: 200px;
+      }
+    }
+    @media (max-width: $laptopL) {
+      gap: 30px;
+    }
+    @media (max-width: $laptopM) {
+      gap: 15px;
+    }
+    @media (max-width: $tablet) {
+      flex-direction: column-reverse;
+    }
+  }
+  @media (max-width: $tablet) {
+    padding-bottom: 0px;
+    margin-bottom: 40px;
+  }
+}

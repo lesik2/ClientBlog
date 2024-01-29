@@ -1,0 +1,75 @@
+@mixin buttonTheme($color: $secondary-color, $hover: #edc14a) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px 48px;
+
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+
+  border: none;
+  outline: none;
+
+  background-color: $color;
+  color: $primary-color;
+
+  transition: background-color 0.2s;
+
+  &:hover {
+    @media #{$ui-mouse-device} {
+      background-color: $hover;
+      cursor: pointer;
+    }
+  }
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.5;
+  }
+}
+
+.primary {
+  @include buttonTheme;
+
+  @media #{$ui-laptopM} {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+
+  @media #{$ui-tablet} {
+    padding: 10px 25px;
+    font-size: 15px;
+  }
+}
+
+.secondary {
+  @include buttonTheme($color: $white-color, $hover: $white-light-gray-color);
+
+  @media #{$ui-laptopM} {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+}
+
+.formPrimary {
+  @include buttonTheme;
+
+  padding: 16px 0px;
+  @include ui-width(192);
+
+  font-size: 24px;
+  line-height: 32px;
+
+  @media #{$ui-tablet} {
+    width: 100%;
+    font-size: 20px;
+    padding: 14px 0px;
+  }
+
+  @media #{$ui-mobileL} {
+    padding: 12px 0px;
+  }
+}

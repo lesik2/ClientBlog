@@ -1,0 +1,88 @@
+.burgerWrapper {
+  display: none;
+  position: relative;
+  z-index: $ui-index-sidebar;
+
+  @include ui-width(10);
+  @include ui-height(10);
+
+  border: none;
+  outline: none;
+  background-color: inherit;
+  border-radius: 50%;
+
+  &:hover {
+    @media #{$ui-mouse-device} {
+      background-color: $light-gray-color;
+      cursor: pointer;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 11px;
+    left: 10px;
+
+    @include ui-width(5);
+    background: $white-color;
+    height: 2.5px;
+    border-radius: 1px;
+
+    transition:
+      transform 0.2s,
+      top 0.2s;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 12px;
+    left: 10px;
+
+    @include ui-width(5);
+    background: $white-color;
+    height: 2.5px;
+    border-radius: 1px;
+
+    transition:
+      transform 0.2s,
+      bottom 0.2s;
+  }
+
+  .line {
+    position: absolute;
+    top: 18px;
+    left: 10px;
+
+    @include ui-width(5);
+
+    background: $white-color;
+    height: 2.5px;
+    border-radius: 1px;
+    transition: transform 0.2s;
+  }
+
+  @media #{$ui-tablet} {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+  }
+}
+.activeWrapper {
+  &::after {
+    transform: rotate(-45deg);
+    bottom: 18px;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    top: 19px;
+  }
+
+  position: fixed;
+}
+
+.activeLine {
+  transform: scale(0);
+}

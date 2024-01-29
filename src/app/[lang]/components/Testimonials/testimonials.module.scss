@@ -1,0 +1,174 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 80px 0px 80px;
+  .content {
+    display: flex;
+    background-color: $white-pink-color;
+    align-items: flex-start;
+    padding: 80px 174px 75px 112px;
+    justify-content: flex-start;
+    gap: 180px;
+    .wrapperInfo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+      margin-top: 12px;
+      &::after {
+        content: '';
+        position: absolute;
+        top: -17px;
+        right: -80px;
+        width: 1px;
+        height: 310px;
+        background: $light-gray-color;
+        opacity: 0.4;
+      }
+      .subtitle {
+        color: $primary-color;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        @media (max-width: $laptopM) {
+          text-align: center;
+        }
+        @media (max-width: $tablet) {
+          font-size: 14px;
+        }
+      }
+      .title {
+        color: $primary-color;
+        margin: 12px 0px 16px 0px;
+        width: 345px;
+        @media (max-width: $laptopM) {
+          text-align: center;
+        }
+        @media (max-width: $tablet) {
+          font-size: 24px;
+          line-height: 30px;
+        }
+      }
+      .infoDescription {
+        @extend %body1;
+        color: $primary-color;
+        width: 349px;
+        @media (max-width: $laptopM) {
+          text-align: center;
+          font-size: 14px;
+          width: 100%;
+        }
+      }
+      @media (max-width: $laptopL) {
+        &::after {
+          right: -40px;
+        }
+      }
+      @media (max-width: $laptopM) {
+        align-items: center;
+        justify-content: center;
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -17px;
+
+          top: auto;
+          right: auto;
+          width: 90%;
+          height: 1px;
+          background: $light-gray-color;
+          opacity: 0.4;
+        }
+      }
+    }
+    .wrapperSlider {
+      width: 469px;
+      @media (max-width: $tablet) {
+        width: 400px;
+      }
+      @media (max-width: $tablet) {
+        width: 320px;
+      }
+    }
+    .wrapperBtn {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      position: absolute;
+      bottom: 3px;
+      right: -65px;
+
+      .prevBtn {
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $white-color;
+        border: none;
+        outline: none;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: transform 0.2s;
+        &:hover {
+          transform: scale(1.05);
+        }
+        @media (max-width: $tablet) {
+          width: 40px;
+          height: 40px;
+        }
+        @media (max-width: $mobileL) {
+          width: 37px;
+          height: 37px;
+        }
+      }
+      .nextBtn {
+        width: 62px;
+        height: 62px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        justify-content: center;
+        background-color: $primary-color;
+        border: none;
+        outline: none;
+        border-radius: 50%;
+        transition: transform 0.2s;
+        &:hover {
+          transform: scale(1.05);
+        }
+        @media (max-width: $tablet) {
+          width: 50px;
+          height: 50px;
+        }
+        @media (max-width: $mobileL) {
+          width: 45px;
+          height: 45px;
+        }
+      }
+      @media (max-width: $tablet) {
+        right: 0px;
+      }
+    }
+    @media (max-width: $laptopL) {
+      padding: 80px 100px 75px 80px;
+      gap: 100px;
+    }
+    @media (max-width: $laptopM) {
+      flex-direction: column;
+      align-items: center;
+    }
+    @media (max-width: $tablet) {
+      padding: 20px 0px;
+      width: 100%;
+      gap: 90px;
+    }
+  }
+  @media (max-width: $tablet) {
+    padding: 0px;
+  }
+}

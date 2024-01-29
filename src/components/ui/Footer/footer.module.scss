@@ -1,0 +1,119 @@
+.footer {
+  background-color: $primary-color;
+  padding: 60px 80px 60px 80px;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .header {
+      @include ui-height(21);
+      display: flex;
+      width: 100%;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      .title {
+        color: $white-color;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 48px;
+      }
+    }
+
+    .contactsWrapper {
+      @include ui-height(26);
+      width: 100%;
+
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      .socialWrapper {
+        display: flex;
+        gap: 26px;
+        align-items: center;
+        margin-bottom: 28px;
+
+        .socialLink {
+          transition: transform 0.2;
+          filter: invert(48%) sepia(10%) saturate(281%) hue-rotate(196deg) brightness(85%) contrast(85%);
+
+          &:hover {
+            @media #{$ui-mouse-device} {
+              transform: scale(1.1);
+            }
+          }
+        }
+
+        @media #{$ui-tablet} {
+          margin-bottom: 18px;
+        }
+      }
+
+      .contactsInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .contact {
+          @include body1();
+
+          @media #{$ui-tablet} {
+            font-size: 14px;
+            gap: 3px;
+          }
+        }
+      }
+
+      @media #{$ui-mobileL} {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 10px;
+      }
+    }
+  }
+
+  @media #{$ui-tablet} {
+    padding: 30px;
+  }
+}
+
+.submitWrapper {
+  width: 100%;
+  @include ui-height(64);
+
+  background: #2e3040;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0px 65px 0px 65px;
+  gap: 64px;
+
+  .subtitle {
+    color: $white-color;
+    max-width: 562px;
+    letter-spacing: 1px;
+  }
+
+  @media #{$ui-laptopM} {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  @media #{$ui-tablet} {
+    padding: 0px 20px;
+  }
+
+  @media #{$ui-mobileL} {
+    padding: 0px 10px;
+  }
+}

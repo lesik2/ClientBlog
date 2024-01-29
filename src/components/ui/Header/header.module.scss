@@ -1,0 +1,84 @@
+.header {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: $primary-color;
+
+  padding: 0px 80px 0px 50px;
+  @include ui-height(20);
+
+  .title {
+    color: $white-color;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+
+    @media #{$ui-laptopM} {
+      font-size: 20px;
+    }
+  }
+
+  .menuWrapper {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    @media #{$ui-laptopM} {
+      gap: 30px;
+    }
+
+    @media #{$ui-tablet} {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    @media #{$ui-laptopM} {
+      gap: 20px;
+    }
+
+    @media #{$ui-tablet} {
+      flex-direction: column;
+      width: 100%;
+      gap: 50px;
+    }
+  }
+
+  .wrapperLocale {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+
+    @media #{$ui-laptopM} {
+      gap: 20px;
+    }
+  }
+
+  .localeBtn {
+    padding: 7px;
+
+    @include ui-height(10);
+    @include ui-width(10);
+
+    @media #{$ui-laptopM} {
+      width: 35px;
+      height: 35px;
+      font-size: 15px;
+    }
+  }
+
+  @media #{$ui-laptopM} {
+    padding: 0px 10px 0px 10px;
+  }
+}

@@ -1,0 +1,123 @@
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 32px;
+  padding: 128px 0px;
+  width: 100%;
+  background-color: $white-light-gray-color;
+  position: relative;
+  .userIconWrapper {
+    width: 260px;
+    height: 260px;
+    position: relative;
+    @media (max-width: $laptopM) {
+      width: 220px;
+      height: 220px;
+    }
+    @media (max-width: $tablet) {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  .infoWrapper {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .title {
+      color: $primary-color;
+      width: 100%;
+      @media (max-width: $laptopM) {
+        font-size: 40px;
+        line-height: 50px;
+      }
+      @media (max-width: $tablet) {
+        font-size: 30px;
+        line-height: 38px;
+        text-align: center;
+      }
+      @media (max-width: $mobileL) {
+        font-size: 25px;
+        line-height: 30px;
+      }
+    }
+    .description {
+      color: $light-gray-color;
+      @extend %body1;
+      margin: 24px 0px;
+      width: 100%;
+      @media (max-width: $laptopM) {
+        font-size: 15px;
+        line-height: 20px;
+        text-align: center;
+      }
+      @media (max-width: $tablet) {
+        font-size: 14px;
+        line-height: 18px;
+        text-align: center;
+      }
+      @media (max-width: $mobileL) {
+        font-size: 13px;
+        line-height: 15px;
+      }
+    }
+    .wrapperSocialLinks {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      .socialLink {
+        transition: transform 0.2;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+    @media (max-width: $laptopM) {
+      width: 60%;
+    }
+    @media (max-width: $tablet) {
+      align-items: center;
+      justify-content: center;
+      width: 70%;
+    }
+    @media (max-width: $mobileL) {
+      width: 90%;
+    }
+  }
+  .designWrapper {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 70%;
+    display: flex;
+    align-items: center;
+    .first {
+      width: 74%;
+      height: 24px;
+      background-color: $secondary-color;
+    }
+    .second {
+      width: 26%;
+      height: 24px;
+      background-color: $third-color;
+    }
+    @media (max-width: $tablet) {
+      width: 80%;
+    }
+    @media (max-width: $mobileL) {
+      width: 90%;
+    }
+  }
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 45px 0px 60px 0px;
+  }
+  @media (max-width: $mobileL) {
+    padding: 35px 0px 50px 0px;
+  }
+}

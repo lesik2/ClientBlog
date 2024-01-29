@@ -1,0 +1,38 @@
+.categoriesSection {
+  padding: 0px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 48px;
+  .title {
+    color: $primary-color;
+    @media (max-width: $tablet) {
+      font-size: 30px;
+      line-height: 40px;
+    }
+    @media (max-width: $mobileL) {
+      font-size: 25px;
+      line-height: 35px;
+    }
+  }
+  .wrapperCategories {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    @media (max-width: $laptopM) {
+      gap: 20px;
+    }
+    @media (max-width: $tablet) {
+      gap: 15px;
+    }
+  }
+  @media (max-width: $laptopM) {
+    padding: 0px 20px;
+  }
+  @media (max-width: $tablet) {
+    padding: 0px 10px;
+    gap: 24px;
+  }
+}

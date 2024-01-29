@@ -1,0 +1,117 @@
+.sectionPolicy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $white-color;
+  .header {
+    background-color: $white-light-gray-color;
+    padding: 80px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 100%;
+    .headerSubtitle {
+      color: $primary-color;
+      @extend %body1;
+      @media (max-width: $tablet) {
+        font-size: 15px;
+      }
+      @media (max-width: $mobileL) {
+        font-size: 14px;
+      }
+    }
+    .headerTitle {
+      color: $primary-color;
+      @media (max-width: $tablet) {
+        font-size: 27px;
+        line-height: 32px;
+      }
+      @media (max-width: $mobileL) {
+        font-size: 22px;
+        line-height: 27px;
+      }
+    }
+    @media (max-width: $tablet) {
+      padding: 50px 0px;
+    }
+  }
+  .title {
+    color: $primary-color;
+    margin-bottom: 32px;
+    @media (max-width: $tablet) {
+      font-size: 32px;
+      line-height: 42px;
+      margin-bottom: 22px;
+    }
+    @media (max-width: $mobileL) {
+      font-size: 26px;
+      line-height: 22px;
+      margin-bottom: 15px;
+    }
+  }
+  .subtitle {
+    color: $primary-color;
+    margin: 32px 0px 24px 0px;
+    width: 714px;
+    @media (max-width: $laptop) {
+      width: 100%;
+    }
+    @media (max-width: $tablet) {
+      font-size: 27px;
+      line-height: 32px;
+      margin: 22px 0px 14px 0px;
+    }
+    @media (max-width: $mobileL) {
+      font-size: 22px;
+      line-height: 27px;
+      margin: 15px 0px 9px 0px;
+    }
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 128px 0px;
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      @media (max-width: $laptop) {
+        width: 80%;
+      }
+      @media (max-width: $tablet) {
+        width: 90%;
+      }
+      @media (max-width: $mobileL) {
+        width: 95%;
+      }
+    }
+
+    .description {
+      width: 768px;
+      @extend %body1;
+      color: $dark-gray-color;
+      @media (max-width: $laptop) {
+        width: 100%;
+      }
+      @media (max-width: $tablet) {
+        font-size: 13px;
+      }
+      @media (max-width: $mobileL) {
+        font-size: 12px;
+      }
+    }
+    @media (max-width: $tablet) {
+      padding: 60px 0px;
+    }
+    @media (max-width: $mobileL) {
+      padding: 40px 0px;
+    }
+  }
+}

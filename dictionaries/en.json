@@ -1,0 +1,108 @@
+{
+  "navigation": {
+    "home": "Home",
+    "blog": "Blog",
+    "AboutUS": "About Us",
+    "ContactUS": "Contact us",
+    "PrivacyPolicy": "Privacy Policy"
+  },
+  "stepByStep": {
+    "btn": "Read More >",
+    "date": "May 23, 2022",
+    "title": "Step-by-step guide to choosing great font pairs",
+    "subtitle": "Posted on",
+    "StartFrom": "By",
+    "video": "Video about us",
+    "post": "Featured Post"
+  },
+  "footer": {
+    "btn": "Subscribe",
+    "text": "Subscribe to our news letter to get latest updates and news",
+    "placeholder": "Enter Your Email"
+  },
+  "joinOurTeam": {
+    "btn": "Join now",
+    "title": "Join our team to be a part of our story"
+  },
+  "testimonials": {
+    "title": "What people say about our blog",
+    "subtitle": "TESTIMONIALS"
+  },
+  "logos": {
+    "title": "Featured in",
+    "subtitle": "We are"
+  },
+  "aboutUs": {
+    "aboutTitle": "We are a community of content writers who share their learnings",
+    "aboutSubtitle": "ABOUT US",
+    "missionSubtitle": "Our mision",
+    "missionTitle": "Creating valuable content for creatives all around the world"
+  },
+  "specialPost": {
+    "title": "It started out as a simple idea and evolved into our passion",
+    "subtitle": "Why we started",
+    "btn": " Discover our story >"
+  },
+  "posts": {
+    "date": "Aug 23, 2021",
+    "link": "View All",
+    "allPostsTitle": "All Posts",
+    "featuredTitle": "Featured Post",
+    "btn": "Read More >",
+    "StartFrom": "By"
+  },
+  "chooseCategory": {
+    "title": "Choose A Catagory"
+  },
+  "authorList": {
+    "title": "List of Authors"
+  },
+  "contact": {
+    "headerSubtitle": "Contact us",
+    "headerTitle": "Let’s Start a Conversation",
+    "workTime": "9:00 AM to 8:00 PM",
+    "workDescription": "Our Support Team is available 24/7",
+    "workDays": "Monday To Friday",
+    "workTitle": "Working hours"
+  },
+  "contactForm": {
+    "placeholderName": "Full Name",
+    "errorMessageName": "Invalid input. Please enter letters and spaces.",
+    "placeholderEmail": "Your Email",
+    "errorMessageEmail": "Invalid email address.",
+    "placeholderMessage": "Message",
+    "errorMessageMessage": "Your message should include at least 10 symbols.",
+    "successMessage": "We have received you message. And contact you as soon as possible",
+    "btn": "Send Message",
+    "contactSelect": "Query Related,Confirmation Message,Status Update Message,Resolution Message,Apology Message"
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "lastUpdate": "Last Updated on 27th January 2022"
+  },
+  "aboutUsPage": {
+    "headerSubtitle": "ABOUT US",
+    "headerTitle": "We are a team of content writers who share their learnings",
+    "blogs": "Blogs Published",
+    "views": "Views on Finsweet",
+    "users": "Total active Users",
+    "missionSubtitle": "Our mission",
+    "missionTitle": "Creating valuable content for creatives all around the world",
+    "visionSubtitle": "Our Vision",
+    "visionTitle": "A platform that empowers individuals to improve",
+    "ourTeamTitle": "Our team of creatives",
+    "whyStartedTitle": "Why we started this Blog",
+    "authorTitle": "List of Authors"
+  },
+  "blogPage": {
+    "categoryTitle": "All Categories",
+    "postsTitle": "All posts",
+    "btnPrev": "< Prev ",
+    "btnNext": " Next > "
+  },
+  "authorPage": {
+    "startTitle": "Hey there, I’m ",
+    "endTitle": " and welcome to my Blog",
+    "postTitle": "My Posts"
+  }
+}

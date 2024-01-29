@@ -1,0 +1,74 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: Sen;
+}
+ol,
+ul {
+  list-style: none;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  @include title1();
+}
+h2 {
+  @include title2();
+}
+h3 {
+  @include title3();
+}
+h4 {
+  @include title4();
+}
+h5 {
+  @include title5();
+}
+h6 {
+  @include title6();
+}
+
+img,
+video,
+iframe {
+  display: block;
+  max-width: 100%;
+}
+a {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+a:visited {
+  text-decoration: none;
+}
+a:focus {
+  text-decoration: none;
+  color: inherit;
+}

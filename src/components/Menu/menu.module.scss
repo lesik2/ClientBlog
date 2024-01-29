@@ -1,0 +1,41 @@
+.wrapperMenu {
+  @media #{$ui-tablet} {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+
+    height: 100vh;
+    transition: width 0.2s;
+
+    z-index: $ui-index-cover;
+  }
+
+  .content {
+    @media #{$ui-tablet} {
+      position: fixed;
+      top: 0px;
+      right: -100%;
+
+      @include ui-width(75);
+      height: 100vh;
+
+      background-color: $primary-color;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      transition: right 0.4s;
+      z-index: $ui-index-sidebar;
+    }
+  }
+
+  .activeContent {
+    right: 0px;
+  }
+}
+
+.activeWrapper {
+  width: 100%;
+}

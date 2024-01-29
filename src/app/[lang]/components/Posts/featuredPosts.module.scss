@@ -1,0 +1,114 @@
+.sectionPosts {
+  padding: 128px 78px 128px 80px;
+  background-color: $white-color;
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .postsWrapper {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      justify-content: space-between;
+      max-width: 1280px;
+      width: 100%;
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        .title {
+          color: $primary-color;
+          @media (max-width: $tablet) {
+            font-size: 30px;
+            line-height: 35px;
+          }
+          @media (max-width: $mobileL) {
+            font-size: 25px;
+            line-height: 28px;
+          }
+        }
+        .link {
+          color: $third-color;
+          @extend %body1;
+          transition: color 0.2s;
+          &:hover {
+            color: #351b64;
+          }
+        }
+      }
+      .allPosts {
+        margin-top: 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        @media (max-width: $laptopL) {
+          align-items: center;
+        }
+        @media (max-width: $tablet) {
+          width: 100%;
+        }
+      }
+      .featuredPostsWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+        .featuredPost {
+          display: flex;
+          flex-direction: column;
+          padding: 32px;
+          align-items: flex-start;
+          justify-content: center;
+          border: 1px solid $white-dark-gray-color;
+          .postImage {
+            @media (max-width: $tablet) {
+              width: 100%;
+              height: auto;
+            }
+          }
+          .info {
+            @extend %label;
+            margin: 32px 0px 16px 0px;
+            color: $dark-gray-color;
+            .infoMark {
+              color: $third-color;
+            }
+          }
+          .subtitle {
+            color: $primary-color;
+            width: 669px;
+            @media (max-width: $tablet) {
+              font-size: 24px;
+              line-height: 28px;
+              width: 100%;
+            }
+          }
+          .description {
+            color: $light-gray-color;
+            margin: 16px 0px 32px 0px;
+            width: 551px;
+            @media (max-width: $tablet) {
+              font-size: 14px;
+              width: 100%;
+            }
+          }
+        }
+      }
+      @media (max-width: $laptopL) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      @media (max-width: $tablet) {
+        align-items: center;
+      }
+    }
+  }
+  @media (max-width: $laptopL) {
+    padding: 128px 20px 128px 20px;
+  }
+  @media (max-width: $tablet) {
+    padding: 40px 10px;
+  }
+}

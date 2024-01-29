@@ -1,0 +1,48 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: $ui-index-modal;
+
+  background-color: $modal-back-color;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .close {
+      position: absolute;
+      right: -35px;
+      top: -35px;
+      width: 35px;
+      height: 35px;
+
+      border: none;
+      outline: none;
+      border-radius: 50%;
+
+      transition: background-color 0.2s;
+      background-color: $white-color;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        @media #{$ui-mouse-device} {
+          background-color: $light-gray-color;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

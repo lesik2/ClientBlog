@@ -1,0 +1,28 @@
+@keyframes scroll {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.infinityScroll {
+  display: block;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+
+  @include ui-height(9);
+  @include ui-width(9);
+
+  border: 4px solid $white-dark-gray-color;
+  border-radius: 50%;
+  border-right-color: $third-color;
+
+  animation: scroll 1s infinite;
+
+  @media #{$ui-tablet} {
+    @include ui-height(7);
+    @include ui-width(7);
+
+    border: 3px solid $white-dark-gray-color;
+  }
+}

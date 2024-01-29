@@ -1,0 +1,18 @@
+@import './ui/media.scss';
+@import './ui/colors.scss';
+@import './ui/typography.scss';
+@import './ui/space.scss';
+@import './ui/zIndex.scss';
+
+$mobileS: 320px;
+$mobileM: 375px;
+$mobileL: 480px;
+$tablet: 780px;
+$laptop: 1040px;
+$laptopM: 1120px;
+$laptopL: 1460px;
+
+$burgerMenu: 1000;
+$modal: 1000;
+$menu: 900;
+$menuBack: 800;

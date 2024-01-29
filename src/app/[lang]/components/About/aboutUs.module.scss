@@ -1,0 +1,133 @@
+.aboutUsSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 80px;
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .header {
+      height: 23px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      .first {
+        width: 20%;
+        height: 23px;
+        background-color: $white-color;
+      }
+      .second {
+        width: 60%;
+        height: 23px;
+        background-color: $secondary-color;
+      }
+      .third {
+        width: 20%;
+        height: 23px;
+        background-color: $third-color;
+      }
+    }
+    .main {
+      display: flex;
+      background-color: $white-light-gray-color;
+      padding: 96px 108px 96px 80px;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 61px;
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .subtitle {
+          color: $primary-color;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 20px;
+          letter-spacing: 3px;
+          text-transform: uppercase;
+          margin-bottom: 24px;
+          @media (max-width: $laptopM) {
+            font-size: 15px;
+          }
+          @media (max-width: $tablet) {
+            font-size: 14px;
+          }
+        }
+        .title {
+          color: $primary-color;
+          width: 480px;
+          margin-bottom: 16px;
+          @media (max-width: $laptopL) {
+            width: 100%;
+          }
+          @media (max-width: $laptopM) {
+            font-size: 24px;
+            line-height: 28px;
+          }
+          @media (max-width: $tablet) {
+            font-size: 22px;
+            line-height: 20px;
+          }
+        }
+        .description {
+          @extend %body1;
+          color: $dark-gray-color;
+          margin-bottom: 16px;
+          width: 516px;
+          @media (max-width: $laptopL) {
+            width: 100%;
+          }
+          @media (max-width: $laptopM) {
+            font-size: 13px;
+          }
+        }
+        .link {
+          color: $third-color;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 32px;
+          transition: color 0.2s;
+          &:hover {
+            color: #351b64;
+          }
+          @media (max-width: $tablet) {
+            font-size: 15px;
+            line-height: 25px;
+          }
+        }
+        @media (max-width: $laptopL) {
+          width: 45%;
+        }
+        @media (max-width: $tablet) {
+          width: 70%;
+        }
+        @media (max-width: $mobileL) {
+          width: 85%;
+        }
+      }
+      @media (max-width: $laptopM) {
+        padding: 40px;
+        gap: 20px;
+      }
+      @media (max-width: $tablet) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 0px;
+      }
+    }
+  }
+  @media (max-width: $laptopL) {
+    width: 100%;
+    padding: 0 20px;
+  }
+  @media (max-width: $tablet) {
+    width: 100%;
+    padding: 0px 0px;
+  }
+}

@@ -1,0 +1,42 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 130px 10px 130px 10px;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .title {
+      color: $primary-color;
+      @include ui-width(103);
+      text-align: center;
+
+      @media #{$ui-tablet} {
+        width: 100%;
+      }
+    }
+    .description {
+      @include body1();
+      @include ui-margin(top, 4);
+
+      text-align: center;
+      @include ui-width(100);
+
+      @media #{$ui-tablet} {
+        width: 100%;
+      }
+    }
+    .link {
+      @include ui-margin(top, 8);
+    }
+  }
+
+  @media #{$ui-tablet} {
+    padding: 60px 10px;
+  }
+}
